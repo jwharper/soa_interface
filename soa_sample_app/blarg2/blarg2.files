@@ -1,0 +1,14 @@
+mapWidget/mapwidget.cpp
+mapWidget/mapwidget.h
+mapWidget/webview.cpp
+mapWidget/webview.h
+console.cpp
+console.h
+mainwindow.cpp
+mainwindow.h
+parsy.cpp
+parsy.h
+../taskpanelwidget/taskpanelwidget.cpp
+../taskpanelwidget/taskpanelwidget.h
+../../../interface/interfacewindow.cpp
+../../../interface/interfacewindow.h

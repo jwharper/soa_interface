@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<Tasks>
+		<!-- POLICE Tasks -->
+		<Task>
+			<Type>searchArea</Type>
+			<Division>POLICE</Division>
+			<Owner>Curtis</Owner>
+			<TaskPoints>
+				<!-- Repeat as many point tags as necessary -->
+				<Point>
+					<PointX>36.164789</PointX>
+					<PointY>-86.783527</PointY>
+				</Point>
+				<Point>
+					<PointX>36.164731</PointX>
+					<PointY>-86.782886</PointY>
+				</Point>
+				<Point>
+					<PointX>36.164527</PointX>
+					<PointY>-86.782668</PointY>
+				</Point>
+				<Point>
+					<PointX>36.164288</PointX>
+					<PointY>-86.783625</PointY>
+				</Point>
+				<Point>
+					<PointX>36.164789</PointX>
+					<PointY>-86.783527</PointY>
+				</Point>
+			</TaskPoints>
+			<!-- Repeat as many details tags as necessary -->
+			<Details>1 This is a search area task.</Details>
+			<Details>2 This is a search area task.</Details>
+			<Details>3 This is a search area task.</Details>
+			<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+			<TaskShape>Polygon</TaskShape>
+			<!-- Milliseconds for timer to create this task -->
+			<Time>25000</Time>
+		</Task>
+		<Task>
+			<Type>searchArea</Type>
+			<Division>HAZMAT</Division>
+			<Owner>Sandy</Owner>
+			<TaskPoints>
+				<!-- Repeat as many point tags as necessary -->
+				<Point>
+					<PointX>36.165789</PointX>
+					<PointY>-86.782527</PointY>
+				</Point>
+				<Point>
+					<PointX>36.165731</PointX>
+					<PointY>-86.781886</PointY>
+				</Point>
+				<Point>
+					<PointX>36.165527</PointX>
+					<PointY>-86.781668</PointY>
+				</Point>
+				<Point>
+					<PointX>36.165288</PointX>
+					<PointY>-86.782625</PointY>
+				</Point>
+				<Point>
+					<PointX>36.165789</PointX>
+					<PointY>-86.782527</PointY>
+				</Point>
+			</TaskPoints>
+			<!-- Repeat as many details tags as necessary -->
+			<Details>1 This is another search area task.</Details>
+			<Details>2 This is another search area task.</Details>
+			<Details>3 This is another search area task.</Details>
+			<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+			<TaskShape>Polygon</TaskShape>
+			<!-- Milliseconds for timer to create this task -->
+			<Time>25500</Time>
+		</Task>
+	</Tasks>
+</Configuration>
+			
+			
+			
+			
+			
+		

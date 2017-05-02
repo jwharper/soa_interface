@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Four 911 Calls -->
+<Configuration>
+    <JSEvent>
+        <Time>10</Time>
+        <Command>add_robot(36.163917296691636, -86.78233623504638, affiliation.POLICE, robot_type.UAV);  window.police_1 = last_item;</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>20</Time>
+        <Command>add_robot(36.163975763372136, -86.78239792585373, affiliation.POLICE, robot_type.UAV);  window.police_2 = last_item;</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>30</Time>
+        <Command>add_robot(36.16400607941151, -86.782365739345555, affiliation.POLICE, robot_type.UAV);  window.police_3 = last_item;</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>40</Time>
+        <Command>add_robot(36.16394328188834, -86.78228259086609, affiliation.POLICE, robot_type.UAV);   window.police_4 = last_item;</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.1653042445258, -86.78309798240661, affiliation.EMS, robot_type.UGV);       window.ems_6 = last_item;</Command>
+    </JSEvent>
+
+
+
+
+
+    <JSEvent>
+        <Time>2000</Time>
+        <Command>trigger(map, 'move_item', police_4, new LatLng(36.1646437962368, -86.78313553333282));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>2000</Time>
+        <Command>trigger(map, 'move_item', police_1, new LatLng(36.1646437962368, -86.78313553333282));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>2000</Time>
+        <Command>trigger(map, 'move_item', police_2, new LatLng(36.1646437962368, -86.78313553333282));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>2000</Time>
+        <Command>trigger(map, 'move_item', police_3, new LatLng(36.1646437962368, -86.78313553333282));</Command>
+    </JSEvent>
+
+     <!--top right -->
+    <JSEvent>
+        <Time>2000</Time>
+        <Command> function() { trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165315071500586, -86.78171932697296)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164856006457725, -86.78322941064835)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165507791401275, -86.78190171718597)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16499675781797, -86.78330987691879)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165715668515794, -86.78204119205475)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16515890308227, -86.78356468677521)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16585399311749, -86.78214848041534)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16533430021465, -86.7837256193161)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16604238094385, -86.78223967552185)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16557032783512, -86.78387850522995)); }); }); trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16530831547907, -86.78316235542297)); }); });  }; </Command>
+    </JSEvent>
+
+    <!-- bottom right -->
+    <JSEvent>
+        <Time>2010</Time>
+        <Command> function() { trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16458749546951, -86.78310066461563)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16502707346249, -86.78156107664108)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16434280320342, -86.78293436765671)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16484734482729, -86.78143233060837)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16416307299929, -86.78280293941498)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16454418715945, -86.78123384714127)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16389646522996, -86.78259640932083)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.164375024681725, -86.78110241889953)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16365826712878, -86.78243279457092)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16419962540282, -86.78097367286682)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.1635001898075, -86.78236037492752)); }); }); trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_2, new LatLng(36.16399607513039, -86.78230673074722)); }); });  }; </Command>
+    </JSEvent>
+
+    <!-- bottom left -->
+    <JSEvent>
+        <Time>2020</Time>
+        <Command> function() { trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.16452469841214, -86.78325891494751)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.163842589203114, -86.78448736667633)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.164236697470095, -86.78308725357056)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.16358273651459, -86.78439617156982)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.164054801593096, -86.78294777870178)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.163353199256576, -86.78424060344696)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.163859652843435, -86.78299069404602)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.16317320693955, -86.7841386795044)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.163593303884646, -86.78291022777557)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.16297398492088, -86.78410917520523)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.16331829222148, -86.7826983332634)); }); }); trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_3, new LatLng(36.163491528027265, -86.78351372480392)); }); });   };</Command>
+    </JSEvent>
+
+    <!-- top left -->
+    <JSEvent>
+        <Time>2030</Time>
+        <Command> function() { trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16458316463957, -86.78329110145569)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16410677188674, -86.78464829921722)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.164743405187544, -86.7834198474884)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16425402086494, -86.78476095199585)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16487766052959, -86.78350567817688)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16444457795554, -86.78488433361053)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16501382119878, -86.78378731012344)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.1645937318665, -86.78497821092605)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16525851137018, -86.7839053273201)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.164851415796036, -86.78524106740951)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.165429577496525, -86.78402066230774)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16500082877895, -86.78536981344223)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.165498869998416, -86.78416281938553)); }); }); trigger(police_4, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_4, new LatLng(36.16479078435941, -86.78435325622558)); }); });  };</Command>
+    </JSEvent>
+   
+
+
+    <!--ems_6-->
+    <JSEvent>
+        <Time>4200</Time>
+        <Command>trigger(map, 'move_item', ems_6, new LatLng(36.16504413682844,  -86.78365588188171)); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>16600</Time>
+        <Command>trigger(map, 'move_item', ems_6, new LatLng (36.164871164308664,  -86.78363710641861)); });</Command>
+    </JSEvent>
+    
+</Configuration>

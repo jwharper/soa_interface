@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Four 911 Calls -->
+<Configuration>
+
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.1653042445258, -86.78309798240661, affiliation.EMS, robot_type.UGV);       window.ems_6 = last_item;</Command>
+    </JSEvent>
+
+
+    <!--ems_6-->
+    <JSEvent>
+        <Time>4200</Time>
+        <Command>trigger(map, 'move_item', ems_6, new LatLng(36.16504413682844,  -86.78365588188171)); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>16600</Time>
+        <Command>trigger(map, 'move_item', ems_6, new LatLng (36.164871164308664,  -86.78363710641861)); });</Command>
+    </JSEvent>
+    
+</Configuration>

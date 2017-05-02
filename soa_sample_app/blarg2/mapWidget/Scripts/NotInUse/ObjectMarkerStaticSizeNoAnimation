@@ -1,0 +1,371 @@
+//Get rid of integer indexing in lists/arrays. Everything should use pointer
+//s
+
+var POI = function (options) {
+    "use strict";
+    this.ID = options.iconID;
+    this.grouper = options.grouper || -1;
+    this.groupIndex = -1; 		//Index position of the group to which this marker's handle has been assigned.
+    this.wdth = 75;
+    this.canvas = document.createElement("canvas");
+    this.canvas.width = this.wdth;
+    this.canvas.height = this.wdth;
+    this.ctx = this.canvas.getContext("2d");
+    this.image = new Image();
+    this.image.src = options.image || "images/diamond.png";
+    this.state = "undefined";
+    this.centerX = 0;
+    this.centerY = 0;
+    this.msg0 = options.msg0 || "Item Object Title";
+    this.msg1 = options.msg1 || "Item object information line 1";
+    this.msg2 = options.msg2 || "Item object information line 2";
+    this.msg3 = options.msg3 || "Item object information line 3";
+    this.msg4 = options.msg4 || "Item object information line 4";
+    log('POI done');
+    return this;
+};
+
+
+
+var scaleMixins = function () { };
+
+scaleMixins.prototype =
+{
+    clear: function (obj, w, h) {
+        width = w;
+        height = h || w;
+        obj.ctx.clearRect(0, 0, obj.canvas.width, obj.canvas.height);
+        obj.canvas.width = width;
+        obj.canvas.height = height;
+        //Uncomment the following to illustrate that the canvas itself resizes
+        //obj.ctx.strokeStyle="#FF0000";
+        //obj.ctx.strokeRect(0,0,obj.canvas.width, obj.canvas.height);
+    },
+
+    seeIcon: function (obj) {
+        var icon = new google.maps.MarkerImage
+			(
+				obj.canvas.toDataURL(),
+				new google.maps.Size(obj.canvas.width, obj.canvas.height), //Size
+				new google.maps.Point(0, 0), 							//Origin
+				new google.maps.Point(obj.centerX, obj.centerY)				//anchor; centerpoint, usually
+			);
+        return icon;
+    },
+
+    setCenter: function (obj) {
+        obj.centerX = obj.canvas.width / 2;
+        obj.centerY = obj.canvas.height / 2;
+    },
+
+    details: function (obj, gm) {
+        obj.clear(obj, 267, 117);
+        obj.ctx.beginPath();
+        obj.ctx.arc(6, 111, 5, 0, 2 * Math.PI);
+        obj.ctx.moveTo(6, 106);
+        obj.ctx.lineTo(6, 116);
+        obj.ctx.moveTo(1, 111);
+        obj.ctx.lineTo(11, 111);
+        obj.ctx.moveTo(6, 116);
+        obj.ctx.lineTo(66, 101);
+        obj.ctx.moveTo(6, 106);
+        obj.ctx.lineTo(66, 1);
+        obj.ctx.stroke();
+        obj.ctx.fillStyle = '#FFFFFF';
+        obj.ctx.fillRect(66, 1, 200, 100);
+        obj.ctx.fillStyle = "#000000";
+        obj.ctx.font = "12px Verdana";
+        obj.ctx.fillText(obj.msg0, 130, 20);
+        obj.ctx.font = "10px Verdana";
+        obj.ctx.fillText(obj.msg1, 118, 35);
+        obj.ctx.fillText(obj.msg2, 118, 50);
+        obj.ctx.fillText(obj.msg3, 118, 65);
+        obj.ctx.fillText(obj.msg4, 118, 80);
+        obj.ctx.strokeRect(66, 1, 200, 100);
+        obj.ctx.drawImage(obj.image, 16, 1, 100, 100);
+        obj.state = "details";
+        obj.centerX = 6;
+        obj.centerY = 111;
+        if (gm) {
+            gm.setIcon(obj.seeIcon(obj));
+            gm.setZIndex(1);
+        }
+    },
+
+    normal: function (obj, gm) {
+        obj.clear(obj, 75);
+        obj.ctx.globalAlpha = 1;
+        obj.ctx.drawImage(obj.image, 0, 0, 75, 75);
+        obj.state = "normal";
+        obj.setCenter(obj);
+        if (gm) {
+            gm.setIcon(obj.seeIcon(obj));
+            gm.setZIndex(1);
+        }
+    },
+
+    residue: function (obj, gm) {
+        obj.clear(obj, 35);
+        obj.ctx.globalAlpha = 0.40;
+        obj.ctx.drawImage(obj.image, 0, 0, 35, 35);
+        obj.state = "residue";
+        obj.setCenter(obj);
+        if (gm) {
+            gm.setIcon(obj.seeIcon(obj));
+            gm.setZIndex(1);
+        }
+        /*if (obj.forGrIndex >= 0)
+        {
+        obj.grouper.removeForGrouping(obj.grouper, obj.forGrIndex, obj.grIndex, obj.groupIndex);
+        obj.forGrIndex = -1;
+        }*/
+    },
+
+    forGrouping: function (obj, gm) {
+        obj.clear(obj, 14.15);
+        obj.ctx.globalAlpha = 1;
+        obj.ctx.fillStyle = "Black";
+        obj.ctx.fillRect(2, 2, 10, 10);
+        obj.state = "forGrouping";
+        obj.setCenter(obj);
+        if (gm) {
+            gm.setIcon(obj.seeIcon(obj));
+            gm.setZIndex(2);
+        }
+    },
+
+    getID: function (obj) {
+        console.info("getID function");
+        console.info(this.ID.toString())
+        return this.ID.toString();
+    },
+
+    rect: function (obj, x, y, w, h) {
+        obj.ctx.beginPath();
+        obj.ctx.rect(x, y, w, h);
+        obj.ctx.closePath();
+        obj.ctx.fill();
+    }
+};     //End scaleMixins
+
+
+//Source: http://addyosmani.com/resources/essentialjsdesignpatterns/book/#designpatternstructure
+function augment(receivingClass, givingClass) {
+    // provide all methods
+    for (var methodName in givingClass.prototype) {
+
+        // check to make sure the receiving class doesn't
+        // have a method of the same name as the one currently
+        // being processed
+        if (!Object.hasOwnProperty(receivingClass.prototype, methodName)) {
+            receivingClass.prototype[methodName] = givingClass.prototype[methodName];
+        }
+    }
+}
+
+
+
+
+augment(POI, scaleMixins);
+
+var Marker = function (options) //Must receive ID, map, lattitude, and longitude
+{
+    this.trueLat = options.pos.lat();
+    this.trueLng = options.pos.lng();
+    this.POI = new POI({
+        iconID: options.iconID,
+        grouper: options.grouper,
+        msg0: options.msg0,
+        msg1: options.msg1,
+        msg2: options.msg2,
+        msg3: options.msg3,
+        msg4: options.msg4,
+        image: options.image,
+        handle: this
+    });
+    this.normal(this.POI);
+    var temp = this.POI;
+    this.gMarker = new google.maps.Marker({
+        position: options.pos,
+        map: options.map,
+        title: options.msg,
+        icon: this.seeIcon(temp)
+    });
+    this.gMarker.setVisible(true);
+    log('gMarker');
+    return this;
+};
+
+augment(Marker, scaleMixins);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function convexHull(options)
+{
+	// Use Google Maps’ point class or any point class with x() and y() methods defined
+	var points = [];
+	var hullPoints = [];
+	var hullPoints_size;
+	var numPoints = options.numPoints;
+	// Add a couple sample points to the array
+
+	for (var i=0;i<numPoints;i++)
+	{
+		points.push(new GLatLng(options.markerArray[i].gMarker.getPosition().lat(), options.markerArray[i].gMarker.getPosition().lng()));
+	}
+	// Sort the points by X, then by Y (required by the algorithm)
+	points.sort(sortPointY);
+	points.sort(sortPointX);
+	// Calculate the convex hull
+	// Takes: an (1) array of points with x() and y() methods defined
+	//          (2) Size of the points array
+	//          (3) Empty array to store the hull points
+	// Returns: The number of hull points, which may differ the the hull points array’s size
+	hullPoints_size = chainHull_2D(points, points.length, hullPoints);
+}
+
+
+// Copyright 2001, softSurfer (www.softsurfer.com)
+// This code may be freely used and modified for any purpose
+// providing that this copyright notice is included with it.
+// SoftSurfer makes no warranty for this code, and cannot be held
+// liable for any real or imagined damage resulting from its use.
+// Users of this code must verify correctness for their application.
+// http://softsurfer.com/Archive/algorithm_0203/algorithm_0203.htm
+// Assume that a class is already given for the object:
+// Point with coordinates {float x, y;}
+//===================================================================
+
+// isLeft(): tests if a point is Left|On|Right of an infinite line.
+// Input: three points P0, P1, and P2
+// Return: >0 for P2 left of the line through P0 and P1
+// =0 for P2 on the line
+// <0 for P2 right of the line
+
+function sortPointX(a, b) {
+    return a.lng() - b.lng();
+}
+function sortPointY(a, b) {
+    return a.lat() - b.lat();
+}
+
+function isLeft(P0, P1, P2) {
+    return (P1.lng() - P0.lng()) * (P2.lat() - P0.lat()) - (P2.lng() - P0.lng()) * (P1.lat() - P0.lat());
+}
+//===================================================================
+
+// chainHull_2D(): A.M. Andrew's monotone chain 2D convex hull algorithm
+// http://softsurfer.com/Archive/algorithm_0109/algorithm_0109.htm
+//
+// Input: P[] = an array of 2D points
+// presorted by increasing x- and y-coordinates
+// n = the number of points in P[]
+// Output: H[] = an array of the convex hull vertices (max is n)
+// Return: the number of points in H[]
+
+
+function chainHull_2D(P, n, H) {
+    // the output array H[] will be used as the stack
+    var bot = 0,
+    top = (-1); // indices for bottom and top of the stack
+    var i; // array scan index
+    // Get the indices of points with min x-coord and min|max y-coord
+    var minmin = 0,
+        minmax;
+        
+    var xmin = P[0].lng();
+    for (i = 1; i < n; i++) {
+        if (P[i].lng() != xmin) {
+            break;
+        }
+    }
+    
+    minmax = i - 1;
+    if (minmax == n - 1) { // degenerate case: all x-coords == xmin
+        H[++top] = P[minmin];
+        if (P[minmax].lat() != P[minmin].lat()) // a nontrivial segment
+            H[++top] = P[minmax];
+        H[++top] = P[minmin]; // add polygon endpoint
+        return top + 1;
+    }
+
+    // Get the indices of points with max x-coord and min|max y-coord
+    var maxmin, maxmax = n - 1;
+    var xmax = P[n - 1].lng();
+    for (i = n - 2; i >= 0; i--) {
+        if (P[i].lng() != xmax) {
+            break;
+        }
+    }
+    maxmin = i + 1;
+
+    // Compute the lower hull on the stack H
+    H[++top] = P[minmin]; // push minmin point onto stack
+    i = minmax;
+    while (++i <= maxmin) {
+        // the lower line joins P[minmin] with P[maxmin]
+        if (isLeft(P[minmin], P[maxmin], P[i]) >= 0 && i < maxmin) {
+            continue; // ignore P[i] above or on the lower line
+        }
+        
+        while (top > 0) { // there are at least 2 points on the stack
+            // test if P[i] is left of the line at the stack top
+            if (isLeft(H[top - 1], H[top], P[i]) > 0) {
+                break; // P[i] is a new hull vertex
+            }
+            else {
+                top--; // pop top point off stack
+            }
+        }
+        
+        H[++top] = P[i]; // push P[i] onto stack
+    }
+
+    // Next, compute the upper hull on the stack H above the bottom hull
+    if (maxmax != maxmin) { // if distinct xmax points
+        H[++top] = P[maxmax]; // push maxmax point onto stack
+    }
+    
+    bot = top; // the bottom point of the upper hull stack
+    i = maxmin;
+    while (--i >= minmax) {
+        // the upper line joins P[maxmax] with P[minmax]
+        if (isLeft(P[maxmax], P[minmax], P[i]) >= 0 && i > minmax) {
+            continue; // ignore P[i] below or on the upper line
+        }
+        
+        while (top > bot) { // at least 2 points on the upper stack
+            // test if P[i] is left of the line at the stack top
+            if (isLeft(H[top - 1], H[top], P[i]) > 0) {
+                break; // P[i] is a new hull vertex
+            }
+            else {
+                top--; // pop top point off stack
+            }
+        }
+        
+        if (P[i].lng() == H[0].lng() && P[i].lat() == H[0].lat()) {
+            return top + 1; // special case (mgomes)
+        }
+        
+        H[++top] = P[i]; // push P[i] onto stack
+    }
+    
+    if (minmax != minmin) {
+        H[++top] = P[minmin]; // push joining endpoint onto stack
+    }
+    
+    return top + 1;
+}
+

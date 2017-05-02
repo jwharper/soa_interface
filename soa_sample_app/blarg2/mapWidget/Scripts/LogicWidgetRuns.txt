@@ -1,0 +1,126 @@
+#ifndef LOGICWIDGET_H
+#define LOGICWIDGET_H
+
+// System Includes
+#include <QWidget>
+#include <QWebView>
+#include <QObject>
+#include <QTimer>
+#include "console.h"
+
+//forward declarations
+class WebView;
+class MapWidget;
+class QWebFrame;
+class QDomElement;
+
+class LogicWidget: public QWidget{
+    Q_OBJECT
+public:
+    LogicWidget(/*bool createConsole = true, */QWidget * pParent = 0);
+    WebView * m_pWebView;
+    QWebFrame * getWebFrame();
+    Q_SLOT void debug(QString str);
+    Q_SLOT void enableTaskDraw();
+    Q_SLOT void sendCoord(QString coords);
+    Q_SIGNAL void actuallySendCoord(QString coords);
+    void setFileName(QString configurationFilename);
+    void setConsole(Console * conc);
+
+//protected:
+    MapWidget * m_pMapWidget;
+    QString filename;
+    Console * m_pConsole;
+    bool needToCreateConsole;
+
+};
+
+#endif
+
+
+
+
+
+
+
+// System Includes
+#include <QToolBar>
+#include <QLineEdit>
+#include <QAction>
+#include <QDebug>
+#include <QStatusBar>
+#include <QProgressBar>
+#include <QLabel>
+#include <QWebFrame>
+//#include <QDomDocument>
+#include <QFile>
+#include <QTimer>
+#include <QAction>
+#include <QMenuBar>
+#include <QMenu>
+#include "logicwidget.h"
+#include <iostream>
+#include <QTextStream>
+#include <QUrl>
+#include <QBoxLayout>
+
+// Application Includes
+#include "mapWidget/webview.h"
+#include "mapWidget/mapwidget.h"
+
+
+LogicWidget::LogicWidget(QWidget * pParent) : QWidget(pParent)
+{
+    qDebug()<<"LogicWidget::LogicWidget()";
+}
+
+void LogicWidget::setFileName(QString configurationFilename)
+{
+    qDebug()<<"LogicWidget::setFileName()";
+    QString file = "/home/musadhaque/Downloads/soa_sample_app/build/test";
+    QStringList args;
+    args.append("-1");
+    args.append("soa-testroom-blue");
+    m_pConsole = new Console(file, args, this);
+    connect(m_pConsole, SIGNAL(newData(QString)), this, SLOT(debug(QString)));
+    m_pConsole->start();
+
+
+    m_pMapWidget = new MapWidget(configurationFilename, this);
+    m_pWebView = m_pMapWidget->GetWebView();
+    QVBoxLayout * nl = new QVBoxLayout(this);
+    nl->addWidget(m_pWebView);
+    m_pWebView->seeMe();
+
+
+    //debug("John Jacob Jingleheimer Schmidt");
+
+    connect(m_pConsole, SIGNAL(newData(QString)), m_pMapWidget->m_pParsy, SLOT(parseIt(QString)));
+    connect(m_pWebView, SIGNAL(coordRecvFromJS(QString)), this, SLOT(sendCoord(QString)));
+
+
+}
+
+
+void LogicWidget::debug(QString str)
+{
+    qDebug()<< str;
+}
+
+
+QWebFrame * LogicWidget::getWebFrame()
+{
+    return m_pWebView->getWebFrame();
+}
+
+void LogicWidget::enableTaskDraw()
+{
+    qDebug()<<"LogicWidget::enableTaskDraw()";
+    m_pWebView->eval("drawTask();");
+}
+
+void LogicWidget::sendCoord(QString coords)
+{
+    Q_EMIT actuallySendCoord(coords);
+
+}

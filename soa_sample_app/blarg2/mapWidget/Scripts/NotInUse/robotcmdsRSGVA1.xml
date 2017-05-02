@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ROE' buts -->
+<Configuration>
+
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.163917296691636, -86.78233623504638, affiliation.POLICE, robot_type.UAV);  window.police_1 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.163975763372136, -86.78239792585373, affiliation.POLICE, robot_type.UAV);  window.police_2 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16400607941151, -86.782365739345555, affiliation.POLICE, robot_type.UAV);  window.police_3 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16394328188834, -86.78228259086609, affiliation.POLICE, robot_type.UAV);   window.police_4 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16477588633977, -86.78456246852875, affiliation.HAZMAT, robot_type.UAV);   window.hazmat_1 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16473041272289, -86.78447127342224, affiliation.HAZMAT, robot_type.UAV);   window.hazmat_2 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16482785615534, -86.78445786237716, affiliation.HAZMAT, robot_type.UGV);   window.hazmat_3 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.164784547978094, -86.78441762924194, affiliation.HAZMAT, robot_type.UGV);  window.hazmat_4 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16487332971568, -86.78437739610672, affiliation.HAZMAT, robot_type.UGV);   window.hazmat_5 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16480911980213, -86.78433688295547, affiliation.HAZMAT, robot_type.UGV);   window.hazmat_6 = last_item;</Command>
+        <RobotName>police_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16539519106742, -86.78292632102966, affiliation.EMS, robot_type.UAV);      window.ems_1 = last_item;</Command>
+        <RobotType>UAV</RobotType>
+        <RobotName>ems_1</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.1654861375035, -86.78298532962799, affiliation.EMS, robot_type.UAV);       window.ems_2 = last_item;</Command>
+        <RobotType>UAV</RobotType>
+        <RobotName>ems_2</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.16544282968993, -86.78305774927139, affiliation.EMS, robot_type.UGV);      window.ems_3 = last_item;</Command>
+        <RobotType>UGV</RobotType>
+        <RobotName>ems_3</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.165354048597365, -86.78301483392715, affiliation.EMS, robot_type.UGV);     window.ems_4 = last_item;</Command>
+        <RobotType>UGV</RobotType>
+        <RobotName>ems_4</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.165393025674774, -86.78318649530411, affiliation.EMS, robot_type.UGV);     window.ems_5 = last_item;</Command>
+        <RobotType>UGV</RobotType>
+        <RobotName>ems_5</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+    <JSEvent>
+        <Time>160</Time>
+        <Command>add_robot(36.1653042445258, -86.78309798240661, affiliation.EMS, robot_type.UGV);       window.ems_6 = last_item;</Command>
+        <RobotType>UGV</RobotType>
+        <RobotName>ems_6</RobotName>
+        <Lat>000</Lat>
+        <Lng>000</Lng>
+    </JSEvent>
+
+    <!--hazmat_1 & _2 move around -->
+    <JSEvent>
+        <Time>20572</Time>
+        <Command> trigger(map, 'move_item', hazmat_1, new LatLng(36.16426138330668, -86.7828431725502)); </Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>45572</Time>
+        <Command> trigger(map, 'move_item', hazmat_2, new LatLng(36.164341503950496, -86.78346812725067)); </Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>88000</Time>
+        <Command> trigger(map, 'move_item', hazmat_1, new LatLng(36.164672812770384, -86.78213238716125)); </Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>122275</Time>
+        <Command> trigger(map, 'move_item', hazmat_2, new LatLng(36.16486769965735, -86.7832401394844)); </Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>139966</Time>
+        <Command> trigger(map, 'move_item', hazmat_1, new LatLng(36.16513620968572, -86.78339302539825));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>131829</Time>
+        <Command> trigger(map, 'move_item', hazmat_2, new LatLng(36.163802312092876, -86.78354322910309)); </Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>201889</Time>
+        <Command> trigger(map, 'move_item', hazmat_1, new LatLng(36.16398637398733, -86.78294509649277));</Command>
+    </JSEvent>
+
+    <!--hazmat_5 & _6 move around-->
+    <JSEvent>
+        <Time>6000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16490148000173,  -86.78424596786499));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>7000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.164834352379856,  -86.78418159484863));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>51000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.164940457304205,  -86.78414672613144));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>57000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.164884156749984,  -86.78409039974212));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>126000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16498593079923,  -86.78400993347168));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>132000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.164944788114376,  -86.78392946720123));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>201000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16502490805969,  -86.78390800952911));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>207000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.16500541943189,  -86.78380608558655));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>276000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16507254690726,  -86.78380876779556));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>282000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.165131012726086,  -86.78369075059891));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>351000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16507471230873,  -86.78366661071777));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>357000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.16518081690772,  -86.78355932235718));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>426000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16512235112605,  -86.78351640701294));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>432000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.16523711724884,  -86.78345203399658));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>501000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16518081690772,  -86.7834010720253));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>507000</Time>
+        <Command>trigger(map, 'move_item', hazmat_6, new LatLng(36.165293417549556,  -86.78330451250076));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>576000</Time>
+        <Command>trigger(map, 'move_item', hazmat_5, new LatLng(36.16523711724884,  -86.78326427936554));</Command>
+    </JSEvent>
+
+    <!--hazmat_3 & _4 move around-->
+    <JSEvent>
+        <Time>30000</Time>
+        <Command> trigger(map, 'move_item', hazmat_3, new LatLng(36.16534408778476, -86.78323209285736));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>30000</Time>
+        <Command> trigger(map, 'move_item', hazmat_4, new LatLng(36.16530727607808, -86.78321868181228));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>156000</Time>
+        <Command> trigger(map, 'move_item', hazmat_3, new LatLng(36.165293417549556,  -86.7831140756607));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>159600</Time>
+        <Command> trigger(map, 'move_item', hazmat_4, new LatLng(36.165172155313186,  -86.78311139345169));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>201000</Time>
+        <Command> trigger(map, 'move_item', hazmat_3, new LatLng(36.16521979407126,  -86.78304702043533));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>204600</Time>
+        <Command> trigger(map, 'move_item', hazmat_4, new LatLng(36.16506821610414,  -86.78294241428375));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>246000</Time>
+        <Command> trigger(map, 'move_item', hazmat_3, new LatLng(36.165152666722,  -86.78300142288208));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>249600</Time>
+        <Command> trigger(map, 'move_item', hazmat_4, new LatLng(36.16507471230873,  -86.7830416560173));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>291000</Time>
+        <Command> trigger(map, 'move_item', hazmat_3, new LatLng(36.165003254028484,  -86.78299069404602));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>294600</Time>
+        <Command> trigger(map, 'move_item', hazmat_4, new LatLng(36.16495128432922,  -86.78291022777557));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>582000</Time>
+        <Command>trigger(map, 'move_item', hazmat_3, new LatLng(36.16494669366483, -86.78284853696823));</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>651000</Time>
+        <Command>trigger(map, 'move_item', hazmat_4, new LatLng(36.16490771636549, -86.78291827440262));</Command>
+    </JSEvent>
+
+
+
+    <!--police_1, _2, _3 & _4 move around-->
+    <JSEvent>
+        <Time>6000</Time>
+        <Command>trigger(map, 'move_item', police_1, new LatLng(36.1646437962368, -86.78313553333282))</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6000</Time>
+        <Command>trigger(map, 'move_item', police_2, new LatLng(36.1646437962368, -86.78313553333282))</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6000</Time>
+        <Command>trigger(map, 'move_item', police_3, new LatLng(36.1646437962368, -86.78313553333282))</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6000</Time>
+        <Command>trigger(map, 'move_item', police_4, new LatLng(36.1646437962368, -86.78313553333282))</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165315071500586, -86.78171932697296)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164856006457725, -86.78322941064835)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165507791401275, -86.78190171718597)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16499675781797, -86.78330987691879)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165715668515794, -86.78204119205475)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16515890308227, -86.78356468677521)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16585399311749, -86.78214848041534)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16533430021465, -86.7837256193161)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16604238094385, -86.78223967552185)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16557032783512, -86.78387850522995)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_1, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16530831547907, -86.78316235542297)); }); });</Command>
+    </JSEvent>
+
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16458749546951, -86.78310066461563)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16502707346249, -86.78156107664108)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16434280320342, -86.78293436765671)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16484734482729, -86.78143233060837)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16416307299929, -86.78280293941498)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16454418715945, -86.78123384714127)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16389646522996, -86.78259640932083)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164375024681725, -86.78110241889953)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16365826712878, -86.78243279457092)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16419962540282, -86.78097367286682)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.1635001898075, -86.78236037492752)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_2, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16399607513039, -86.78230673074722)); }); });</Command>
+    </JSEvent>
+
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16452469841214, -86.78325891494751)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.163842589203114, -86.78448736667633)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164236697470095, -86.78308725357056)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16358273651459, -86.78439617156982)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164054801593096, -86.78294777870178)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.163353199256576, -86.78424060344696)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.163859652843435, -86.78299069404602)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16317320693955, -86.7841386795044)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.163593303884646, -86.78291022777557)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16297398492088, -86.78410917520523)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16331829222148, -86.7826983332634)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.163491528027265, -86.78351372480392)); }); });</Command>
+    </JSEvent>
+
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16458316463957, -86.78329110145569)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16410677188674, -86.78464829921722)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164743405187544, -86.7834198474884)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16425402086494, -86.78476095199585)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16487766052959, -86.78350567817688)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16444457795554, -86.78488433361053)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16501382119878, -86.78378731012344)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.1645937318665, -86.78497821092605)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16525851137018, -86.7839053273201)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.164851415796036, -86.78524106740951)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165429577496525, -86.78402066230774)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16500082877895, -86.78536981344223)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.165498869998416, -86.78416281938553)); }); });</Command>
+    </JSEvent>
+    <JSEvent>
+        <Time>6010</Time>
+        <Command> trigger(police_3, 'push_event', function() { timed_event(500, function() {trigger(map, 'move_item', police_1, new LatLng(36.16479078435941, -86.78435325622558)); }); });</Command>
+    </JSEvent>
+
+</Configuration>

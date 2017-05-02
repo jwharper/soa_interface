@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Maps SOA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!--External Dependencies-->
+        <!-- jquery library and jquery.easing plugin are needed -->
+        <script src="jquery.min.js"></script>
+        <script src="jquery.easing.1.3.js"></script>
+
+        <!-- we provide marker for google maps, so here it comes-->
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCOACZMSTCJedn70r_zDb2ndVfhjK7alig&sensor=false&libraries=drawing,geometry"></script>
+
+        <!-- we use markerAnimate to actually animate marker -->
+        <script src="markerAnimate.js"></script>
+
+        <!-- SlidingMarker hides details from you - your markers are just animated automagically -->
+        <script src="SlidingMarker.js"></script>
+        <script>SlidingMarker.initializeGlobally();</script>
+
+        <!--Internal Dependencies-->
+
+        <script>
+            // Forward Declarations and Globals
+            var map;
+            var static_icon_array = [];
+            var robot_array = [];
+            var task_area_array = [];
+            var last_item = null;
+            const affiliation = {
+                BLUE: 'BLUE',
+                RED: 'RED',
+                NEUTRAL: 'NEUTRAL'
+            };
+            const object_type = {
+                STATIC_ICON: 'static_icon',
+                ROBOT: 'robot',
+                TASK_AREA: 'task_area'
+            };
+            const nashville = new google.maps.LatLng(40.199487, -112.939870);
+            const team_affiliation = affiliation.BLUE;
+            const DEBUG = false;
+            const RVAA = false;
+            var markerArray = new Array();
+            var groupArray = new Array();
+            var images = new Array();
+            var myTaskArray = new Array();
+            var BLUETaskArray = new Array();
+            var REDTaskArray = new Array();
+            var NEUTRALTaskArray = new Array();
+            var taskManifest;
+            var taskType;
+            var taskId = 1;
+            var BLUETaskId = 101;
+            var REDTaskId = 201;
+            var NEUTRALTaskId = 301;
+            var myDiv = "BLUE";
+			var tempTask = null;
+            var pointSelect = false;
+            var minZoom = 7;
+
+            //CenterLATitude, CenterLoNGitude, BorderLATitude1, etc.
+            var clat  =  40.199487;//48.000;
+            var clng  =  -112.939870;//-108.000;
+            var blat1 =  1.947409;
+            var blng1 =  0.860157;
+            var blat2 = -1.947409;
+            var blng2 = -0.860157;
+            var mask1 = -0.860157;
+            var mask2 =  0.860157;
+            var mask3 = -1.947409;
+            var mask4 =  1.947409;
+            // var blat1 =  0.144144;
+            // var blng1 =  0.378378;
+            // var blat2 = -0.144144;
+            // var blng2 = -0.378378;
+            // var mask1 = -0.144144;
+            // var mask2 =  0.144144;
+            // var mask3 = -0.378378;
+            // var mask4 =  0.378378;
+
+            clock = 0;
+            setInterval(function(){ clock += 0.1 }, 100);
+
+            /*******************************************************************************
+             * Logging to the screen
+             * - This can only be attached after the window has initialized
+             *******************************************************************************/
+            var $log;
+            function log(text) {
+                if (DEBUG) {
+                    if (text !== undefined) {
+                        $log.html($log.html() + text + '<br/>');
+                    } else {
+                        $log.html('');
+                    };
+                } else {
+                    console.log(text);
+                }
+            };
+        </script>
+
+        <script src="static_icon.js"></script>
+        <script src="robot.js"></script>
+        <script src="task_area.js"></script> 
+        <script src="Scenarios.js"></script>  
+        <!--script type="text/javascript" src="ObjectMarkers.js"></script-->
+        <script type="text/javascript" src="ContextMenu.js"></script>
+        <!--script type="text/javascript" src="ConvexHull.js"></script-->
+        <script type="text/javascript" src="Groups.js"></script>
+        <script type="text/javascript" src="Initialize.js"></script>
+        <!--script type="text/javascript" src="MarkerHandler.js"></script-->
+        <script type="text/javascript" src="Preloader.js"></script>
+        <!--script type="text/javascript" src="TaskMaker.js"></script-->
+
+    </head>
+    <body>
+  <!--div id="thisN">
+    <p id="preloader">Preloading images...</p>
+  </div-->
+       <div id="map"></div>
+        <script>
+            function setWebview(webV) {
+               //log("Got webView");
+               webView = webV;
+               //webView.interactionFromJS("webView has been set in Javascript");
+               //gerald.interactionFromJS("bollocks");
+           };
+
+
+
+
+
+			function clearTempTask() {
+				if (tempTask){
+					tempTask.setMap(null);
+					tempTask = null;
+				}
+			};
+            function drawTask(taskColor, taskShape) {
+				//log("here1");
+				if (tempTask){
+					clearTempTask();
+				}
+				drawingManager.setOptions({
+					polygonOptions: {
+						fillColor: taskColor,
+						fillOpacity: 0.75,
+						strokeColor: taskColor,
+						strokeOpacity: 1.0,
+						strokeWeight: 5,
+						clickable: true,
+						zIndex: 1,
+						editable: true
+					},
+					polylineOptions: {
+						strokeColor: taskColor,
+						strokeOpacity: 1,
+						strokeWeight: 10,
+						clickable: true,
+						zIndex: 1,
+						editable: true
+					}
+				});
+                if (taskShape == 'polygon')
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                else if (taskShape == 'polyline')
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+                else 
+                    pointSelect = true;
+            };
+
+            // function finishTask(tId, taskIcon) {
+            //     //log("here4");
+            //     myTaskArray[tId] = tempTask;
+            //     tempTask = null;
+            //     if (taskIcon){
+            //         //Set the icon for the task: find the centroid for a polygon, the midpoint for a polyline, or just change to a custom icon for a point. Later.
+            //     }
+            // };
+
+
+            function finishTask(tId, actor, taskName, summary, rtype) {
+                var path = tempTask.getPath();
+                var pLength = path.getLength();
+                var centLat = 0;
+                var centLng = 0;
+                for (var i = 0; i < pLength; i++) {
+                        centLat += path.getAt(i).lat();
+                        centLng += path.getAt(i).lng();
+                    }
+                log("function finishTask(tId, affiliation, rtype, msg1, msg2)");
+                centLat = centLat/(pLength);
+                centLng= centLng/(pLength);
+                add_group_icon(tId, centLat, centLng, affiliation, rtype);
+                var gIc = robot_array[tId];
+                gIc.msg1 = "Sample task"; //taskName + ": " + actor;
+                gIc.msg2 = "kdjshksjhglsdkfjgh"; //summary;
+                gIc.groupIcon = 2;
+                var tt = tempTask;
+                tempTask = null;
+                tt.setEditable(false);
+                var temp = new Group(tt, tId, gIc);
+                myTaskArray[tId] = temp;
+                set_visual_state2(gIc, 'normal')
+                //log(gIc.groupIcon);
+                //tempTask = null;
+            };
+
+            function log(msg) {
+                console.log(msg);
+            };
+
+            function addPolygon(e, drawingManager) {
+                //log("here5");
+                var tId = taskId;
+                taskId++;
+                // var tType = taskType;
+                // var temp = new task(e, tType, tId, myDiv);
+                var paths = e.getPaths();
+                var pLength = paths.getLength();
+                var ltlng = new Array();
+                for (var i = 0; i < pLength; i++) {
+                    var p = paths.getAt(i);
+                    for (var j = 0; j < p.length; j++) {
+                        ltlng.push(p.getAt(j).lat());
+                        ltlng.push(p.getAt(j).lng());
+                    }
+                }
+                //log("in RVA Derived");
+                myTaskArray[tId] = e;
+                taskManifest.taskFromJS(ltlng, tId);
+            };
+
+            function addPolyline(e, drawingManager) {
+                //log("here6");
+                var tId = taskId;
+                taskId++;
+                var tType = taskType;
+                var temp = new task(e, tType, tId, myDiv);
+                var paths = e.getPath();
+                var pLength = paths.getLength();
+                var ltlng = new Array();
+                    for (var i = 0; i < pLength; i++) {
+                        ltlng.push(paths.getAt(i).lat());
+                        ltlng.push(paths.getAt(i).lng());
+                    }
+                //log("in RVA Derived");
+                myTaskArray[tId] = e;
+                taskManifest.taskFromJS(ltlng, tId);
+            };
+
+
+            function initialize() {
+                // Draw the map
+                var myOptions = {
+                    zoom: 9,
+                    center: nashville,
+                    mapTypeId: google.maps.MapTypeId.SATELLITE,
+                    zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL },
+                    rotateControl: false,
+                    mapTypeControl: false,
+                    streetViewControl: false,
+                    tilt: 0
+                };
+                map = new google.maps.Map(document.getElementById('map'), myOptions);
+        // var el = document.getElementById('thisN');
+        // el.style.display = 'none';
+
+                Dinitialize();
+
+                /*******************************************************************************
+                 *  Action Listeners
+                 *  - These are the three general ways in which events occur in the program
+                 *******************************************************************************/
+                map.addListener('add_item', function(item, options) {
+                    //log("here7");
+                    last_item = item(options);
+                    if (last_item.object_type === object_type.STATIC_ICON) {                        
+                        static_icon_array.push(last_item);
+                    } else if (last_item.object_type === object_type.ROBOT) {
+                        log("adding item" + last_item.id);
+                        robot_array[last_item.id] = last_item;
+                    } else if (last_item.object_type === object_type.TASK_AREA) {
+                        task_area_array.push(last_item);
+                    }
+                });
+                map.addListener('delete_item', function(item) {
+                    item.setMap(null);
+                    // item = null;
+                    // doesn't actually delete the item for the moment; just hides them
+                    // avoids array access errors for the moment
+
+                    // if item is a task, stop patrol
+                    // if item is a risk, decrease visual state of closeby
+                    // if item is a robot, decrease visual score accordingly
+                });
+                map.addListener('move_item', function(item, position, duration) {
+                    // Item is assumed to be a robot
+                    //item.duration = google.maps.geometry.spherical.computeDistanceBetween(item.position, position) / item.speed;
+					item.duration = 1000; //duration;
+                    item.previous_position = item.position;
+                    item.setPosition(position);
+                });
+                map.addListener('click', function(e) {
+                    log("click");
+                    if (pointSelect == true){
+                        var lllat = e.latLng.lat();
+                        var lllng = e.latLng.lng();
+                        var myLatLng = {lat: lllat, lng: lllng};
+                        log(lllat + ", " + lllng);
+                        webView.recvFromJS(myLatLng);
+                        tempTask = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map, 
+                            title: 'Selected Avoid Location'
+                        });
+                        //tempTask.setMap(map);
+                    pointSelect = false;
+                    }
+                });
+
+                /*******************************************************************************
+                 *  Interfacing Listeners
+                 *  - These listen to user interface events 
+                 *******************************************************************************/
+                // if (DEBUG) {
+                    // map.addListener('click', function(e) {
+                    //     log(e.latLng);
+                    // });
+                // }
+
+                // /*******************************************************************************
+                //  * Logging to the screen
+                //  *******************************************************************************/
+                // if (DEBUG) {
+                //     var log_div = document.createElement('div');
+                //     log_div.id = 'log';
+                //     log_div.className = 'control';
+                //     document.body.appendChild(log_div);
+                //     $log = $('#log');
+                // }
+
+                //setTimeout(preloader, 500);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <!--script src="scenario_EAB5.js"></script-->
+    </body>
+</html>

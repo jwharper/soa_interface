@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Objects>
+	  <!-- GMapItem Objects -->
+		<!-- responderUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1000</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/respondertriagelevelunknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+		
+		
+		<!-- responderTL1 -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL1</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1001</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/respondertriagelevel1.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL2 -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL2</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1002</GroupingId>
+			<GroupingColor>#F5B800</GroupingColor>
+			<ImageFile>images/respondertriagelevel2.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+			</Object>
+
+		<!-- responderTL3 -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL3</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1003</GroupingId>
+			<GroupingColor>#339933</GroupingColor>
+			<ImageFile>images/respondertriagelevel3.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL4 -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL4</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1004</GroupingId>
+			<GroupingColor>#3D3D3D</GroupingColor>
+			<ImageFile>images/respondertriagelevel4.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL5 -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL5</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1005</GroupingId>
+			<GroupingColor>#FFFFFF</GroupingColor>
+			<ImageFile>images/respondertriagelevel5.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTLUNonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTLUNonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1006</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/respondertriagelevelunknownnonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTLUNonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTLUNonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1006</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/respondertriagelevelunknownnonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL1Nonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL1Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1007</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/respondertriagelevel1nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL2Nonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL2Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1008</GroupingId>
+			<GroupingColor>#F5B800</GroupingColor>
+			<ImageFile>images/respondertriagelevel2nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL3Nonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL3Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1009</GroupingId>
+			<GroupingColor>#339933</GroupingColor>
+			<ImageFile>images/respondertriagelevel3nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL4Nonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL4Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1010</GroupingId>
+			<GroupingColor>#3D3D3D</GroupingColor>
+			<ImageFile>images/respondertriagelevel4nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL5Nonamb -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL5Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1011</GroupingId>
+			<GroupingColor>#FFFFFF</GroupingColor>
+			<ImageFile>images/respondertriagelevel5nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTLUAmbUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTLUAmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1012</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/respondertriagelevelunknownunknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL1AmbUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL1AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1013</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/respondertriagelevel1unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL2AmbUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL2AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1014</GroupingId>
+			<GroupingColor>#F5B800</GroupingColor>
+			<ImageFile>images/respondertriagelevel2unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL3AmbUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL3AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1015</GroupingId>
+			<GroupingColor>#339933</GroupingColor>
+			<ImageFile>images/respondertriagelevel3unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL4AmbUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL4AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1016</GroupingId>
+			<GroupingColor>#3D3D3D</GroupingColor>
+			<ImageFile>images/respondertriagelevel4unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- responderTL5AmbUnknown -->
+		<Object type="HumanTypeResponder">
+			<SubType>responderTL5AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1017</GroupingId>
+			<GroupingColor>#FFFFFF</GroupingColor>
+			<ImageFile>images/respondertriagelevel5unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1100</GroupingId>
+			<GroupingColor>#0070E0</GroupingColor>
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+		
+		
+		<!-- victimTL1 -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL1</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1101</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/victimtriagelevel1.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL2 -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL2</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1102</GroupingId>
+			<GroupingColor>#F5B800</GroupingColor>
+			<ImageFile>images/victimtriagelevel2.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL3 -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL3</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1103</GroupingId>
+			<GroupingColor>#339933</GroupingColor>
+			<ImageFile>images/victimtriagelevel3.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL4 -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL4</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1104</GroupingId>
+			<GroupingColor>#3D3D3D</GroupingColor>
+			<ImageFile>images/victimtriagelevel4.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL5 -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL5</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1105</GroupingId>
+			<GroupingColor>#FFFFFF</GroupingColor>
+			<ImageFile>images/victimtriagelevel5.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTLUNonamb -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTLUNonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1106</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/victimtriagelevelunknownnonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL1Nonamb -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL1Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1107</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/victimtriagelevel1nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL2Nonamb -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL2Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1108</GroupingId>
+			<GroupingColor>#F5B800</GroupingColor>
+			<ImageFile>images/victimtriagelevel2nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL3Nonamb -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL3Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1109</GroupingId>
+			<GroupingColor>#339933</GroupingColor>
+			<ImageFile>images/victimtriagelevel3nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL4Nonamb -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL4Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1110</GroupingId>
+			<GroupingColor>#3D3D3D</GroupingColor>
+			<ImageFile>images/victimtriagelevel4nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL5Nonamb -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL5Nonamb</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1111</GroupingId>
+			<GroupingColor>#FFFFFF</GroupingColor>
+			<ImageFile>images/victimtriagelevel5nonambulatory.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTLUAmbUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTLUAmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1112</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/victimtriagelevelunknownunknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL1AmbUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL1AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1113</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/victimtriagelevel1unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL2AmbUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL2AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1114</GroupingId>
+			<GroupingColor>#F5B800</GroupingColor>
+			<ImageFile>images/victimtriagelevel2unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL3AmbUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL3AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1115</GroupingId>
+			<GroupingColor>#339933</GroupingColor>
+			<ImageFile>images/victimtriagelevel3unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL4AmbUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL4AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1116</GroupingId>
+			<GroupingColor>#3D3D3D</GroupingColor>
+			<ImageFile>images/victimtriagelevel4unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- victimTL5AmbUnknown -->
+		<Object type="HumanTypeVictim">
+			<SubType>victimTL5AmbUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1117</GroupingId>
+			<GroupingColor>#FFFFFF</GroupingColor>
+			<ImageFile>images/victimtriagelevel5unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- suspiciousPersonGroup -->
+		<Object type="HumanTypeSuspiciousPerson">
+			<SubType>suspiciousPersonGroup</SubType>
+			<Division>POLICE</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1200</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/suspiciousperson.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- HumanTypeVictimGroup -->
+		<Object type="HumanTypeVictimGroup">
+			<SubType>GroupingIdUnknown</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>1300</GroupingId>
+			<GroupingColor>#663300</GroupingColor>
+			<ImageFile>images/victimgroup.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- egress -->
+		<Object type="LocationTypePortal">
+			<SubType>egress</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>-1</GroupingId>
+			<GroupingColor>0</GroupingColor>
+			<ImageFile>images/egress.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- ingress-egress -->
+		<Object type="LocationTypePortal">
+			<SubType>ingress-egress</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>-1</GroupingId>
+			<GroupingColor>0</GroupingColor>
+			<ImageFile>images/ingress-egress.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- ingress -->
+		<Object type="LocationTypePortal">
+			<SubType>ingress</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>-1</GroupingId>
+			<GroupingColor>0</GroupingColor>
+			<ImageFile>images/ingress.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- nine11Call -->
+		<Object type="InformationItemType911Call">
+			<SubType>nine11Call</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>2000</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/a911call.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- eyeWitnessReport -->
+		<Object type="InformationItemTypeEyeWitnessReport">
+			<SubType>eyeWitnessReport</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>2001</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/eyewitnessreport.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- suspiciousObject -->
+		<Object type="PhysicalItemTypeSuspiciousItem">
+			<SubType>suspiciousObject</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>3000</GroupingId>
+			<GroupingColor>#000000</GroupingColor>
+			<ImageFile>images/suspiciousitem.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- bomb -->
+		<Object type="PhysicalItemTypeBomb">
+			<SubType>bomb</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>3001</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/bomb.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- gasHazardDivU -->
+		<Object type="HazardTypeGasHazard">
+			<SubType>gasHazardDivU</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClasification type="false"></RequiresClasification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>5000</GroupingId>
+			<GroupingColor>#A0A0A4</GroupingColor>
+			<ImageFile>images/gas-unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- gasHazardDivFlam -->
+		<Object type="HazardTypeGasHazard">
+			<SubType>gasHazardDivFlam</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClasification type="false"></RequiresClasification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>5001</GroupingId>
+			<GroupingColor>#FF0000</GroupingColor>
+			<ImageFile>images/gas-flammable.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- gasHazardDivTox -->
+		<Object type="HazardTypeGasHazard">
+			<SubType>gasHazardDivTox</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClasification type="false"></RequiresClasification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>5002</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/gas-toxic.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- gasHazardDivNonflamNontox -->
+		<Object type="HazardTypeGasHazard">
+			<SubType>gasHazardDivNonflamNontox</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClasification type="false"></RequiresClasification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>5003</GroupingId>
+			<GroupingColor>#00FF00</GroupingColor>
+			<ImageFile>images/gas-nonflammablenontoxic.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!-- gasHazardDivInvalid -->
+		<Object type="HazardTypeGasHazard">
+			<SubType>gasHazardDivInvalid</SubType>
+			<Division></Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClasification type="false"></RequiresClasification>
+			<LocationX type="NumericalFieldStatusValid"></LocationX>
+			<LocationY type="NumericalFieldStatusValid"></LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>5004</GroupingId>
+			<GroupingColor>#A0A0A4</GroupingColor>
+			<ImageFile>images/gas-unknown.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">0</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">0</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content></Content>
+			<Time type="NumericalFieldStatusValid"></Time>
+		</Object>
+
+		<!--  -->
+

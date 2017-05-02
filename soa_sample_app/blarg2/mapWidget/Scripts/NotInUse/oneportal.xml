@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Three 911 Calls -->
+<Configuration>
+	<Objects>
+		<!-- ingress-egress -->
+		<Object type="LocationTypePortal">
+			<SubType>ingress-egress</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>false</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid">36.165324</LocationX>
+			<LocationY type="NumericalFieldStatusValid">-86.779231</LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>-1</GroupingId>
+			<GroupingColor>0</GroupingColor>
+			<ImageFile>images/ingress-egress.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">36.165324</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">-86.779231</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content>Portal 1</Content>
+			<Title>Portal 1</Title>
+			<Details0>Details, line 1</Details0>
+			<Details1>Details, line 2</Details1>
+			<Details2>Details, line 3</Details2>
+			<Details3>Details, line 4</Details3>
+			<Time type="NumericalFieldStatusValid">10000</Time>
+		</Object>
+
+		<!-- ingress-egress 
+		<Object type="LocationTypePortal">
+			<SubType>ingress-egress</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>false</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid">36.165324</LocationX>
+			<LocationY type="NumericalFieldStatusValid">-86.779731</LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>-1</GroupingId>
+			<GroupingColor>0</GroupingColor>
+			<ImageFile>images/ingress-egress.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">36.165324</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">-86.779731</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content>Portal 2</Content>
+			<Title>Portal 2</Title>
+			<Details0>Details, line 1</Details0>
+			<Details1>Details, line 2</Details1>
+			<Details2>Details, line 3</Details2>
+			<Details3>Details, line 4</Details3>
+			<Time type="NumericalFieldStatusValid">10000</Time>
+		</Object>-->
+		
+		
+		
+		
+	</Objects>
+  
+  
+</Configuration>

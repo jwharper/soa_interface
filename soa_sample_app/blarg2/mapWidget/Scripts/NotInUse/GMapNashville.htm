@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+html {
+width: 100%;
+height: 100%;
+}
+ 
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+}
+ 
+#thisN {
+width: 100%;
+height: 5%;
+}
+ 
+#map_canvas {
+width: 100%;
+height: 95%;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GMapNashville</title>
+<style type="text/css">
+html{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:100%;
+}
+body{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+/*	start styles for the ContextMenu	*/
+.context_menu{
+	background-color:white;
+	border:1px solid gray;
+}
+.context_menu_item{
+	padding:3px 6px;
+}
+.context_menu_item:hover{
+	background-color:#CCCCCC;
+}
+.context_menu_separator{
+	background-color:gray;
+	height:1px;
+	margin:0;
+	padding:0;
+}
+/*	end styles for the ContextMenu	*/
+
+}
+</style>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdr20rkTmF-sEDB7GrijItfmpuO_ZeY_U&sensor=false&libraries=drawing"></script>
+<script type="text/javascript" src="ObjectMarkers.js"></script>
+<script type="text/javascript" src="ContextMenu.js"></script>
+<script type="text/javascript" src="ConvexHull.js"></script>
+<script type="text/javascript" src="Groups.js"></script>
+<script type="text/javascript" src="Initialize.js"></script>
+<script type="text/javascript" src="MarkerHandler.js"></script>
+<script type="text/javascript" src="Preloader.js"></script>
+<script type="text/javascript" src="TaskMaker.js"></script>
+</head>
+<body id="bdy" onload="preinitialize()">
+  <div id="thisN">
+    <p id="preloader">Preloading images...</p>
+  </div>
+<div id="map_canvas"></div>
+<script type="text/javascript">
+
+    //For tasks created using the map
+    var taskId = 1;
+
+    //the map
+    var map;
+    //the minimum zoom level that the program will allow
+    var minZoom = 18;
+
+
+    var markerArray = new Array();
+    var groupArray = new Array();
+    var images = new Array();
+    var myTaskArray = new Array();
+    var EMSTaskArray = new Array();
+    var HAZMATTaskArray = new Array();
+    var POLICETaskArray = new Array();
+    var taskManifest;
+    var taskType;
+    var taskId = 1;
+    var EMSTaskId = 101;
+    var HAZMATTaskId = 201;
+    var POLICETaskId = 301;
+    var myDiv = "EMS";
+	var tempTask;
+    //CenterLATitude, CenterLoNGitude, BorderLATitude1, etc.
+    var clat  =  36.164549;
+    var clng  = -86.783468;
+    var blat1 =  0.001117;
+    var blng1 =  0.002167;
+    var blat2 = -0.001117;
+    var blng2 = -0.002167;
+    var mask1 = -0.001117;
+    var mask2 =  0.001117;
+    var mask3 = -0.002167;
+    var mask4 =  0.002167;
+
+	function drawTask(pType, pDiv) {
+	
+		drawingManager.setOptions({
+			polygonOptions: {
+				fillColor: '#ffffff',
+				fillOpacity: 0.75,
+				strokeColor: '#ffffff',
+				strokeOpacity: 1.0,
+				strokeWeight: 5,
+				clickable: true,
+				zIndex: 1,
+				editable: true
+			},
+			polylineOptions: {
+				strokeColor: '#ffffff',
+				strokeOpacity: 1,
+				strokeWeight: 10,
+				clickable: true,
+				zIndex: 1,
+				editable: true
+			}
+		});
+		switch (pType) {
+			case 'Bomb Surveillance':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+				break;
+			case 'Decontaminate Self':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+				break;
+			case 'Gather Imagery':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Gather Samples':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Go To X':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+				break;
+			case 'Guide Victims':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Hazard Sampling':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Improve ommunication':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Search Area':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Surveillance':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Victim Search':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+			case 'Victim Assessment':
+				drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+				break;
+		}
+	};
+
+
+
+	var task = function (pGon, pType, pId, pDiv) {
+        this.pGon = pGon;
+        this.taskId = pId;
+        this.taskType = pType;
+        this.division = pDiv || "EMS";
+    };
+
+    function setTaskManifest(tMan) {
+        //log("Got tMan");
+        taskManifest = tMan;
+        taskManifest.msgFromJS("TaskManifest has been set in Javascript");
+    };
+
+    function log(msg) {
+        console.log(msg);
+    };
+
+    function addPolygon(e, drawingManager) {
+        var tId = taskId;
+        taskId++;
+        var tType = taskType;
+        var temp = new task(e, tType, tId, myDiv);
+        var paths = e.getPaths();
+        var pLength = paths.getLength();
+        var ltlng = new Array();
+        for (var i = 0; i < pLength; i++) {
+            var p = paths.getAt(i);
+            for (var j = 0; j < p.length; j++) {
+                ltlng.push(p.getAt(j).lat());
+                ltlng.push(p.getAt(j).lng());
+            }
+        }
+        myTaskArray[tId] = temp;
+        taskManifest.taskFromJS(ltlng, tId, tType);
+    };
+
+    function addPolyline(e, drawingManager) {
+        var tId = taskId;
+        taskId++;
+        var tType = taskType;
+        var temp = new task(e, tType, tId, myDiv);
+        var paths = e.getPath();
+        var pLength = paths.getLength();
+        var ltlng = new Array();
+        for (var i = 0; i < pLength; i++) {
+            ltlng.push(paths.getAt(i).lat());
+            ltlng.push(paths.getAt(i).lng());
+        }
+        myTaskArray[tId] = temp;
+        taskManifest.taskFromJS(ltlng, tId, tType);
+    };
+
+    function preinitialize() {
+        preloader();
+        // creating a map
+        map = new google.maps.Map(document.getElementById("map_canvas"), {
+            zoom: 20,
+		    center: new google.maps.LatLng(clat, clng), 
+		    mapTypeId: google.maps.MapTypeId.SATELLITE
+	    });
+		map.setTilt(0);
+		// var el = document.getElementById('thisN');
+		// el.style.display = 'none';
+		log("about to initialize");
+		Dinitialize();
+		log("initialized");
+    };
+      
+</script>
+</body>
+</html>

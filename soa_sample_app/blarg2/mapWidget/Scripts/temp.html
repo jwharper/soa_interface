@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+html {
+width: 100%;
+height: 100%;
+}
+ 
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+}
+ 
+#map_canvas {
+width: 100%;
+height: 100%;
+}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ContextMenu 1.0 Basic Example</title>
+<style type="text/css">
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    height:100%;
+}
+body{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+/*  start styles for the ContextMenu    */
+.context_menu{
+    background-color:white;
+    border:1px solid gray;
+}
+.context_menu_item{
+    padding:3px 6px;
+}
+.context_menu_item:hover{
+    background-color:#CCCCCC;
+}
+.context_menu_separator{
+    background-color:gray;
+    height:1px;
+    margin:0;
+    padding:0;
+}
+/*  end styles for the ContextMenu  */
+
+#map_container{
+    height:100%;
+}
+</style>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdr20rkTmF-sEDB7GrijItfmpuO_ZeY_U&sensor=false&libraries=drawing"></script>
+<script type="text/javascript" src="ObjectMarkers.js"></script>
+<script type="text/javascript" src="ContextMenu.js"></script>
+<script type="text/javascript" src="ConvexHull.js"></script>
+<script type="text/javascript" src="Groups.js"></script>
+<script type="text/javascript" src="MarkerHandler.js"></script>
+<script type="text/javascript" src="Preloader.js"></script>
+<script type="text/javascript" src="TaskMaker.js"></script>
+</head>
+<body id="bdy" onload="initialize()">
+  <div id="thisN">
+    <p id="preloader">Preloading images...</p>
+  </div>
+<div id="map_canvas"></div>
+<script type="text/javascript">
+
+    //For tasks created using the map
+    var taskId = 1;
+
+    //the map
+    var map;
+    //the minimum zoom level that the program will allow
+    var minZoom = 18;
+
+    var markerArray = new Array();
+    var groupArray = new Array();
+    var images = new Array();
+    var myTaskArray = new Array();
+    var EMSTaskArray = new Array();
+    var HAZMATTaskArray = new Array();
+    var POLICETaskArray = new Array();
+    var taskManifest;
+    var taskType;
+    var taskId = 1;
+    var EMSTaskId = 101;
+    var HAZMATTaskId = 201;
+    var POLICETaskId = 301;
+    var myDiv = "EMS";
+    var mask;
+
+
+    var task = function (pGon, pType, pId, pDiv) {
+        this.pGon = pGon;
+        this.taskId = pId;
+        this.taskType = pType;
+        this.division = pDiv || "EMS";
+    }
+
+    function setTaskManifest(tMan) {
+        //log("Got tMan");
+        taskManifest = tMan;
+        taskManifest.msgFromJS("TaskManifest has been set in Javascript");
+    }
+
+    function log(msg) {
+        console.log(msg);
+    };
+
+    function addPolygon(e, drawingManager) {
+        var tId = taskId;
+        taskId++;
+        var tType = taskType;
+        var temp = new task(e, tType, tId, myDiv);
+        var paths = e.getPaths();
+        var pLength = paths.getLength();
+        var ltlng = new Array();
+        for (var i = 0; i < pLength; i++) {
+            var p = paths.getAt(i);
+            for (var j = 0; j < p.length; j++) {
+                ltlng.push(p.getAt(j).lat());
+                ltlng.push(p.getAt(j).lng());
+            }
+        }
+        myTaskArray[tId] = temp;
+        taskManifest.taskFromJS(ltlng, tId, tType);
+    }
+
+    function addPolyline(e, drawingManager) {
+        var tId = taskId;
+        taskId++;
+        var tType = taskType;
+        var temp = new task(e, tType, tId, myDiv);
+        var paths = e.getPath();
+        var pLength = paths.getLength();
+        var ltlng = new Array();
+        for (var i = 0; i < pLength; i++) {
+            ltlng.push(paths.getAt(i).lat());
+            ltlng.push(paths.getAt(i).lng());
+        }
+        myTaskArray[tId] = temp;
+        taskManifest.taskFromJS(ltlng, tId, tType);
+    }
+
+    function initialize() {
+
+        //log("initialize");
+        //preloader();
+        //document.getElementById("thisN").removeChild(document.getElementById("imageObj"));
+
+        // creating a map
+        map = new google.maps.Map(document.getElementById("map_canvas"), {
+            zoom: 19,
+            center: new google.maps.LatLng(36.1642065, -86.783469),
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        });
+        map.setTilt(0);
+
+        //http://stackoverflow.com/questions/12840021/google-maps-strict-bounds-for-panning
+        //to limit the map to downtown nashville {(36.192841,-86.829093),(36.145690, -86.735001)}OLD
+        //to limit the map to downtown nashville {(36.165324,-86.785636),(36.163089,-86.781302)}NEW
+        var strictBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(36.163089, -86.785636),
+        new google.maps.LatLng(36.165324, -86.781302)
+        );
+
+
+
+
+        //***************************************************************************************
+        //http://code.martinpearman.co.uk/googlemapsapi/contextmenu/1.0/
+        // create the ContextMenuOptions object var 
+        contextMenuOptions = {};
+        contextMenuOptions.classNames = { menu: 'context_menu', menuSeparator: 'context_menu_separator' };
+        // create an array of ContextMenuItem objects 
+        var menuItems = [];
+        menuItems.push({ className: 'context_menu_item', eventName: 'bombSurveillance', label: 'Bomb Surveillance' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'decontaminateSelf', label: 'Decontaminate Self' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'gatherImagery', label: 'Gather Imagery' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'gatherSamples', label: 'Gather Samples' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'gotox', label: 'Go To X' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'guideVictims', label: 'Guide Victims' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'hazardSampling', label: 'Hazard Sampling' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'improveCommunication', label: 'Improve Communication' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'searchArea', label: 'Search Area' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'surveillance', label: 'Surveillance' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'victimSearch', label: 'Victim Search' });
+        menuItems.push({ className: 'context_menu_item', eventName: 'victimAssessment', label: 'Victim Assessment' });
+        // a menuItem with no properties will be rendered as a separator
+        menuItems.push({});
+        menuItems.push({ className: 'context_menu_item', eventName: 'center_map_click', label: 'Center map here' });
+        contextMenuOptions.menuItems = menuItems;
+
+        // create the ContextMenu object 
+        var contextMenu = new ContextMenu(map, contextMenuOptions);
+
+        // display the ContextMenu on a Map right click 
+        google.maps.event.addListener(map, 'rightclick', function (mouseEvent) {
+            //if (drawingManager.getDrawingMode() != "NULL")
+            //window.event('keypress', 27);
+            //  drawingManager.setDrawingMode("NULL");
+            //else
+            contextMenu.show(mouseEvent.latLng);
+        });
+        // listen for the ContextMenu 'menu_item_selected' event 
+        google.maps.event.addListener(contextMenu, 'menu_item_selected', function (latLng, eventName) {
+            taskType = eventName;
+            // latLng is the position of the ContextMenu 
+            // eventName is the eventName defined for the clicked ContextMenuItem in the ContextMenuOptions 
+            drawingManager.setOptions({
+                polygonOptions: {
+                    fillColor: '#ffffff',
+                    fillOpacity: 0.75,
+                    strokeColor: '#ffffff',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 5,
+                    clickable: true,
+                    zIndex: 1,
+                    editable: true
+                },
+                polylineOptions: {
+                    strokeColor: '#ffffff',
+                    strokeOpacity: 1,
+                    strokeWeight: 10,
+                    clickable: true,
+                    zIndex: 1,
+                    editable: true
+                }
+            });
+            switch (eventName) {
+                case 'bombSurveillance':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+                    break;
+                case 'decontaminateSelf':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+                    break;
+                case 'gatherImagery':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'gatherSamples':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'goToX':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
+                    break;
+                case 'guideVictims':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'hazardSampling':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'improveCommunication':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'searchArea':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'surveillance':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'victimSearch':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+                    break;
+                case 'victimAssessment':
+                    drawingManager.setDrawingMode(google.maps.drawing.OverlayType.BUMMER);
+                    break;
+                case 'center_map_click':
+                    map.panTo(latLng);
+                    break;
+            }
+
+        });
+        //********************************************************************************************
+
+        // Listen for the dragend event
+        google.maps.event.addListener(map, 'dragend', function () {
+            if (strictBounds.contains(map.getCenter())) return;
+            // We're out of bounds - Move the map back within the bounds
+            var c = map.getCenter(),
+                    x = c.lng(),
+                    y = c.lat(),
+                    maxX = strictBounds.getNorthEast().lng(),
+                    maxY = strictBounds.getNorthEast().lat(),
+                    minX = strictBounds.getSouthWest().lng(),
+                    minY = strictBounds.getSouthWest().lat();
+
+            if (x < minX) x = minX;
+            if (x > maxX) x = maxX;
+            if (y < minY) y = minY;
+            if (y > maxY) y = maxY;
+
+            map.setCenter(new google.maps.LatLng(36.1642065, -86.783469));
+        });
+
+        // Limit the zoom level
+        google.maps.event.addListener(map, 'zoom_changed', function () {
+            if (map.getZoom() < minZoom) map.setZoom(minZoom);
+        });
+
+
+        var drawingManager = new google.maps.drawing.DrawingManager({
+            drawingMode: google.maps.drawing.OverlayType.NULL,
+            drawingControl: false,
+            polygonOptions: {
+                fillColor: '#ffffff',
+                fillOpacity: 0.75,
+                strokeColor: '#ffffff',
+                strokeOpacity: 1.0,
+                strokeWeight: 5,
+                clickable: true,
+                zIndex: 1,
+                editable: true
+            },
+            polylineOptions: {
+                strokeColor: '#ffffff',
+                strokeOpacity: 1,
+                strokeWeight: 10,
+                clickable: true,
+                zIndex: 1,
+                editable: true
+            }
+        });
+        drawingManager.setMap(map);
+
+        window.addEventListener('keypress', function (e) {
+            if (e.keyCode == 116) {
+                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
+            }
+        });
+
+        window.addEventListener('keypress', function (e) {
+            if (e.keyCode !== 116) {
+                drawingManager.setDrawingMode(null);
+            }
+        });
+
+        google.maps.event.addListener(drawingManager, 'polygoncomplete', function (e) {
+            addPolygon(e, drawingManager);
+            drawingManager.setDrawingMode(null);
+        });
+
+        google.maps.event.addListener(drawingManager, 'polylinecomplete', function (e) {
+            addPolyline(e, drawingManager);
+            drawingManager.setDrawingMode(null);
+        });
+
+
+
+//Will this mask the rest of the map?
+    var neastU = new google.maps.LatLng(84.574702, 177.539063);
+    var swestU = new google.maps.LatLng(36.165324,-178.59375);
+    var upperB = new google.maps.LatLngBounds(swestU, neastU);
+    var upperR = new google.maps.Rectangle({
+        bounds: upperB,
+        fillColor: '#aaaaaa',
+        fillOpacity: 0.75,
+        map: map,
+        strokeWeight: 0.01,
+        zIndex: 1
+    });
+
+    var neastL = new google.maps.LatLng(36.163089, 178.59375);
+    var swestL = new google.maps.LatLng(-84.990100, -179.296875);
+    var lowerB = new google.maps.LatLngBounds(swestL, neastL);
+    var lowerR = new google.maps.Rectangle({
+        bounds: lowerB,
+        fillColor: '#aaaaaa',
+        fillOpacity: 0.75,
+        map: map,
+        strokeWeight: 0.01,
+        zIndex: 1
+    });
+
+    var neastE = new google.maps.LatLng(36.165324, 178.59375);
+    var swestE = new google.maps.LatLng(36.163089, -86.781302);
+    var eastB = new google.maps.LatLngBounds(swestE, neastE);
+    var eastR = new google.maps.Rectangle({
+        bounds: eastB,
+        fillColor: '#aaaaaa',
+        fillOpacity: 0.75,
+        map: map,
+        strokeWeight: 0.01,
+        zIndex: 1
+    });
+
+    var neastW = new google.maps.LatLng(36.165324, -86.785636);
+    var swestW = new google.maps.LatLng(36.163089, -178.59375);
+    var westB = new google.maps.LatLngBounds(swestW, neastW);
+    var westR = new google.maps.Rectangle({
+        bounds: westB,
+        fillColor: '#aaaaaa',
+        fillOpacity: 0.75,
+        map: map,
+        strokeWeight: 0.01,
+        zIndex: 1
+    });
+
+}
+
+
+ 
+</script>
+</body>
+</html>

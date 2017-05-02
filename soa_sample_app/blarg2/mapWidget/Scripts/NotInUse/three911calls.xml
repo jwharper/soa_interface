@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Three 911 Calls -->
+<Configuration>
+	<Objects>
+		<!-- nine11Call -->
+		<Object type="InformationItemType911Call">
+			<SubType>nine11Call</SubType>
+			<Division>EMS</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid">36.165293</LocationX>
+			<LocationY type="NumericalFieldStatusValid">-86.781522</LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>2000</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/a911call.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">36.165293</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">-86.781522</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content>911 Call 1</Content>
+			<Title>911 Call 1</Title>
+			<Details0>Details, line 1</Details0>
+			<Details1>Details, line 2</Details1>
+			<Details2>Details, line 3</Details2>
+			<Details3>Details, line 4</Details3>
+			<Time type="NumericalFieldStatusValid">10000</Time>
+		</Object>  
+		
+		<!-- nine11Call -->
+		<Object type="InformationItemType911Call">
+			<SubType>nine11Call</SubType>
+			<Division>HAZMAT</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid">36.165293</LocationX>
+			<LocationY type="NumericalFieldStatusValid">-86.782022</LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>2000</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/a911call.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">36.165293</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">-86.782022</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content>911 Call 2</Content>
+			<Title>911 Call 2</Title>
+			<Details0>Details, line 1</Details0>
+			<Details1>Details, line 2</Details1>
+			<Details2>Details, line 3</Details2>
+			<Details3>Details, line 4</Details3>
+			<Time type="NumericalFieldStatusValid">11000</Time>
+		</Object>  
+		
+		<!-- nine11Call -->
+		<Object type="InformationItemType911Call">
+			<SubType>nine11Call</SubType>
+			<Division>POLICE</Division>
+			<Announcement type="true">0</Announcement>
+			<Detectable>true</Detectable>
+			<UsesGVA>true</UsesGVA>
+			<PredeterminedImportance type="NumericalFieldStatusValid">0.0</PredeterminedImportance>
+			<RequiresClassification type="false"></RequiresClassification>
+			<LocationX type="NumericalFieldStatusValid">36.165293</LocationX>
+			<LocationY type="NumericalFieldStatusValid">-86.782522</LocationY>
+			<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+			<Heading>HeadingUnknown</Heading>
+			<Velocity type="NumericalFieldStatusValid">0</Velocity>
+			<GroupingId>2000</GroupingId>
+			<GroupingColor>#FFFF00</GroupingColor>
+			<ImageFile>images/a911call.png</ImageFile>
+			<TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+			<ReportedLocationX type="NumericalFieldStatusValid">36.165293</ReportedLocationX>
+			<ReportedLocationY type="NumericalFieldStatusValid">-86.782522</ReportedLocationY>
+			<ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+			<Content>911 Call 3</Content>
+			<Title>911 Call 3</Title>
+			<Details0>Details, line 1</Details0>
+			<Details1>Details, line 2</Details1>
+			<Details2>Details, line 3</Details2>
+			<Details3>Details, line 4</Details3>
+			<Time type="NumericalFieldStatusValid">12000</Time>
+		</Object>    
+	</Objects>
+  
+  
+</Configuration>

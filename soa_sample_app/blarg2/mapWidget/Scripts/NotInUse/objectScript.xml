@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 911Calls, Victims, Gas, SuspiciousObjects, and Portals -->
+<Configuration>
+	<Objects>
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16505305829129</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78404748439789</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports a strange smell</Details> 
+			<Details></Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >5000</Time> 
+		</Object> 
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165042231280346</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78369611501694</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports a strange smell and</Details> 
+			<Details>a burning sensation when breathing.</Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >6000</Time> 
+		</Object> 
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.1653042445258</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78363174200058</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports a disturbance on the</Details> 
+			<Details>north side of Legislative Plaza.</Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >7000</Time> 
+		</Object> 
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16532589847385</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78331792354584</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports a strange smell.</Details> 
+			<Details></Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >10000</Time> 
+		</Object> 
+		<Object type="PhysicalItemTypeBomb"> 
+			<SubType>bomb</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16487549512268</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78277343511581</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>3001</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/bomb.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Bomb</Content> 
+			<Title>Bomb</Title> 
+			<Details>Caller reports a distubance in</Details> 
+			<Details>Legislative Plaza.</Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >14000</Time> 
+		</Object> 
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16467411201781</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78268492221832</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:15:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports people running out</Details> 
+			<Details>of Legislative Plaza and a strange</Details> 
+			<Details>smell.</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16452469841214</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78303092718124</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports a strange smell.</Details> 
+			<Details></Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="InformationItemType911Call"> 
+			<SubType>nine11Call</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16371699384456</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78291827440262</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>2000</GroupingId> 
+			<GroupingColor>#FFFF00</GroupingColor> 
+			<ImageFile>images/a911call.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:11:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>911 Call</Content> 
+			<Title>911 Call</Title> 
+			<Details>Caller reports a disturbance.</Details> 
+			<Details></Details> 
+			<Details></Details> 
+			<Time type="NumericalFieldStatusValid" >20000</Time> 
+		</Object> 
+
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16507471230873</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78366661071777</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >13000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165131012726086</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78369075059891</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >14000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16512235112605</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78351640701294</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >14000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16518081690772</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78355932235718</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >14000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16518081690772</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.7834010720253</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >14000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16523711724884</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78345203399658</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >14000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16523711724884</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78326427936554</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165293417549556</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78330451250076</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165293417549556</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.7831140756607</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16535188320363</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78315162658691</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165172155313186</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78311139345169</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16521979407126</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78304702043533</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >15000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16526093661178</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78318113088608</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165152666722</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78300142288208</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16507471230873</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.7830416560173</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16506821610414</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78294241428375</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.165003254028484</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78299069404602</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16495128432922</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78291022777557</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16500541943189</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78380608558655</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16507254690726</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78380876779556</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16502490805969</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78390800952911</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164944788114376</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78392946720123</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16498593079923</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78400993347168</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >150000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164884156749984</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78409039974212</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164940457304205</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78414672613144</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164834352379856</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78418159484863</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="ReadingTypeHazmat"> 
+			<SubType>readingHazmat</SubType> 
+			<Division>ALL</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16490148000173</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78424596786499</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>4000</GroupingId> 
+			<GroupingColor>#FF3366</GroupingColor> 
+			<ImageFile>images/hazmatChlorine.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Hazardous Gas Reading</Content> 
+			<Title>Hazardous Gas Reading</Title> 
+			<Details>Hazardous gas detection </Details> 
+			<Details>Chlorine gas detected</Details> 
+			<Details>XXX ppm</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.1648754951227</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78355664014816</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.1644640667228</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78324550390243</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16464596165013</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78321063518524</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16462647292811</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78330719470978</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16476289388051</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78346008062362</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16474557059812</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78356200456619</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >19000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16438611162475</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78330987691879</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >22000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164871164308664</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78363710641861</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >22000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16445323963048</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.7835083603859</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >22000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.1644575704676</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78339302539825</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >22000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164674112017835</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78346276283264</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >10000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164604818786834</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78337961435318</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16436662283812</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.7832562327385</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16429083306628</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78318113088608</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164539856327146</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.783167719841</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16421287779595</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78319722414017</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16435796115361</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78290218114853</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164267013408576</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78286999464035</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164940457304226</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78347617387771</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >12000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16499242701067</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78335279226303</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >13000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.16404180901432</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78310066461563</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >13000</Time> 
+		</Object> 
+		<Object type="HumanTypeVictim"> 
+			<SubType>victimUnknown</SubType> 
+			<Division>EMS</Division> 
+			<Announcement type="true" >0</Announcement> 
+			<Detectable>true</Detectable> 
+			<UsesGVA>true</UsesGVA> 
+			<PredeterminedImportance type="NumericalFieldStatusValid" >0.0</PredeterminedImportance> 
+			<RequiresClassification type="false" ></RequiresClassification> 
+			<LocationX type="NumericalFieldStatusValid" >36.164195554392016</LocationX> 
+			<LocationY type="NumericalFieldStatusValid" >-86.78305774927139</LocationY> 
+			<LocationZ type="NumericalFieldStatusValid" >0</LocationZ> 
+			<Heading>HeadingUnknown</Heading> 
+			<Velocity type="NumericalFieldStatusValid" >0</Velocity> 
+			<GroupingId>1100</GroupingId> 
+			<GroupingColor>#0070E0</GroupingColor> 
+			<ImageFile>images/victimtriagelevelunknown.png</ImageFile> 
+			<TimeReported type="NumericalFieldStatusValid" >13:10:00</TimeReported> 
+			<ReportedLocationX type="NumericalFieldStatusValid" >0</ReportedLocationX> 
+			<ReportedLocationY type="NumericalFieldStatusValid" >0</ReportedLocationY> 
+			<ReportedLocationZ type="NumericalFieldStatusValid" >0</ReportedLocationZ> 
+			<Content>Human Victim Triage Level Unknown</Content> 
+			<Title>Human Victim Triage Level Unknown</Title> 
+			<Details>Human victim</Details> 
+			<Details>Triage level unknown</Details> 
+			<Details>Ambulatory status unknown</Details> 
+			<Time type="NumericalFieldStatusValid" >13000</Time> 
+		</Object> 
+
+		
+		
+	</Objects>
+  
+  
+</Configuration>

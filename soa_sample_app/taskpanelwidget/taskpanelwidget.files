@@ -1,0 +1,7 @@
+main.cpp
+taskpanelwidget.cpp
+taskpanelwidget.h
+../blarg2/mapWidget/mapwidget.cpp
+../blarg2/mapWidget/mapwidget.h
+../blarg2/mapWidget/webview.cpp
+../blarg2/mapWidget/webview.h

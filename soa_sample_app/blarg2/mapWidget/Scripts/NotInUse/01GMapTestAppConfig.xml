@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Calls the correct URL, will (someday) set the other user task events -->
+<Configuration>
+	<UrlName>C:\\Source\\hmt-branch\\widgets\\gmapwidget\\GMapTestApp\\GMapNashville.htm</UrlName> 
+  <!--<UrlName>C:\\Source\\hmt-branch\\EABJavaScript//AN2.html</UrlName>-->
+	<ObjectFileName>callsVictimsGasSuspObjPortalNewLoc.xml</ObjectFileName>
+	<TaskFileName>tasks2.xml</TaskFileName>
+	<AgentFileName>agents1.xml</AgentFileName>
+	<DivisionName>EMS</DivisionName>
+	<!-- Values used to toggle/weight factors of the Visual Score Equation -->
+	<K1>1</K1>
+	<K2>1</K2>
+	<K3>1</K3>
+	<K4>1</K4>
+	<K5>1</K5>
+	<K6>1</K6>
+	<K7>1</K7>
+</Configuration>

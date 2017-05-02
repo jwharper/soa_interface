@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<Tasks>
+		<!-- POLICE Tasks -->
+	
+		<!-- top left -->	
+		<Task>
+			<Type>Search Area</Type>
+			<Division>POLICE</Division>
+			<Owner>Kate Whitney</Owner>
+			<TaskPoints>
+				<!-- Repeat as many point tags as necessary -->
+				<Point>
+					<PointX>36.16457640853847</PointX>
+					<PointY>-86.78324818611145</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16407619603713</PointX>
+					<PointY>-86.78464829921722</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16503330982449</PointX>
+					<PointY>-86.78550124168396</PointY>
+				</Point>
+				<Point>
+					<PointX>36.165522689281815</PointX>
+					<PointY>-86.78413063287735</PointY>
+				</Point>
+			</TaskPoints>
+			<!-- Repeat as many details tags as necessary -->
+			<Details>1 This is a search area task.</Details>
+			<Details>2 This is a search area task.</Details>
+			<Details>3 This is a search area task.</Details>
+			<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+			<TaskShape>Polygon</TaskShape>
+			<!-- Milliseconds for timer to create this task -->
+			<Time>14000</Time>
+		</Task>
+
+        <!--top right-->
+        <Task>
+			<Type>Search Area</Type>
+			<Division>POLICE</Division>
+			<Owner>Kate Whitney</Owner>
+			<TaskPoints>
+				<!-- Repeat as many point tags as necessary -->
+				<Point>
+					<PointX>36.16461971683485</PointX>
+					<PointY> -86.7832025885582</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16532130783554</PointX>
+					<PointY>-86.78155303001404</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16612466513974</PointX>
+					<PointY>-86.7821940779686</PointY>
+				</Point>
+				<Point>
+					<PointX>36.165628793270265</PointX>
+					<PointY>-86.78394019603729</PointY>
+				</Point>
+			</TaskPoints>
+			<!-- Repeat as many details tags as necessary -->
+			<Details>1 This is a search area task.</Details>
+			<Details>2 This is a search area task.</Details>
+			<Details>3 This is a search area task.</Details>
+			<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+			<TaskShape>Polygon</TaskShape>
+			<!-- Milliseconds for timer to create this task -->
+			<Time>15500</Time>
+		</Task>
+
+        <!--bottom right-->
+       <Task>
+			<Type>Search Area</Type>
+			<Division>POLICE</Division>
+			<Owner>Kate Whitney</Owner>
+			<TaskPoints>
+				<!-- Repeat as many point tags as necessary -->
+				<Point>
+					<PointX>36.16520437644026</PointX>
+					<PointY>-86.78155303001404</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16461105519069</PointX>
+					<PointY>-86.78317844867706</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16353483691889</PointX>
+					<PointY>-86.78231745958328</PointY>
+				</Point>
+				<Point>
+					<PointX>36.164039383743265</PointX>
+					<PointY>-86.78077518939972</PointY>
+				</Point>
+			</TaskPoints>
+			<!-- Repeat as many details tags as necessary -->
+			<Details>1 This is a search area task.</Details>
+			<Details>2 This is a search area task.</Details>
+			<Details>3 This is a search area task.</Details>
+			<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+			<TaskShape>Polygon</TaskShape>
+			<!-- Milliseconds for timer to create this task -->
+			<Time>13000</Time>
+		</Task>
+
+        <!--bottom left-->
+        <Task>
+			<Type>Search Area</Type>
+			<Division>POLICE</Division>
+			<Owner>Kate Whitney</Owner>
+			<TaskPoints>
+				<!-- Repeat as many point tags as necessary -->
+				<Point>
+					<PointX>36.16459589728945</PointX>
+					<PointY>-86.78322404623031</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16395709735834</PointX>
+					<PointY> -86.78464025259018</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16282673353819</PointX>
+					<PointY>-86.78402870893478</PointY>
+				</Point>
+				<Point>
+					<PointX>36.16330096861985</PointX>
+					<PointY>-86.78251057863235</PointY>
+				</Point>
+			</TaskPoints>
+			<!-- Repeat as many details tags as necessary -->
+			<Details>1 This is a search area task.</Details>
+			<Details>2 This is a search area task.</Details>
+			<Details>3 This is a search area task.</Details>
+			<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+			<TaskShape>Polygon</TaskShape>
+			<!-- Milliseconds for timer to create this task -->
+			<Time>18500</Time>
+		</Task>
+
+
+    <!--Charlotte Avenue-->
+    <Task>	
+    	<Type>Gather Samples</Type>
+		<Division>HAZMAT</Division>
+		<Owner>Alice Turner</Owner>
+		<TaskPoints>
+			<!-- Repeat as many point tags as necessary -->
+			<Point>
+				<PointX>36.16494885907391</PointX>
+				<PointY>-86.78434520959854</PointY>
+			</Point>
+			<Point>
+				<PointX>36.16478645353657</PointX>
+				<PointY>-86.78422719240188</PointY>
+			</Point>
+			<Point>
+				<PointX>36.16521736882428</PointX>
+				<PointY>-86.78320527076721</PointY>
+			</Point>
+			<Point>
+				<PointX>36.16536678110966</PointX>
+				<PointY>-86.78335815668106</PointY>
+			</Point>
+		</TaskPoints>
+		<!-- Repeat as many details tags as necessary -->
+		<Details>This is a gather samples task.</Details>
+		<Details>This is a gather samples task.</Details>
+		<Details>This is a gather samples task.</Details>
+		<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+		<TaskShape>Polygon</TaskShape>
+		<!-- Milliseconds for timer to create this task -->
+		<Time>15595</Time>
+	</Task>
+
+
+    <!--6th Avenue North-->
+    <Task>	
+    	<Type>Gather Samples</Type>
+		<Division>HAZMAT</Division>
+		<Owner>Alice Turner</Owner>
+		<TaskPoints>
+			<!-- Repeat as many point tags as necessary -->
+			<Point>
+				<PointX>36.16536894649887</PointX>
+				<PointY>-86.78328305482864</PointY>
+			</Point>
+			<Point>
+				<PointX>36.16544040444572</PointX>
+				<PointY>-86.78310871124267</PointY>
+			</Point>
+			<Point>
+				<PointX>36.164379355506654</PointX>
+				<PointY>-86.78248107433319</PointY>
+			</Point>
+			<Point>
+				<PointX>36.16432955081577</PointX>
+				<PointY>-86.7826098203659</PointY>
+			</Point>
+		</TaskPoints>
+		<!-- Repeat as many details tags as necessary -->
+		<Details>This is a gather samples task.</Details>
+		<Details>This is a gather samples task.</Details>
+		<Details>This is a gather samples task.</Details>
+		<!-- Anything other than "Polygon" will result in the isClosed value of the task to be false -->
+		<TaskShape>Polygon</TaskShape>
+		<!-- Milliseconds for timer to create this task -->
+		<Time>77580</Time>
+	</Task>
+
+
+
+    <!--//******** Replace time value
+    time = 137000;
+    timed_event(time, function() { trigger(map, 'delete_item', hazmatTask2); });
+
+
+    //******** Replace time value
+    time = 429810;
+
+    timed_event(time, function() { trigger(map, 'delete_item', hazmatTask1); });-->
+
+
+	</Tasks>
+</Configuration>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabPanelWidget</class>
+ <widget class="QWidget" name="TabPanelWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>320</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>1000</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>TabPanelWidget</string>
+  </property>
+  <widget class="QTabWidget" name="m_pTabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>300</width>
+     <height>980</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="m_pTasksTab">
+    <attribute name="title">
+     <string>Tasks</string>
+    </attribute>
+    <widget class="QLabel" name="m_pLabelTask">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_pLabelPriority">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="m_pAvailableAgentsTab">
+    <attribute name="title">
+     <string>Available Vehicles</string>
+    </attribute>
+    <widget class="QSlider" name="m_pSliderSUAV">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>221</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="invertedAppearance">
+      <bool>false</bool>
+     </property>
+     <property name="invertedControls">
+      <bool>false</bool>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::NoTicks</enum>
+     </property>
+     <property name="tickInterval">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSUAV">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;SUAV:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAvailable">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Available</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelFOB">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>40</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>FOB</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelField">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>80</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Field</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pAvailFOBSUAV">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>40</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pAvailFieldSUAV">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>80</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pSliderSelectedSUAV">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>160</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSelected">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>160</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>selected</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="m_pSliderHUAV">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>221</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelFOB_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>240</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>FOB</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelField_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>280</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Field</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelHUAV">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>240</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;HUAV:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pAvailFOBHUAV">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>240</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pSliderSelectedHUAV">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>360</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAvailable_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>240</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Available</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pAvailFieldHUAV">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>280</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSelected_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>360</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>selected</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="m_pSliderBUAV">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>540</y>
+       <width>221</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>2</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelFOB_3">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>450</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>FOB</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelField_3">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>490</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Field</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelBUAV">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>450</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;BUAV:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pAvailFOBBUAV">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>450</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pSliderSelectedBUAV">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>570</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAvailable_3">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>450</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Available</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="m_pAvailFieldBUAV">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>490</y>
+       <width>40</width>
+       <height>35</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSelected_3">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>570</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>selected</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>280</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>430</y>
+       <width>280</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>640</y>
+       <width>280</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="m_pTestLabel">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>100</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

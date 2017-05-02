@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+<!--testObjects_SimpleGrouping.xml-->
+  <Objects>
+	  <!-- 911 Calls -->
+	  <!-- 911-a -->
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.167841</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.778705</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.167841</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783705</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>An explosion on 5th St.</Content>
+		  <Time type="NumericalFieldStatusValid">13000</Time>
+		</SubType>
+	  </Object>
+	  
+	 	  
+    <!--5TH Avenue Fish market events -->
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.163440</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.780342</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.163440</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.780342</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>A year ago. And then abandoned it. Fully stocked.</Content>
+		  <Time type="NumericalFieldStatusValid">28000</Time>
+		</SubType>
+	  </Object>	 
+	  
+	<!--End of the 5TH Avenue fish market events-->  
+	  
+	  
+	  
+	  
+	  
+	<!--TN's Supreme Court-->	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165267</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.784205</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165267</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.784205</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>First stop on a tour around TN's Supreme Court.</Content>
+		  <Time type="NumericalFieldStatusValid">23000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165389</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783947</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165389</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783947</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>TN has always been very respectful of human rights.</Content>
+		  <Time type="NumericalFieldStatusValid">25000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	 
+	<!--End of the courthouse tour-->	  
+	  
+  </Objects>
+  
+  
+</Configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

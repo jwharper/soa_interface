@@ -1,0 +1,329 @@
+<!--testObjects_aBigMessOfHazards.xml-->
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Objects>
+	  <!-- 911 Calls -->
+	  <!-- 911-a -->
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.167841</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.778705</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.167841</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783705</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>An explosion on 5th St.</Content>
+		  <Time type="NumericalFieldStatusValid">13000</Time>
+		</SubType>
+	  </Object>
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.162841</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783705</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.162841</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783705</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>An explosion on 6th St.</Content>
+		  <Time type="NumericalFieldStatusValid">12000</Time>
+		</SubType>
+	  </Object>
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.157841</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783705</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.157841</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783705</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>An explosion on 7th St.</Content>
+		  <Time type="NumericalFieldStatusValid">15000</Time>
+		</SubType>
+	  </Object>
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.152841</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783705</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.152841</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783705</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>An explosion on 8th St.</Content>
+		  <Time type="NumericalFieldStatusValid">18000</Time>
+		</SubType>
+	  </Object>
+	  
+	  
+    <!--5TH Avenue Fish market events -->
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.164029</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.780739</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.164029</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.780739</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>Something smells a bit fishy on 5th Avenue.</Content>
+		  <Time type="NumericalFieldStatusValid">20000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.163717</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.780546</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.163717</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.780546</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>It's sort of a perch-y scent on 5th Avenue.</Content>
+		  <Time type="NumericalFieldStatusValid">22000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.163717</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.780546</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.163717</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.780546</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>5th Avenue has a distinctly piscine vibe.</Content>
+		  <Time type="NumericalFieldStatusValid">24000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.163587</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.780460</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.163587</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.780460</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>Someone appears to have created an open-air fish market on 5th Avenue.</Content>
+		  <Time type="NumericalFieldStatusValid">26000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.163440</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.780342</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.163440</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.780342</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>A year ago. And then abandoned it. Fully stocked.</Content>
+		  <Time type="NumericalFieldStatusValid">28000</Time>
+		</SubType>
+	  </Object>	 
+	  
+	<!--End of the 5TH Avenue fish market events-->  
+	  
+	  
+	  
+	  
+	  
+	<!--TN's Supreme Court-->	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165267</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.784205</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165267</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.784205</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>First stop on a tour around TN's Supreme Court.</Content>
+		  <Time type="NumericalFieldStatusValid">23000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165389</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783947</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165389</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783947</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>TN has always been very respectful of human rights.</Content>
+		  <Time type="NumericalFieldStatusValid">25000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165484</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783668</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165484</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783668</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>It's just that TN defines 'humans' very narrowly.</Content>
+		  <Time type="NumericalFieldStatusValid">27000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165813</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.783733</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165813</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.783733</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>It's like someone who thinks that only poodles are actually dogs.</Content>
+		  <Time type="NumericalFieldStatusValid">29000</Time>
+		</SubType>
+	  </Object>	  
+	  
+	  <Object type="ObjectTypeInformationItem">
+		<Division>EMS</Division>
+		<Announcement type="true">0</Announcement>
+		<Detectable>true</Detectable>
+		<RequiresClasification type="false"></RequiresClasification>
+		<LocationX type="NumericalFieldStatusValid">36.165207</LocationX>
+		<LocationY type="NumericalFieldStatusValid">-86.784012</LocationY>
+		<LocationZ type="NumericalFieldStatusValid">0</LocationZ>
+		<Heading>HeadingUnknown</Heading>
+		<Velocity type="NumericalFieldStatusValid">0</Velocity>
+		<SubType type="InformationItemType911Call">
+		  <TimeReported type="NumericalFieldStatusValid">0</TimeReported>
+		  <ReportedLocationX type="NumericalFieldStatusValid">36.165207</ReportedLocationX>
+		  <ReportedLocationY type="NumericalFieldStatusValid">-86.784012</ReportedLocationY>
+		  <ReportedLocationZ type="NumericalFieldStatusValid">0</ReportedLocationZ>
+		  <Content>Great Danes and German Shepherds are some sort of mongrelized, inferior wolf.</Content>
+		  <Time type="NumericalFieldStatusValid">31000</Time>
+		</SubType>
+	  </Object>	  
+	<!--End of the courthouse tour-->	  
+	  
+  </Objects>
+  
+  
+</Configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

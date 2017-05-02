@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TaskPanelWidget</class>
+ <widget class="QWidget" name="TaskPanelWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1330</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>150</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>250</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>TaskPanelWidget</string>
+  </property>
+  <widget class="QPushButton" name="m_pCommitButton">
+   <property name="geometry">
+    <rect>
+     <x>980</x>
+     <y>120</y>
+     <width>99</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Commit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="m_pResetButton">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>120</y>
+     <width>99</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="m_pDurationSmallBox">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>0</y>
+     <width>281</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="labelDuration">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Duration</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDuration_6">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>30</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>dd</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_pDDSelect">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>0</y>
+      <width>48</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDuration_7">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>30</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hh</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_pDSSelect">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>48</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_pDMSelect">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>0</y>
+      <width>48</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDuration_4">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>30</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>mm</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="m_pDHSelect">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>0</y>
+      <width>48</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDuration_8">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>30</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ss</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="m_pCancelButton">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>120</y>
+     <width>99</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="m_pTaskSelect">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>0</y>
+     <width>221</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTask">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>-10</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Task</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPriority">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Priority</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelRisk">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Risk Level</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="m_pPrioritySelect">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>30</y>
+     <width>221</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="m_pRiskSelect">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>60</y>
+     <width>221</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAssocTask">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>50</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Associated Task</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="m_pAssocTaskSelect">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>60</y>
+     <width>181</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTask_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>-10</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Small UAV</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelTask_3">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>50</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Heavy UAV</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="m_pSSlider">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>0</y>
+     <width>160</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>9</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBothSides</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="m_pHSlider">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>60</y>
+     <width>160</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>3</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBothSides</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="m_pSNumLabel">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>20</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="m_pHNumLabel">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>80</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="m_pSLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>20</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>selected</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="m_pSLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>80</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>selected</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="m_pSNumLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>-10</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>12</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="m_pSNumLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>50</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>  3</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
