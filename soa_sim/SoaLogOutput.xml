@@ -1,0 +1,15 @@
+<Log>
+  <Simulation configFile="SoaSimConfig.xml" startDateTime="05/02/2017 09:55:59.230034" startTimeStamp="1493733359230" stopDateTime="05/02/2017 10:01:30.687316" stopTimeStamp="1493733690687" />
+  <Errors />
+  <Results supplyDelivery="0" redTruckCaptured="3" redDismountCaptured="3" casualtyDelivered="0" heavyUAVLost="0" smallUAVLost="0" civilianInRedCustody="2" />
+  <Events>
+    <CivilianInRedCustody timeStamp="1493733433668" capturer="Red Truck 8" destination="Red Base 0" />
+    <CivilianInRedCustody timeStamp="1493733543963" capturer="Red Truck 8" destination="Red Base 2" />
+    <RedTruckCaptured timeStamp="1493733562026" capturer="Blue Police 16" captured="Red Truck 10" />
+    <RedTruckCaptured timeStamp="1493733580545" capturer="Blue Police 16" captured="Red Truck 8" />
+    <RedDismountCaptured timeStamp="1493733620054" capturer="Blue Police 16" captured="Red Dismount 3" />
+    <RedTruckCaptured timeStamp="1493733628841" capturer="Blue Police 16" captured="Red Truck 23" />
+    <RedDismountCaptured timeStamp="1493733686394" capturer="Blue Police 16" captured="Red Dismount 5" />
+    <RedDismountCaptured timeStamp="1493733686919" capturer="Blue Police 16" captured="Red Dismount 4" />
+  </Events>
+</Log>

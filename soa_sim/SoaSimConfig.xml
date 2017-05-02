@@ -1,0 +1,244 @@
+<SoaConfig>
+  <!-- Network Configuration Settings -->
+  <Network 
+       redRoom ="localhost:11512"
+       blueRoom="localhost:11511" 
+  />
+ 
+  <!-- Logger Configuration Settings -->
+  <Logger 
+       outputFile               ="SoaLogOutput.xml"
+       enableLogToFile          ="true"
+       enableLogEventsToFile    ="true"
+       enableLogToUnityConsole  ="true"
+  />
+
+  <!-- Simulation Configuration Settings -->
+  <Simulation 
+       simulationRandomSeed     ="1"
+       gameDurationHr           ="15.0"
+       probRedDismountHasWeapon ="0.5"
+       probRedTruckHasWeapon    ="0.5" 
+       probRedTruckHasJammer    ="0.5"
+  />
+
+  <!-- Fuel Default Settings -->
+  <FuelDefaults
+       heavyUAVFuelTankSize_s   ="9999999"
+       smallUAVFuelTankSize_s   ="9999999"
+  />
+
+  <!-- Storage Default Settings -->
+  <StorageDefaults
+       heavyUAVNumStorageSlots     ="1"
+       redDismountNumStorageSlots  ="1"
+       redTruckNumStorageSlots     ="1"
+  /> 
+
+  <!-- Sensor Default Settings -->
+  <SensorDefaults>
+     <RedDismount>
+        <Mode tag="BluePolice"      RangeP1_km="1.0" RangeMax_km="5.0" />
+        <Mode tag="HeavyUAV"        RangeP1_km="1.0" RangeMax_km="5.0" />
+        <Mode tag="SmallUAV"        RangeP1_km="1.0" RangeMax_km="4.5" />
+     </RedDismount>
+
+     <RedTruck>
+        <Mode tag="BluePolice"      RangeP1_km="1.0" RangeMax_km="5.0" />
+        <Mode tag="HeavyUAV"        RangeP1_km="1.0" RangeMax_km="5.0" />
+        <Mode tag="SmallUAV"        RangeP1_km="1.0" RangeMax_km="4.5" />
+     </RedTruck>
+
+     <NeutralDismount>
+        <!-- No sensing capabilities -->
+     </NeutralDismount>
+
+     <NeutralTruck>
+        <!-- No sensing capabilities -->
+     </NeutralTruck>
+
+     <BluePolice>
+        <Mode tag="RedDismount"     RangeP1_km="0.5"   RangeMax_km="0.5" />
+        <Mode tag="RedTruck"        RangeP1_km="0.5"   RangeMax_km="0.5" />
+        <Mode tag="NeutralDismount" RangeP1_km="0.5"   RangeMax_km="0.5" />
+        <Mode tag="NeutralTruck"    RangeP1_km="0.5"   RangeMax_km="0.5" />
+     </BluePolice>
+
+     <HeavyUAV beamwidth_deg="360">
+        <Mode tag="RedDismount"     RangeP1_km="0.5"   RangeMax_km="0.5" />
+        <Mode tag="RedTruck"        RangeP1_km="0.5"   RangeMax_km="0.5" />
+        <Mode tag="NeutralDismount" RangeP1_km="0.5"   RangeMax_km="0.5" />
+        <Mode tag="NeutralTruck"    RangeP1_km="0.5"   RangeMax_km="0.5" />
+     </HeavyUAV>
+
+     <SmallUAV beamwidth_deg="20">
+        <Mode tag="RedDismount"     RangeP1_km="1.0"   RangeMax_km="5.0" />
+        <Mode tag="RedTruck"        RangeP1_km="2.0"   RangeMax_km="7.0" />
+        <Mode tag="NeutralDismount" RangeP1_km="1.0"   RangeMax_km="5.0" />
+        <Mode tag="NeutralTruck"    RangeP1_km="2.0"   RangeMax_km="7.0" />
+     </SmallUAV>
+
+     <BlueBalloon beamwidth_deg="4">
+        <Mode tag="RedDismount"     RangeP1_km="1e20"  RangeMax_km="1e20" />
+        <Mode tag="RedTruck"        RangeP1_km="1e20"  RangeMax_km="1e20" />
+        <Mode tag="NeutralDismount" RangeP1_km="1e20"  RangeMax_km="1e20" />
+        <Mode tag="NeutralTruck"    RangeP1_km="1e20"  RangeMax_km="1e20" />
+     </BlueBalloon>
+  </SensorDefaults>
+
+  <!-- Classifier Default Settings -->
+  <ClassifierDefaults>
+     <RedDismount>
+        <Mode tag="BluePolice"      RangeP1_km="5.0"  RangeMax_km="5.0" />
+        <Mode tag="HeavyUAV"        RangeP1_km="5.0"  RangeMax_km="5.0" />
+        <Mode tag="SmallUAV"        RangeP1_km="4.5"  RangeMax_km="4.5" />
+     </RedDismount>
+
+     <RedTruck>
+        <Mode tag="BluePolice"      RangeP1_km="5.0"  RangeMax_km="5.0" />
+        <Mode tag="HeavyUAV"        RangeP1_km="5.0"  RangeMax_km="5.0" />
+        <Mode tag="SmallUAV"        RangeP1_km="4.5"  RangeMax_km="4.5" />
+     </RedTruck>
+
+     <NeutralDismount>
+        <!-- No classification capabilities -->
+     </NeutralDismount>
+
+     <NeutralTruck>
+        <!-- No classification capabilities -->
+     </NeutralTruck>
+
+     <BluePolice>
+        <Mode tag="RedDismount"     RangeP1_km="0.5"  RangeMax_km="0.5" />
+        <Mode tag="RedTruck"        RangeP1_km="0.5"  RangeMax_km="0.5" />
+        <Mode tag="NeutralDismount" RangeP1_km="0.5"  RangeMax_km="0.5" />
+        <Mode tag="NeutralTruck"    RangeP1_km="0.5"  RangeMax_km="0.5" />
+     </BluePolice>
+
+     <HeavyUAV>
+        <Mode tag="RedDismount"     RangeP1_km="0.5"  RangeMax_km="0.5" />
+        <Mode tag="RedTruck"        RangeP1_km="0.5"  RangeMax_km="0.5" />
+        <Mode tag="NeutralDismount" RangeP1_km="0.5"  RangeMax_km="0.5" />
+        <Mode tag="NeutralTruck"    RangeP1_km="0.5"  RangeMax_km="0.5" />
+     </HeavyUAV>
+
+     <SmallUAV>
+        <Mode tag="RedDismount"     RangeP1_km="0.5"  RangeMax_km="5.0" />
+        <Mode tag="RedTruck"        RangeP1_km="0.5"  RangeMax_km="7.0" />
+        <Mode tag="NeutralDismount" RangeP1_km="0.5"  RangeMax_km="5.0" />
+        <Mode tag="NeutralTruck"    RangeP1_km="0.5"  RangeMax_km="7.0" />
+     </SmallUAV>
+
+     <BlueBalloon>
+        <!-- No classification capabilities -->
+     </BlueBalloon>
+  </ClassifierDefaults>
+
+  <!-- Communication Default Settings -->
+  <CommsDefaults>
+     <Node tag="BlueBase"     commsRange_km="30.0"/>
+     <Node tag="RedDismount"  commsRange_km="5.0" />
+     <Node tag="RedTruck"     commsRange_km="5.0" />
+     <Node tag="BluePolice"   commsRange_km="10.0"/>
+     <Node tag="HeavyUAV"     commsRange_km="30.0"/>
+     <Node tag="SmallUAV"     commsRange_km="30.0"/>
+     <!-- Entries for neutrals and blue balloon ignored -->
+  </CommsDefaults>
+
+  <!-- Jammer Default Settings -->
+  <JammerDefaults>
+     <Node tag="RedTruck"     jammerRange_km="2.0"/>
+     <!-- Only red truck entry is used -->
+  </JammerDefaults>
+
+  <!-- Site Locations -->
+  <Sites>
+    <BlueBase name="Blue Base"     x_km="-3.02830208"   z_km="-9.7492255" />
+    <RedBase  name="Red Base 0"    x_km="-17.7515077"   z_km="13.7463599" />
+    <RedBase  name="Red Base 1"    x_km="-0.439941213"  z_km="12.7518844" />
+    <RedBase  name="Red Base 2"    x_km="22.0787984"    z_km="10.7493104" />
+    
+    <NGOSite  name="NGO Site 0"    x_km="-21.2181483"   z_km="-1.25010618" />
+    <NGOSite  name="NGO Site 1"    x_km="-4.76803318"   z_km="-5.74888572" />
+    <NGOSite  name="NGO Site 2"    x_km="11.6916982"    z_km="4.76402643" />
+    <NGOSite  name="NGO Site 3"    x_km="24.6807822"    z_km="-6.75057337" />
+    
+    <Village  name="Village 0"     x_km="-16.0197901"   z_km="5.74808437" />
+    <Village  name="Village 1"     x_km="-14.296086"    z_km="-3.22944096" />
+    <Village  name="Village 2"     x_km="-5.63349131"   z_km="4.74559538" />
+    <Village  name="Village 3"     x_km="7.34998325"    z_km="-0.743652906" />
+    <Village  name="Village 4"     x_km="-13.4306279"   z_km="-11.7638197" />
+  </Sites>  
+
+  <!-- Local Platform Descriptions -->
+  <Local>
+    <!-- Red Dismounts -->
+    <RedDismount     x_km="-16.892"   z_km="12.273"
+       hasWeapon="false" initialWaypoint="Red Base 0" />
+    
+    <RedDismount     x_km="-18.638"   z_km="12.267"
+       hasWeapon="true" initialWaypoint="Red Base 0"  />
+
+    <RedDismount     x_km="-2.190"    z_km="11.744"
+       hasWeapon="false" initialWaypoint="Red Base 1" />
+
+    <RedDismount     x_km="-2.124"    z_km="12.733"
+       hasWeapon="true" initialWaypoint="Red Base 1"  />
+
+    <RedDismount     x_km="21.180"    z_km="9.240" 
+       hasWeapon="false" initialWaypoint="Red Base 2" />
+
+    <RedDismount     x_km="22.077"    z_km="9.752" 
+       hasWeapon="true" initialWaypoint="Red Base 2"  />
+
+    <!-- Red Trucks -->
+    <RedTruck        x_km="-17.770"   z_km="12.758"
+       hasWeapon="false" initialWaypoint="Red Base 0" hasJammer="true" jammerRange_km="2.0"/>
+
+    <RedTruck        x_km="-1.300"    z_km="12.245"
+       hasWeapon="true" initialWaypoint="Red Base 1"  hasJammer="false"/>
+
+    <RedTruck        x_km="21.205"    z_km="11.251" 
+       hasWeapon="false" initialWaypoint="Red Base 2" />
+
+    <!-- Neutral Dismounts -->
+    <NeutralDismount x_km="23.696"    z_km="-6.595"   />
+    <NeutralDismount x_km="-10.987"   z_km="-6.595"   />
+    <NeutralDismount x_km="1.210"     z_km="2.075"    />
+
+    <!-- Neutral Trucks -->
+    <NeutralTruck    x_km="-19.345"   z_km="-0.048"   />
+    <NeutralTruck    x_km="10.746"    z_km="2.196"    />
+
+    <!-- Blue Police -->
+    <BluePolice      x_km="-9.095"    z_km="-15.178"  />
+  </Local>
+
+  <!-- Remote Platform Descriptions -->
+  <Remote>
+    <!-- Heavy UAVs -->
+    <HeavyUAV        x_km="0.481"     y_km="0.500"   z_km="-9.696"    id="100"/>
+    <HeavyUAV        x_km="3.585"     y_km="0.500"   z_km="-7.268"    id="101"/>
+    <HeavyUAV        x_km="3.185"     y_km="0.500"   z_km="-11.268"    id="102"/>
+    
+    <!-- Small UAVs -->
+    <SmallUAV        x_km="-1.362"    y_km="5.000"   z_km="-11.626"   id="103"/>
+    <SmallUAV        x_km="-4.760"    y_km="5.000"   z_km="-9.889"    id="104"/>
+    <SmallUAV        x_km="1.178"     y_km="5.000"   z_km="-11.628"   id="105"/>
+    <SmallUAV        x_km="-3.362"    y_km="5.000"   z_km="-9.626"   id="106"/>
+    <SmallUAV        x_km="-5.760"    y_km="5.000"   z_km="-10.889"    id="107"/>
+    <SmallUAV        x_km="3.178"     y_km="5.000"   z_km="-12.628"   id="108"/>
+    <SmallUAV        x_km="-2.362"    y_km="5.000"   z_km="-10.626"   id="109"/>
+    <SmallUAV        x_km="-5.760"    y_km="5.000"   z_km="-10.889"    id="110"/>
+    <SmallUAV        x_km="2.178"     y_km="5.000"   z_km="-8.628"   id="111"/>
+    <SmallUAV        x_km="-2.362"    y_km="5.000"   z_km="-8.626"   id="112"/>
+    <SmallUAV        x_km="-3.760"    y_km="5.000"   z_km="-10.889"    id="113"/>
+    <SmallUAV        x_km="1.178"     y_km="5.000"   z_km="-10.628"   id="114"/>
+    
+    <!-- Blue Balloons --> 
+    <BlueBalloon     id="105"    teleportLoop="true">
+       <Waypoint x_km="-28" z_km="0" />
+       <Waypoint x_km="29"  z_km="0"  />
+    </BlueBalloon>
+  </Remote>
+</SoaConfig>
