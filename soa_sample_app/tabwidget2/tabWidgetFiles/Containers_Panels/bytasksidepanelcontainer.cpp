@@ -1,6 +1,7 @@
-// bytasksidepanelcontainer.h
+// bytasksidepanelcontainer.cpp
 //
-// Created by EAB
+// Created by EAB, HMT Lab
+// Modified by Musad Haque
 // 2016
 
 #include "bytasksidepanelcontainer.h"
@@ -23,7 +24,6 @@ int ByTaskSidePanelContainer::MinimumWidth(){
     tData->task = "Move To Location";
     tData->actor = "Heavy UAV 101";
     tData->actorId = 101;
-    //tData->priority = 5;
 	ByTaskPanel panel(tData);
 		int minimumWidth;
 
@@ -75,3 +75,5 @@ void ByTaskSidePanelContainer::SortPanels(int method){
 			assert(0);
 	};
 }
+
+

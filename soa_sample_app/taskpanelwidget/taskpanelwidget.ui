@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1330</width>
-    <height>150</height>
+    <width>1100</width>
+    <height>250</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>1000</width>
-    <height>150</height>
+    <height>200</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -28,10 +28,10 @@
   <widget class="QPushButton" name="m_pCommitButton">
    <property name="geometry">
     <rect>
-     <x>980</x>
-     <y>120</y>
-     <width>99</width>
-     <height>27</height>
+     <x>970</x>
+     <y>200</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -41,10 +41,10 @@
   <widget class="QPushButton" name="m_pResetButton">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>120</y>
-     <width>99</width>
-     <height>27</height>
+     <x>840</x>
+     <y>200</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -55,8 +55,8 @@
    <property name="geometry">
     <rect>
      <x>760</x>
-     <y>0</y>
-     <width>281</width>
+     <y>30</y>
+     <width>321</width>
      <height>71</height>
     </rect>
    </property>
@@ -71,7 +71,7 @@
      <rect>
       <x>0</x>
       <y>-10</y>
-      <width>71</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -82,10 +82,10 @@
    <widget class="QLabel" name="labelDuration_6">
     <property name="geometry">
      <rect>
-      <x>90</x>
+      <x>120</x>
       <y>30</y>
-      <width>31</width>
-      <height>21</height>
+      <width>41</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -95,7 +95,7 @@
    <widget class="QSpinBox" name="m_pDDSelect">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>120</x>
       <y>0</y>
       <width>48</width>
       <height>27</height>
@@ -105,10 +105,10 @@
    <widget class="QLabel" name="labelDuration_7">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>180</x>
       <y>30</y>
       <width>31</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -118,7 +118,7 @@
    <widget class="QSpinBox" name="m_pDSSelect">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>270</x>
       <y>0</y>
       <width>48</width>
       <height>27</height>
@@ -128,7 +128,7 @@
    <widget class="QSpinBox" name="m_pDMSelect">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>220</x>
       <y>0</y>
       <width>48</width>
       <height>27</height>
@@ -138,10 +138,10 @@
    <widget class="QLabel" name="labelDuration_4">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>220</x>
       <y>30</y>
-      <width>31</width>
-      <height>21</height>
+      <width>51</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -151,7 +151,7 @@
    <widget class="QSpinBox" name="m_pDHSelect">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>170</x>
       <y>0</y>
       <width>48</width>
       <height>27</height>
@@ -161,10 +161,10 @@
    <widget class="QLabel" name="labelDuration_8">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>280</x>
       <y>30</y>
-      <width>31</width>
-      <height>21</height>
+      <width>41</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -175,10 +175,10 @@
   <widget class="QPushButton" name="m_pCancelButton">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>120</y>
-     <width>99</width>
-     <height>27</height>
+     <x>710</x>
+     <y>200</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -188,10 +188,10 @@
   <widget class="QComboBox" name="m_pTaskSelect">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>0</y>
+     <x>150</x>
+     <y>10</y>
      <width>221</width>
-     <height>27</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="acceptDrops">
@@ -201,9 +201,9 @@
   <widget class="QLabel" name="labelTask">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>-10</y>
-     <width>81</width>
+     <x>10</x>
+     <y>10</y>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
@@ -214,9 +214,9 @@
   <widget class="QLabel" name="labelPriority">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>81</width>
+     <x>10</x>
+     <y>60</y>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
@@ -227,9 +227,9 @@
   <widget class="QLabel" name="labelRisk">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>50</y>
-     <width>81</width>
+     <x>10</x>
+     <y>110</y>
+     <width>151</width>
      <height>41</height>
     </rect>
    </property>
@@ -240,10 +240,10 @@
   <widget class="QComboBox" name="m_pPrioritySelect">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>30</y>
+     <x>150</x>
+     <y>60</y>
      <width>221</width>
-     <height>27</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="acceptDrops">
@@ -253,10 +253,10 @@
   <widget class="QComboBox" name="m_pRiskSelect">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>60</y>
+     <x>150</x>
+     <y>110</y>
      <width>221</width>
-     <height>27</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="acceptDrops">
@@ -267,8 +267,8 @@
    <property name="geometry">
     <rect>
      <x>760</x>
-     <y>50</y>
-     <width>121</width>
+     <y>110</y>
+     <width>151</width>
      <height>41</height>
     </rect>
    </property>
@@ -279,10 +279,10 @@
   <widget class="QComboBox" name="m_pAssocTaskSelect">
    <property name="geometry">
     <rect>
-     <x>880</x>
-     <y>60</y>
+     <x>910</x>
+     <y>110</y>
      <width>181</width>
-     <height>27</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="acceptDrops">
@@ -292,8 +292,8 @@
   <widget class="QLabel" name="labelTask_2">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>-10</y>
+     <x>410</x>
+     <y>30</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -305,8 +305,8 @@
   <widget class="QLabel" name="labelTask_3">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>50</y>
+     <x>410</x>
+     <y>110</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -318,8 +318,8 @@
   <widget class="QSlider" name="m_pSSlider">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>0</y>
+     <x>500</x>
+     <y>40</y>
      <width>160</width>
      <height>29</height>
     </rect>
@@ -337,8 +337,8 @@
   <widget class="QSlider" name="m_pHSlider">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>60</y>
+     <x>500</x>
+     <y>120</y>
      <width>160</width>
      <height>29</height>
     </rect>
@@ -356,8 +356,8 @@
   <widget class="QLabel" name="m_pSNumLabel">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>20</y>
+     <x>530</x>
+     <y>60</y>
      <width>31</width>
      <height>41</height>
     </rect>
@@ -369,8 +369,8 @@
   <widget class="QLabel" name="m_pHNumLabel">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>80</y>
+     <x>530</x>
+     <y>140</y>
      <width>31</width>
      <height>41</height>
     </rect>
@@ -383,8 +383,8 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>20</y>
-     <width>61</width>
+     <y>60</y>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
@@ -396,8 +396,8 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>80</y>
-     <width>61</width>
+     <y>140</y>
+     <width>121</width>
      <height>41</height>
     </rect>
    </property>
@@ -408,8 +408,8 @@
   <widget class="QLabel" name="m_pSNumLabel_2">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>-10</y>
+     <x>660</x>
+     <y>30</y>
      <width>31</width>
      <height>41</height>
     </rect>
@@ -421,14 +421,14 @@
   <widget class="QLabel" name="m_pSNumLabel_3">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>50</y>
+     <x>660</x>
+     <y>110</y>
      <width>31</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>  3</string>
+    <string>03</string>
    </property>
   </widget>
  </widget>

@@ -142,7 +142,7 @@ void TaskPanelWidget::taskSelected(){
         ui->m_pDHSelect->setValue(00);
         ui->m_pDMSelect->setValue(10);
         ui->m_pDSSelect->setValue(00);
-        //
+        //A check for commit button since no emit signal
         enoughMapPoints = true;
         //Enable vehicle selection
         ui->m_pSSlider->setEnabled(true);
@@ -155,7 +155,7 @@ void TaskPanelWidget::taskSelected(){
         ui->m_pRiskSelect->setCurrentIndex(0);
         //Duration disappers
         ui->m_pDurationSmallBox->setVisible(false);
-        //
+        //A check for commit button since no emit signal
         enoughMapPoints = true;
         //Enable vehicle selection
         ui->m_pSSlider->setEnabled(true);
@@ -168,7 +168,7 @@ void TaskPanelWidget::taskSelected(){
         ui->m_pRiskSelect->setCurrentIndex(0);
         //Duration disappers
         ui->m_pDurationSmallBox->setVisible(false);
-        //
+        //A check for commit button since no emit signal
         enoughMapPoints = true;
         //Enable vehicle selection
         ui->m_pSSlider->setEnabled(true);
@@ -181,7 +181,7 @@ void TaskPanelWidget::taskSelected(){
         ui->m_pRiskSelect->setCurrentIndex(0);
         //Duration disappers
         ui->m_pDurationSmallBox->setVisible(false);
-        //
+        //A check for commit button since no emit signal
         enoughMapPoints = true;
         //Enable vehicle selection
         ui->m_pSSlider->setEnabled(true);
@@ -196,7 +196,7 @@ void TaskPanelWidget::taskSelected(){
         ui->m_pDurationSmallBox->setVisible(false);
         //A map-based task was selected, so emit signal
         Q_EMIT(actAsMapButton());
-        //
+        //A check for commit button since no vehicles involved
         enoughRobots = true;
         //No vehicles involved
     }
@@ -204,21 +204,33 @@ void TaskPanelWidget::taskSelected(){
     {
         //Duration disappers
         ui->m_pDurationSmallBox->setVisible(false);
-        //ui->m_pLocationSelectButton->setVisible(false);
     }
-    //Enable buttons
+    //Enable the three buttons
     ui->m_pCancelButton->setEnabled(true);
     ui->m_pResetButton->setEnabled(true);
-    //ui->m_pCommitButton->setEnabled(true);
-    enableCommitBtn();
+    enableCommitBtn(); //Check enoughMapPoints and enoughRobots first
+}
+
+
+void TaskPanelWidget::enableCommitBtn()
+{
+    if (enoughRobots && enoughMapPoints)
+        ui->m_pCommitButton->setEnabled((true));
+    else
+        ui->m_pCommitButton->setEnabled((false));
+
 }
 
 
 void TaskPanelWidget::enableTaskAreaSelection(){
+
+    //A map-based task has been selected
     qDebug()<<"Turn on the Javascript task selection";
 
+    //Default color and shape of task on map
     QString taskColor = "#FFFFFF";
     QString taskShape = "polygon";
+
     if (ui->m_pTaskSelect->currentText() == "Move to Location"){
         taskShape = "polyline";
     }
@@ -242,18 +254,30 @@ void TaskPanelWidget::enableTaskAreaSelection(){
     {
         //Done
     }
-    Q_EMIT selectTaskArea(taskColor, taskShape);
+    /*
+     * Task's shape and color have been set
+     * Signal is caught by logicWidget's SLOT enableTaskDraw
+     * Connection between SIGNAL and SLOT can be found in interfacewindow.cpp
+    */
+    Q_EMIT taskShapeAndColor(taskShape, taskColor);
 }
 
 
-//Location comes from JS
+/*
+ *
+*/
 void TaskPanelWidget::mapCoordFromJS (QString locationJS)
 {
     m_PointList.clear();
-//    qDebug()<<"Coordinates from JS";
-//    qDebug()<<locationJS;
-
-    //"(lat0, lng0), (lat1, lng2), ..., (latN, lngN))"
+    /*
+     * Location comes from JS and looks like this:
+     * "( (lat0, lng0), (lat1, lng2), ..., (latN, lngN) )"
+     * This needs to be changed to
+     * ("(lat0" , "lng0)", "(lat1", "lng2)", ..., "(latN", "lngN)")
+     * And then to
+     * ("lat0", "lng0", "lat1", "lng2", ..., "latN", "lngN")
+     *
+    */
 
     QStringList coordList = locationJS.split(", ");
     if(coordList.size()%2 != 0) {
@@ -261,33 +285,37 @@ void TaskPanelWidget::mapCoordFromJS (QString locationJS)
         return;
     }
 
-    //("(lat0" , "lng0)", "(lat1", "lng2)", ..., "(latN", "lngN)")
-
     for (int i=0; i < coordList.size(); i++){
         coordList[i].remove("(");
         coordList[i].remove(")");
     }
-
-    //("lat0", "lng0", "lat1", "lng2", ..., "latN", "lngN")
 
     for (int i=0; i < coordList.size(); i++){
         m_PointList.append(coordList[i].toFloat());
     }
     enoughMapPoints = true;
     enableCommitBtn();
-
 }
 
 
 void TaskPanelWidget::commit(){
 
-    //Gather task information from fields into a taskInfo * pTaskInfo
+    /*
+     * Gather task information from fields into a taskInfo * pTaskInfo.
+     * The goal is to emit this information using the sendTaskInfo SIGNAL
+     * The associated SLOTS are logicWidget's commitTask and taskSOA and
+     * tabPanel2's addTask. The connections can be found in interfacewindow.cpp
+    */
     taskInfo * pTaskInfo = new taskInfo;
 
+    //Name of the task
     pTaskInfo->task       = ui->m_pTaskSelect->currentText();
+
+    //Priority and risk
     pTaskInfo->priority   = ui->m_pPrioritySelect->currentText().toInt();
     pTaskInfo->risk       = ui->m_pRiskSelect->currentText().toInt();
 
+    //Remove spaces from the name of the task...
     if (pTaskInfo->task == "Move to Location")
     {
         pTaskInfo->task = "MoveToLocation";
@@ -305,7 +333,10 @@ void TaskPanelWidget::commit(){
         //do nothing.
     }
 
+    //Processed JS coords
     pTaskInfo->points = m_PointList;
+
+    //Duration
     QString tempDuration = "";
     tempDuration.append(QString::number(ui->m_pDDSelect->value()));
     tempDuration.append(QString::number(ui->m_pDHSelect->value()));
@@ -313,13 +344,25 @@ void TaskPanelWidget::commit(){
     tempDuration.append(QString::number(ui->m_pDSSelect->value()));
     pTaskInfo->duration = tempDuration;
 
+    /*
+     * The following code scripts a set of tasks
+     *      00  Avoid (setup of no fly zone)
+     *      01  Move to location    2 small UAVS    (103 104)
+     *      01  Move to location    3 small UAVS    (105 106 107)
+     *      01  Move to location    3 small UAVS    (108 109 110)
+     *      01  Maintain location   3 small UAVS    (108 109 110)
+     *      01  Move to location    1 heavy UAVS    (101)
+     *      01  Return to FOB       2 small UAVS    (103 104)
+     *
+    */
+
     //00 Avoid
     if (commitCounter == 0)
     {
         pTaskInfo->id = 300;
         pTaskInfo->actor = " ";
         pTaskInfo->actorId = 103;
-        Q_EMIT sendTask(pTaskInfo);
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
     //01 Move to Location
     else if (commitCounter == 1)
@@ -327,10 +370,7 @@ void TaskPanelWidget::commit(){
         pTaskInfo->id = 301;
         pTaskInfo->actor = "Small UAV 103, 104";
         pTaskInfo->actorId = 103;
-        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 104";
-//        pTaskInfo->actorId = 104;
-//        Q_EMIT sendTask(pTaskInfo);
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
     //02 Move to Location
     else if (commitCounter == 2)
@@ -338,13 +378,7 @@ void TaskPanelWidget::commit(){
         pTaskInfo->id = 302;
         pTaskInfo->actor = "Small UAV 105, 106, 107";
         pTaskInfo->actorId = 105;
-        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 106";
-//        pTaskInfo->actorId = 106;
-//        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 107";
-//        pTaskInfo->actorId = 107;
-//        Q_EMIT sendTask(pTaskInfo);
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
     //03 Move to Location
     else if (commitCounter == 3)
@@ -352,12 +386,7 @@ void TaskPanelWidget::commit(){
         pTaskInfo->id = 303;
         pTaskInfo->actor = "Small UAV 108, 109, 110";
         pTaskInfo->actorId = 108;
-        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 109";
-//        pTaskInfo->actorId = 109;
-//        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 110";
-//        pTaskInfo->actorId = 110;
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
     //04 Maintain Location
     else if (commitCounter == 4)
@@ -365,12 +394,7 @@ void TaskPanelWidget::commit(){
         pTaskInfo->id = 304;
         pTaskInfo->actor = "Small UAV 108, 109, 110";
         pTaskInfo->actorId = 108;
-        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 109";
-//        pTaskInfo->actorId = 109;
-//        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 110";
-//        pTaskInfo->actorId = 110;
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
     //05 Move to Location
     else if (commitCounter == 5)
@@ -378,7 +402,7 @@ void TaskPanelWidget::commit(){
         pTaskInfo->id = 305;
         pTaskInfo->actor = "Heavy UAV 101";
         pTaskInfo->actorId = 101;
-        Q_EMIT sendTask(pTaskInfo);
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
     //07 Return to FOB
     else if (commitCounter == 6)
@@ -386,15 +410,10 @@ void TaskPanelWidget::commit(){
         pTaskInfo->id = 306;
         pTaskInfo->actor = "Small UAV 103, 104";
         pTaskInfo->actorId = 103;
-        Q_EMIT sendTask(pTaskInfo);
-//        pTaskInfo->actor = "Small UAV 104";
-//        pTaskInfo->actorId = 104;
-//        Q_EMIT sendTask(pTaskInfo);
+        Q_EMIT sendTaskInfo(pTaskInfo);
     }
-
     commitCounter++;
     resetAll();
-
 }
 
 
@@ -450,16 +469,6 @@ void TaskPanelWidget::resetAll()
     //
     enoughMapPoints = false;
     enoughRobots = false;
-}
-
-
-void TaskPanelWidget::enableCommitBtn()
-{
-    if (enoughRobots && enoughMapPoints)
-        ui->m_pCommitButton->setEnabled((true));
-    else
-        ui->m_pCommitButton->setEnabled((false));
-
 }
 
 

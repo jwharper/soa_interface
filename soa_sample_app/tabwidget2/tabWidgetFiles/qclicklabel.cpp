@@ -45,3 +45,5 @@ void QClickLabel::mouseDoubleClickEvent(QMouseEvent * event){
 	(void)event;
 	Q_EMIT(DoubleClicked());
 }
+
+

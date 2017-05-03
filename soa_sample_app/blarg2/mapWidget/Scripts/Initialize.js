@@ -16,11 +16,7 @@ function Dinitialize(options){
 
 	// Listen for the dragend event
 	google.maps.event.addListener(map, 'dragend', function() {
-		//log(map.getCenter());
-		//if (strictBounds.contains(map.getCenter()))
-			//log("in center");
-		//else
-			//log("(" + strictBounds.getNorthEast().lat() + ", " + strictBounds.getNorthEast().lng() + "), (" + strictBounds.getSouthWest().lat() + ", " + strictBounds.getSouthWest().lng());
+		
 		if (strictBounds.contains(map.getCenter())) return;
 
 		// We're out of bounds - Move the map back within the bounds
@@ -104,18 +100,7 @@ function initRightClickMenu(){
     contextMenuOptions.classNames = { menu: 'context_menu', menuSeparator: 'context_menu_separator' };
     // create an array of ContextMenuItem objects 
     var menuItems = [];
-    /*menuItems.push({ className: 'context_menu_item', eventName: 'bombSurveillance', label: 'Bomb Surveillance' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'decontaminateSelf', label: 'Decontaminate Self' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'gatherImagery', label: 'Gather Imagery' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'gatherSamples', label: 'Gather Samples' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'gotox', label: 'Go To X' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'guideVictims', label: 'Guide Victims' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'hazardSampling', label: 'Hazard Sampling' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'improveCommunication', label: 'Improve Communication' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'searchArea', label: 'Search Area' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'surveillance', label: 'Surveillance' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'victimSearch', label: 'Victim Search' });
-    menuItems.push({ className: 'context_menu_item', eventName: 'victimAssessment', label: 'Victim Assessment' });*/
+    
     // a menuItem with no properties will be rendered as a separator
     menuItems.push({});
     menuItems.push({ className: 'context_menu_item', eventName: 'center_map_click', label: 'Center map here' });
@@ -158,42 +143,6 @@ function initRightClickMenu(){
             }
         });
         switch (eventName) {
-            /*case 'bombSurveillance':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
-                break;
-            case 'decontaminateSelf':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
-                break;
-            case 'gatherImagery':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'gatherSamples':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'goToX':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
-                break;
-            case 'guideVictims':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'hazardSampling':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'improveCommunication':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'searchArea':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'surveillance':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'victimSearch':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-                break;
-            case 'victimAssessment':
-                drawingManager.setDrawingMode(google.maps.drawing.OverlayType.BUMMER);
-                break;*/
             case 'center_map_click':
                 map.panTo(latLng);
                 break;
@@ -298,69 +247,3 @@ function maskInit(){
 }
 
 
-
-//From Qt????
-// function drawTask(eventName) {
-//     taskType = eventName;
-//     // eventName is the eventName defined sent from Qt 
-//     drawingManager.setOptions({
-//         polygonOptions: {
-//             fillColor: '#ffffff',
-//             fillOpacity: 0.75,
-//             strokeColor: '#ffffff',
-//             strokeOpacity: 1.0,
-//             strokeWeight: 5,
-//             clickable: true,
-//             zIndex: 1,
-//             editable: true
-//         },
-//         polylineOptions: {
-//             strokeColor: '#ffffff',
-//             strokeOpacity: 1,
-//             strokeWeight: 10,
-//             clickable: true,
-//             zIndex: 1,
-//             editable: true
-//         }
-//     });
-//     switch (eventName) {
-//         case 'bombSurveillance':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
-//             break;
-//         case 'decontaminateSelf':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
-//             break;
-//         case 'gatherImagery':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'gatherSamples':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'goToX':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYLINE);
-//             break;
-//         case 'guideVictims':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'hazardSampling':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'improveCommunication':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'searchArea':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'surveillance':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'victimSearch':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//         case 'victimAssessment':
-//             drawingManager.setDrawingMode(google.maps.drawing.OverlayType.POLYGON);
-//             break;
-//     }
-//     //taskManifest.pointsFromJS(
-
-// };

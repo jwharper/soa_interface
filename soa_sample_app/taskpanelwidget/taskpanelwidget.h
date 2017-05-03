@@ -42,8 +42,8 @@ public:
 
     //Q_SIGNAL void taskSOA();
     Q_SIGNAL void replacedMapButton();
-    Q_SIGNAL void sendTask(taskInfo * pTaskInfo);
-    Q_SIGNAL void selectTaskArea(QString taskColor, QString taskShape);
+    Q_SIGNAL void sendTaskInfo(taskInfo * pTaskInfo);
+    Q_SIGNAL void taskShapeAndColor(QString taskShape, QString taskColor);
     Q_SIGNAL void actAsMapButton();
 
     Q_SLOT void resetAll();
@@ -55,9 +55,6 @@ public:
     Q_SLOT void tieToSlider();
 
     int commitCounter = 0;
-
-    //Q_SLOT void updateNumSmall();
-    //Q_SLOT void updateNumHeavy();
 
     void initialize();
 

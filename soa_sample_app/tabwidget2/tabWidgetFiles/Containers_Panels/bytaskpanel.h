@@ -32,10 +32,6 @@ public Q_SLOTS:
 	virtual void ChangeMode(PanelMode mode, bool resort = false);
 	void ChangeName(QString name, bool resort = false);
 	void ChangeLeader(QString leader, bool resort = false);
-    /*void togglePausePlay();
-	void startTask();
-	void cancelTask();
-	void pauseTask();*/
 
 protected Q_SLOTS:
 	virtual void DecreaseMode();
@@ -49,9 +45,7 @@ protected:
 	virtual bool MinusPresent(PanelMode mode);
 
 protected:	
-	QVBoxLayout * m_pMainLayout;
-	//QVBoxLayout * m_pMinLayout;
-	//QVBoxLayout * m_pMaxLayout;
+    QVBoxLayout * m_pMainLayout;
     QHBoxLayout * m_pLine1Layout;
 	QGridLayout * m_pLine2Layout;
 	QHBoxLayout * m_pBottomLayout;
@@ -59,7 +53,6 @@ protected:
 	QLabel * m_pLine2;
     int m_ActorId;
 
-	//runningBar * m_pRunningBar;
 	QProgressBar * m_pRunningBar;
 	QLabel * m_pRunningLabel;
 	QLabel * m_pNameLabel;
@@ -70,8 +63,8 @@ protected:
 	QLabel * m_pUavCount;
 	QLabel * m_pUgvIcon;
 	QLabel * m_pUgvCount;
-	QLabel * m_pLeaderLabel;
-//	QPushButton * m_pPausePlay;
+    QLabel * m_pLeaderLabel;
+
 	bool m_Paused;
 
 	int m_TaskId;
@@ -80,3 +73,5 @@ protected:
 };
 
 #endif
+
+

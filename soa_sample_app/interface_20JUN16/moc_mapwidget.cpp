@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MapWidget_t {
     QByteArrayData data[24];
-    char stringdata0[235];
+    char stringdata0[236];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,26 +39,26 @@ QT_MOC_LITERAL(6, 61, 8), // "CenterOn"
 QT_MOC_LITERAL(7, 70, 6), // "latLng"
 QT_MOC_LITERAL(8, 77, 12), // "IncomingData"
 QT_MOC_LITERAL(9, 90, 11), // "placeholder"
-QT_MOC_LITERAL(10, 102, 10), // "commitTask"
-QT_MOC_LITERAL(11, 113, 9), // "taskInfo*"
-QT_MOC_LITERAL(12, 123, 5), // "tInfo"
-QT_MOC_LITERAL(13, 129, 11), // "updateActor"
-QT_MOC_LITERAL(14, 141, 6), // "actor*"
-QT_MOC_LITERAL(15, 148, 6), // "pActor"
-QT_MOC_LITERAL(16, 155, 10), // "updateSite"
-QT_MOC_LITERAL(17, 166, 5), // "site*"
-QT_MOC_LITERAL(18, 172, 5), // "pSite"
-QT_MOC_LITERAL(19, 178, 12), // "OutgoingData"
-QT_MOC_LITERAL(20, 191, 18), // "requestPlaceholder"
-QT_MOC_LITERAL(21, 210, 6), // "ZoomIn"
-QT_MOC_LITERAL(22, 217, 7), // "ZoomOut"
-QT_MOC_LITERAL(23, 225, 9) // "ZoomReset"
+QT_MOC_LITERAL(10, 102, 11), // "sendCmdToJS"
+QT_MOC_LITERAL(11, 114, 9), // "taskInfo*"
+QT_MOC_LITERAL(12, 124, 5), // "tInfo"
+QT_MOC_LITERAL(13, 130, 11), // "updateActor"
+QT_MOC_LITERAL(14, 142, 6), // "actor*"
+QT_MOC_LITERAL(15, 149, 6), // "pActor"
+QT_MOC_LITERAL(16, 156, 10), // "updateSite"
+QT_MOC_LITERAL(17, 167, 5), // "site*"
+QT_MOC_LITERAL(18, 173, 5), // "pSite"
+QT_MOC_LITERAL(19, 179, 12), // "OutgoingData"
+QT_MOC_LITERAL(20, 192, 18), // "requestPlaceholder"
+QT_MOC_LITERAL(21, 211, 6), // "ZoomIn"
+QT_MOC_LITERAL(22, 218, 7), // "ZoomOut"
+QT_MOC_LITERAL(23, 226, 9) // "ZoomReset"
 
     },
     "MapWidget\0ManifestsReady\0\0endTask\0id\0"
     "ShowWebInspectorRequest\0CenterOn\0"
     "latLng\0IncomingData\0placeholder\0"
-    "commitTask\0taskInfo*\0tInfo\0updateActor\0"
+    "sendCmdToJS\0taskInfo*\0tInfo\0updateActor\0"
     "actor*\0pActor\0updateSite\0site*\0pSite\0"
     "OutgoingData\0requestPlaceholder\0ZoomIn\0"
     "ZoomOut\0ZoomReset"
@@ -124,7 +124,7 @@ void MapWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 2: _t->ShowWebInspectorRequest(); break;
         case 3: _t->CenterOn((*reinterpret_cast< QPointF(*)>(_a[1]))); break;
         case 4: _t->IncomingData((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 5: _t->commitTask((*reinterpret_cast< taskInfo*(*)>(_a[1]))); break;
+        case 5: _t->sendCmdToJS((*reinterpret_cast< taskInfo*(*)>(_a[1]))); break;
         case 6: _t->updateActor((*reinterpret_cast< actor*(*)>(_a[1]))); break;
         case 7: _t->updateSite((*reinterpret_cast< site*(*)>(_a[1]))); break;
         case 8: { QString _r = _t->OutgoingData((*reinterpret_cast< QString(*)>(_a[1])));

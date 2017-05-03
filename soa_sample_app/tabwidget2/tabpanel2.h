@@ -1,3 +1,10 @@
+//
+// tabpanel2.h
+//
+// Created by EAB, HMT lab
+// Tweaked by Musad Haque
+//
+
 #ifndef TABPANEL2_H
 #define TABPANEL2_H
 

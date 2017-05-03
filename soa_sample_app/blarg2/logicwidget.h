@@ -36,7 +36,7 @@ public:
     WebView * m_pWebView;
     QWebFrame * getWebFrame();
     Q_SLOT void debug(QString str);
-    Q_SLOT void enableTaskDraw(QString taskColor, QString taskShape);
+    Q_SLOT void enableTaskDraw(QString taskShape, QString taskColor);
     Q_SLOT void sendCoord(QString coords);
     Q_SLOT void getBeliefInfo();
     Q_SLOT void debuggingFunc();
@@ -68,7 +68,7 @@ public:
     float googleToHLat(float lat);
     float googleToHLng(float lng);
 
-    QHash<int, int> velocityZeroHash;
+    QHash<int, int> velocityZeroHash; //Used to resolve icon flickering issue
 
 };
 

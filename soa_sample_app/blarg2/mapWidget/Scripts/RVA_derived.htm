@@ -73,14 +73,7 @@
             var mask2 =  0.860157;
             var mask3 = -1.947409;
             var mask4 =  1.947409;
-            // var blat1 =  0.144144;
-            // var blng1 =  0.378378;
-            // var blat2 = -0.144144;
-            // var blng2 = -0.378378;
-            // var mask1 = -0.144144;
-            // var mask2 =  0.144144;
-            // var mask3 = -0.378378;
-            // var mask4 =  0.378378;
+            
 
             clock = 0;
             setInterval(function(){ clock += 0.1 }, 100);
@@ -126,17 +119,12 @@
             function setWebview(webV) {
                //log("Got webView");
                webView = webV;
-               //webView.interactionFromJS("webView has been set in Javascript");
-               //gerald.interactionFromJS("bollocks");
+               
            };
-
-
-
-
-
-			function clearTempTask() {
-				if (tempTask){
-					tempTask.setMap(null);
+           
+           function clearTempTask() {
+           if (tempTask){
+           tempTask.setMap(null);
 					tempTask = null;
 				}
 			};
@@ -173,16 +161,7 @@
                     pointSelect = true;
             };
 
-            // function finishTask(tId, taskIcon) {
-            //     //log("here4");
-            //     myTaskArray[tId] = tempTask;
-            //     tempTask = null;
-            //     if (taskIcon){
-            //         //Set the icon for the task: find the centroid for a polygon, the midpoint for a polyline, or just change to a custom icon for a point. Later.
-            //     }
-            // };
-
-
+            
             function finishTask(tId, actor, taskName, summary, rtype) {
                 var path = tempTask.getPath();
                 var pLength = path.getLength();
@@ -206,8 +185,6 @@
                 var temp = new Group(tt, tId, gIc);
                 myTaskArray[tId] = temp;
                 set_visual_state2(gIc, 'normal')
-                //log(gIc.groupIcon);
-                //tempTask = null;
             };
 
             function log(msg) {
@@ -218,8 +195,7 @@
                 //log("here5");
                 var tId = taskId;
                 taskId++;
-                // var tType = taskType;
-                // var temp = new task(e, tType, tId, myDiv);
+                
                 var paths = e.getPaths();
                 var pLength = paths.getLength();
                 var ltlng = new Array();
@@ -267,8 +243,6 @@
                     tilt: 0
                 };
                 map = new google.maps.Map(document.getElementById('map'), myOptions);
-        // var el = document.getElementById('thisN');
-        // el.style.display = 'none';
 
                 Dinitialize();
 
@@ -290,17 +264,11 @@
                 });
                 map.addListener('delete_item', function(item) {
                     item.setMap(null);
-                    // item = null;
-                    // doesn't actually delete the item for the moment; just hides them
-                    // avoids array access errors for the moment
-
-                    // if item is a task, stop patrol
-                    // if item is a risk, decrease visual state of closeby
-                    // if item is a robot, decrease visual score accordingly
+                    
                 });
                 map.addListener('move_item', function(item, position, duration) {
                     // Item is assumed to be a robot
-                    //item.duration = google.maps.geometry.spherical.computeDistanceBetween(item.position, position) / item.speed;
+                    
 					item.duration = 1000; //duration;
                     item.previous_position = item.position;
                     item.setPosition(position);
@@ -323,28 +291,7 @@
                     }
                 });
 
-                /*******************************************************************************
-                 *  Interfacing Listeners
-                 *  - These listen to user interface events 
-                 *******************************************************************************/
-                // if (DEBUG) {
-                    // map.addListener('click', function(e) {
-                    //     log(e.latLng);
-                    // });
-                // }
-
-                // /*******************************************************************************
-                //  * Logging to the screen
-                //  *******************************************************************************/
-                // if (DEBUG) {
-                //     var log_div = document.createElement('div');
-                //     log_div.id = 'log';
-                //     log_div.className = 'control';
-                //     document.body.appendChild(log_div);
-                //     $log = $('#log');
-                // }
-
-                //setTimeout(preloader, 500);
+               
             }
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>

@@ -16,9 +16,7 @@ QMAKE_CXXFLAGS += -std=c++11
 
 SOURCES += main.cpp\
         interfacewindow.cpp \
-    ../blarg2/console.cpp \
     ../blarg2/logicwidget.cpp \
-    ../blarg2/parsy.cpp \
     ../blarg2/mapWidget/mapwidget.cpp \
     ../blarg2/mapWidget/webview.cpp \
     ../taskpanelwidget/taskpanelwidget.cpp \
@@ -32,9 +30,7 @@ SOURCES += main.cpp\
     ../tabwidget2/tabWidgetFiles/qclicklabel.cpp
 
 HEADERS  += interfacewindow.h \
-    ../blarg2/console.h \
     ../blarg2/logicwidget.h \
-    ../blarg2/parsy.h \
     ../blarg2/mapWidget/mapwidget.h \
     ../blarg2/mapWidget/webview.h \
     ../taskpanelwidget/taskpanelwidget.h \

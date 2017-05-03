@@ -1,8 +1,8 @@
 //
-// mapwidget.h
+// mapwidget.cpp
 //
-// Created by EAB, HMT lab
-//
+// Created by EAB and Musad Haque
+// 2016
 
 #ifndef __MapWidget__
 #define __MapWidget__
@@ -15,8 +15,6 @@
 #include <QDebug>
 #include <QHash>
 
-//#include "../parsy.h"
-//#include "../console.h"
 #include "../logicwidget.h"
 #include "../../taskpanelwidget/taskpanelwidget.h"
 
@@ -38,6 +36,22 @@ class QProgressBar;
 class QWebFrame;
 
 
+/*
+ * Blue
+ *      Small UAV
+ *      Heavy UAV
+ *      Police
+ *      Blimp
+ *
+ * Red
+ *      Dismount
+ *      Truck
+ *
+ * Neutral
+ *      Dismount
+ *      Truck
+ *
+*/
 struct actor
 {
     int id;
@@ -51,11 +65,11 @@ struct actor
 };
 
 
-
+//Base, NGO Site, Village (or Red Base)
 struct site
 {
     int id;
-    QString type; //Base or NGO Site or Village (or Red Base)
+    QString type;
     float coordinates[3];
 };
 
@@ -75,19 +89,17 @@ public:
 
     Q_SIGNAL void ManifestsReady();
     Q_SIGNAL void endTask(int id);
-
     Q_SIGNAL void ShowWebInspectorRequest();
-    //Q_SIGNAL void ptsToTaskPanel(QString pts);
 
 public Q_SLOTS:
 
     void CenterOn(QPointF latLng);
     void IncomingData(QString placeholder);
-    void commitTask(taskInfo* tInfo);
+    void sendCmdToJS(taskInfo* tInfo);
 
 
     void updateActor(actor * pActor);
-    Q_SLOT void updateSite(site * pSite); //!!!!!!!!!!!!!
+    Q_SLOT void updateSite(site * pSite);
 
 
     QString OutgoingData(QString requestPlaceholder);
@@ -97,23 +109,19 @@ public Q_SLOTS:
 
 
 public:
-    //Functions:
+
     void Initialize(QString fileName);
 
-    //Variables:
     WebView * m_pWebView;
     QString m_HtmlFileName;
+
     LogicWidget * m_pLogicWidget;
 
     QHash<int, taskInfo*> taskHash;
     QHash<int, actor*> actorHash;
-    QHash<int, site*> siteHash; //!!!!!!!!!!!!!
+    QHash<int, site*> siteHash;
 
     int nextTId;
-
-    //Parsy * m_pParsy;
-
-
 };
 
 

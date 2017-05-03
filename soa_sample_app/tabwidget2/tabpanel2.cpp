@@ -1,3 +1,10 @@
+//
+// tabpanel2.cpp
+//
+// Created by EAB, HMT lab
+// Tweaked by Musad Haque
+//
+
 #include "tabpanel2.h"
 
 #include <QSpinBox>
@@ -13,10 +20,6 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <QDebug>
-
-//#include "tabWidgetFiles/OldCode/qsidepanelcontainertabwidget.h"
-//#include "tabWidgetFiles/Containers_Panels/bytasksidepanelcontainer.h"
-//#include "tabWidgetFiles/Containers_Panels/bytaskpanel.h"
 
 #include "../tabwidget2/tabWidgetFiles/OldCode/qsidepanelcontainertabwidget.h"
 #include "../tabwidget2/tabWidgetFiles/Containers_Panels/bytasksidepanelcontainer.h"
@@ -102,7 +105,6 @@ void TabPanel2::taskEdit(QSidePanel * pPanel)
 
 void TabPanel2::addTask(taskInfo * ttask)
 {
-//	addTask(ttask->tempId, ttask->name, ttask->leader, ttask->division, xxx);
     // Create a ByTask panel for the new task
     ByTaskPanel * pByTaskPanel;
     pByTaskPanel = new ByTaskPanel(ttask, this);
@@ -111,6 +113,8 @@ void TabPanel2::addTask(taskInfo * ttask)
 
     // Load the ByTask panel in the ByTask panel container
     m_pByTaskSidePanelContainer->AddPanel(pByTaskPanel);
+
+    // Task ID used here
     m_pByTaskSidePanelContainer->m_ByTaskPanelHash.insert(ttask->id, pByTaskPanel);
 }
 
@@ -123,3 +127,5 @@ void TabPanel2::endTask(int id)
     m_pByTaskSidePanelContainer->m_ByTaskPanelHash.remove(id);
     m_pByTaskSidePanelContainer->RemovePanel(pByTaskPanel);
 }
+
+

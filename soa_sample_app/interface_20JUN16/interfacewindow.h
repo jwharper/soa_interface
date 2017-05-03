@@ -22,10 +22,12 @@ class InterfaceWindow : public QWidget
 public:
     InterfaceWindow(QWidget * parent = 0);
 
-    // InterfaceWindow holds three widgets
-    // 1 A map area (LogicWidget)
-    // 2 A tasking panel below the map (TaskPanelWidget)
-    // 3 A tab panel to display info to the map's right (TabPanel2)
+    /*
+     * InterfaceWindow holds three widgets
+     *      1 A map area (LogicWidget)
+     *      2 A tasking panel below the map (TaskPanelWidget)
+     *      3 A tab panel to display info to the map's right (TabPanel2)
+    */
 private:
     TabPanel2 * m_pTabPanel2; //OR: TabPanelWidget * m_pTabPanelWidget;
     TaskPanelWidget * m_pTaskPanelWidget;

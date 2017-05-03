@@ -339,21 +339,7 @@ function set_icon_detailed(robot) {
 
 
 function set_visual_state(robot, visual_score) {
-    // if (robot.affiliation === team_affiliation) {
-    //     if (visual_score < visual_state.threshold.team_normal_to_detailed) {
-            set_icon_normal(robot);
-    //     } else {
-    //         set_icon_detailed(robot);
-    //     }
-    // } else {
-    //     if (visual_score < visual_state.threshold.friendly_residue_to_normal) {
-    //         set_icon_residue(robot);
-    //     } else if (visual_score < visual_state.threshold.friendly_normal_to_detailed) {
-    //         set_icon_normal(robot);
-    //     } else {
-    //         set_icon_detailed(robot);
-    //     }
-    // }
+	set_icon_normal(robot);
 };
 
 function set_visual_state2(tItem, state) {
@@ -548,8 +534,7 @@ function robot_options_template(map, position, affiliation, type, iid) {
 
         // SlidingMarker options
         easing: 'linear',
-        duration: 900, // will be set by move_marker due to constant speed !!!Possibly disabled
-
+        duration: 900, 
 
         // RVA options
         affiliation: affiliation,

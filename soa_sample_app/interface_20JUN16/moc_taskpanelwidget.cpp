@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_TaskPanelWidget_t {
     QByteArrayData data[25];
-    char stringdata0[276];
+    char stringdata0[283];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,33 +32,33 @@ static const qt_meta_stringdata_TaskPanelWidget_t qt_meta_stringdata_TaskPanelWi
 QT_MOC_LITERAL(0, 0, 15), // "TaskPanelWidget"
 QT_MOC_LITERAL(1, 16, 17), // "replacedMapButton"
 QT_MOC_LITERAL(2, 34, 0), // ""
-QT_MOC_LITERAL(3, 35, 8), // "sendTask"
-QT_MOC_LITERAL(4, 44, 9), // "taskInfo*"
-QT_MOC_LITERAL(5, 54, 9), // "pTaskInfo"
-QT_MOC_LITERAL(6, 64, 14), // "selectTaskArea"
-QT_MOC_LITERAL(7, 79, 9), // "taskColor"
-QT_MOC_LITERAL(8, 89, 9), // "taskShape"
-QT_MOC_LITERAL(9, 99, 14), // "actAsMapButton"
-QT_MOC_LITERAL(10, 114, 8), // "resetAll"
-QT_MOC_LITERAL(11, 123, 6), // "commit"
-QT_MOC_LITERAL(12, 130, 5), // "reset"
-QT_MOC_LITERAL(13, 136, 6), // "cancel"
-QT_MOC_LITERAL(14, 143, 11), // "tieToSlider"
-QT_MOC_LITERAL(15, 155, 23), // "enableTaskAreaSelection"
-QT_MOC_LITERAL(16, 179, 9), // "updatePts"
-QT_MOC_LITERAL(17, 189, 3), // "pts"
-QT_MOC_LITERAL(18, 193, 10), // "createTask"
-QT_MOC_LITERAL(19, 204, 14), // "mapCoordFromJS"
-QT_MOC_LITERAL(20, 219, 10), // "locationJS"
-QT_MOC_LITERAL(21, 230, 12), // "taskSelected"
-QT_MOC_LITERAL(22, 243, 15), // "enableCommitBtn"
-QT_MOC_LITERAL(23, 259, 11), // "sliderMoved"
-QT_MOC_LITERAL(24, 271, 4) // "bots"
+QT_MOC_LITERAL(3, 35, 12), // "sendTaskInfo"
+QT_MOC_LITERAL(4, 48, 9), // "taskInfo*"
+QT_MOC_LITERAL(5, 58, 9), // "pTaskInfo"
+QT_MOC_LITERAL(6, 68, 17), // "taskShapeAndColor"
+QT_MOC_LITERAL(7, 86, 9), // "taskShape"
+QT_MOC_LITERAL(8, 96, 9), // "taskColor"
+QT_MOC_LITERAL(9, 106, 14), // "actAsMapButton"
+QT_MOC_LITERAL(10, 121, 8), // "resetAll"
+QT_MOC_LITERAL(11, 130, 6), // "commit"
+QT_MOC_LITERAL(12, 137, 5), // "reset"
+QT_MOC_LITERAL(13, 143, 6), // "cancel"
+QT_MOC_LITERAL(14, 150, 11), // "tieToSlider"
+QT_MOC_LITERAL(15, 162, 23), // "enableTaskAreaSelection"
+QT_MOC_LITERAL(16, 186, 9), // "updatePts"
+QT_MOC_LITERAL(17, 196, 3), // "pts"
+QT_MOC_LITERAL(18, 200, 10), // "createTask"
+QT_MOC_LITERAL(19, 211, 14), // "mapCoordFromJS"
+QT_MOC_LITERAL(20, 226, 10), // "locationJS"
+QT_MOC_LITERAL(21, 237, 12), // "taskSelected"
+QT_MOC_LITERAL(22, 250, 15), // "enableCommitBtn"
+QT_MOC_LITERAL(23, 266, 11), // "sliderMoved"
+QT_MOC_LITERAL(24, 278, 4) // "bots"
 
     },
     "TaskPanelWidget\0replacedMapButton\0\0"
-    "sendTask\0taskInfo*\0pTaskInfo\0"
-    "selectTaskArea\0taskColor\0taskShape\0"
+    "sendTaskInfo\0taskInfo*\0pTaskInfo\0"
+    "taskShapeAndColor\0taskShape\0taskColor\0"
     "actAsMapButton\0resetAll\0commit\0reset\0"
     "cancel\0tieToSlider\0enableTaskAreaSelection\0"
     "updatePts\0pts\0createTask\0mapCoordFromJS\0"
@@ -130,8 +130,8 @@ void TaskPanelWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->replacedMapButton(); break;
-        case 1: _t->sendTask((*reinterpret_cast< taskInfo*(*)>(_a[1]))); break;
-        case 2: _t->selectTaskArea((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+        case 1: _t->sendTaskInfo((*reinterpret_cast< taskInfo*(*)>(_a[1]))); break;
+        case 2: _t->taskShapeAndColor((*reinterpret_cast< QString(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
         case 3: _t->actAsMapButton(); break;
         case 4: _t->resetAll(); break;
         case 5: _t->commit(); break;
@@ -158,13 +158,13 @@ void TaskPanelWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         }
         {
             typedef void (TaskPanelWidget::*_t)(taskInfo * );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&TaskPanelWidget::sendTask)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&TaskPanelWidget::sendTaskInfo)) {
                 *result = 1;
             }
         }
         {
             typedef void (TaskPanelWidget::*_t)(QString , QString );
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&TaskPanelWidget::selectTaskArea)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&TaskPanelWidget::taskShapeAndColor)) {
                 *result = 2;
             }
         }
@@ -220,14 +220,14 @@ void TaskPanelWidget::replacedMapButton()
 }
 
 // SIGNAL 1
-void TaskPanelWidget::sendTask(taskInfo * _t1)
+void TaskPanelWidget::sendTaskInfo(taskInfo * _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void TaskPanelWidget::selectTaskArea(QString _t1, QString _t2)
+void TaskPanelWidget::taskShapeAndColor(QString _t1, QString _t2)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);

@@ -19,8 +19,11 @@ WebView::WebView(QString homeUrl, MapWidget * pParentMapWidget)
 {
     Q_UNUSED(homeUrl);
     firstLoad = true;
+
+    //QUrl doesn't like relative paths, so please change accordingly:
     load(QUrl::fromLocalFile("/home/haquema1/Downloads/soa_sample_app/blarg2/mapWidget/Scripts/RVA_derived.htm"));
     show();
+
     page()->settings()->setAttribute(QWebSettings::JavascriptCanOpenWindows, true);
     settings()->setAttribute(QWebSettings::JavascriptCanOpenWindows, true);
     page()->settings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
@@ -28,6 +31,7 @@ WebView::WebView(QString homeUrl, MapWidget * pParentMapWidget)
     QWebSettings::globalSettings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
     connect(this,SIGNAL(loadFinished(bool)), this, SLOT(UpdateOnPageLoad(bool)));
 }
+
 
 void WebView::showWebInspector()
 {
@@ -81,12 +85,7 @@ void WebView::UpdateOnPageLoad(bool ok)
 
 void WebView::eval(QString cmd)
 {
-//    QString dBugStuff = "log('";
-//    dBugStuff.append(cmd);
-//    dBugStuff.append("');");
     getWebFrame()->evaluateJavaScript(cmd);
-    //getWebFrame()->evaluateJavaScript(dBugStuff);
-    //qDebug()<<dBugStuff;
 }
 
 
@@ -97,12 +96,10 @@ QWebFrame * WebView::getWebFrame()
     return m_pWebFrame;
 }
 
+
 void WebView::recvFromJS(QString info)
 {
-    //qDebug()<<info;
-
     //Emit signal with the list of coordinates from JS
     Q_EMIT coordRecvFromJS(info);
-
 }
 

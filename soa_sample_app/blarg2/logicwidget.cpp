@@ -39,29 +39,36 @@ LogicWidget::LogicWidget(QWidget * pParent) : QWidget(pParent)
 
 void LogicWidget::setFileName(QString configurationFilename)
 {
+    //configurationFilename is coming from interfaceWindow.cpp
     //qDebug()<<"LogicWidget::setFileName()";
-
 
     //Call getBeliefIno using timer
     m_pBeliefTimer = new QTimer();
     connect(m_pBeliefTimer, SIGNAL(timeout()), this, SLOT(getBeliefInfo()));
     m_pBeliefTimer->setInterval(1000);
 
-
+    // Setting up the browser (MapWidget, Webview)
     m_pMapWidget = new MapWidget(configurationFilename, this);
     m_pWebView = m_pMapWidget->GetWebView();
     QVBoxLayout * nl = new QVBoxLayout(this);
     nl->addWidget(m_pWebView);
     m_pWebView->seeMe();
 
-
+    //Site and actor information is sent to MapWidget
     connect(this, SIGNAL(siteData(site*)), m_pMapWidget, SLOT(updateSite(site*)));
     connect(this, SIGNAL(actorData(actor*)), m_pMapWidget, SLOT(updateActor(actor*)));
+
+    //WebView browser is telling logicWidget that JS coordinated have been received
     connect(m_pWebView, SIGNAL(coordRecvFromJS(QString)), this, SLOT(sendCoord(QString)));
-    connect(this, SIGNAL(commitTask(taskInfo*)), m_pMapWidget, SLOT(commitTask(taskInfo*)));
+
+    //LogicWidget's commitTask is connected to MapWidget's sendCmdToJS
+    connect(this, SIGNAL(commitTask(taskInfo*)), m_pMapWidget, SLOT(sendCmdToJS(taskInfo*)));
+    //MapWidget's endTask is connected to LogicWidget's endTask
     connect(m_pMapWidget, SIGNAL(endTask(int)), this, SIGNAL(endTask(int)));
 
     //SoaAutonomy pointer and worldDataManager pointer using agent0
+    //FOB acts as agent0
+    //socket matches ~Downloads/soa_sim/SoaSimConfig.xml's configuration of "blue-room"
     m_pSoaAutonomy = new soa::SoaAutonomy(0, "localhost:11511");
     m_pWDM = m_pSoaAutonomy->getWorldDataManager();
 
@@ -84,9 +91,11 @@ QWebFrame * LogicWidget::getWebFrame()
     return m_pWebView->getWebFrame();
 }
 
-void LogicWidget::enableTaskDraw(QString taskColor, QString taskShape)
+/*
+ * How to send a command to the JS code
+*/
+void LogicWidget::enableTaskDraw(QString taskShape, QString taskColor)
 {
-    //qDebug()<<"LogicWidget::enableTaskDraw()";
     QString sendMe = "drawTask('";
     sendMe.append(taskColor);
     sendMe.append("', '");
@@ -101,12 +110,19 @@ void LogicWidget::sendCoord(QString coords)
     Q_EMIT actuallySendCoord(coords);
 }
 
-
+/*
+ * getBeliefInfo method is based on Test.cpp script created by JHU/APL,
+ * which basically polls the world data manager
+ * about the state of the sim (actor locations, for instance)
+ * For the opertator interface, this guides icon choice and placement
+*/
 void LogicWidget::getBeliefInfo()
 {
     //Create temporary actors and sites
     actor * tActor;
     site * tSite;
+
+    //There are three types of sites: FOB, NGOs, and villages
 
     //Base information
     gm = m_pWDM->getGridMath();
@@ -119,11 +135,6 @@ void LogicWidget::getBeliefInfo()
         tSite = new site;
         soa::Belief_Base* base = static_cast<soa::Belief_Base*>(baseIter->second.get());
         gm->gridToWorld(base->getCells()[0].getCol(), base->getCells()[0].getRow(), tempX, tempZ);
-
-        //Print info to screen
-        //qDebug() << "Base: id=" << base->getId() << ", position=(" << tempX << ",0," << tempZ << ")";
-        //qDebug() << ", suppliesAvailable=" << base->getSupplies();
-        //qDebug() << ", timestamp=" << base->getBeliefTime() << endl;
 
         //Store info in tSite
         tSite->id = base->getId();
@@ -145,12 +156,6 @@ void LogicWidget::getBeliefInfo()
         soa::Belief_NGOSite* ngo = static_cast<soa::Belief_NGOSite*>(ngoIter->second.get());
         gm->gridToWorld(ngo->getCells()[0].getCol(), ngo->getCells()[0].getRow(), tempX, tempZ);
 
-        //Print info to screen
-        //qDebug() << "NGO Site: id=" << ngo->getId() << ", position=(" << tempX << ",0," << tempZ << ")";
-        //qDebug() << ", suppliesRemaining=" << ngo->getSupplies() << ", casualtiesAvailable=" << ngo->getCasualties() <<
-        //", civiliansTaken=" << ngo->getCivilians();
-        //qDebug() << ", timestamp=" << ngo->getBeliefTime() << endl;
-
         //Store info in tSite
         tSite->id = ngo->getId();
         tSite->type = "NGO";
@@ -171,11 +176,6 @@ void LogicWidget::getBeliefInfo()
         soa::Belief_Village* village = static_cast<soa::Belief_Village*>(villageIter->second.get());
         gm->gridToWorld(village->getCells()[0].getCol(), village->getCells()[0].getRow(), tempX, tempZ);
 
-        //Print info to screen
-        //qDebug() << "Village: id=" << village->getId() << ", position=(" << tempX << ",0," << tempZ << ")";
-        //qDebug() << ", suppliesRemaining=" << village->getSupplies() << ", casualtiesAvailable=" << village->getCasualties();
-        //qDebug() << ", timestamp=" << village->getBeliefTime() << endl;
-
         //Store info in tSite
         tSite->id = village->getId();
         tSite->type = "Village";
@@ -194,16 +194,15 @@ void LogicWidget::getBeliefInfo()
      for(actorIter = actorMap.begin(); actorIter!= actorMap.end(); actorIter++){
          tActor = new actor;
          soa::Belief_Actor* actor = static_cast<soa::Belief_Actor*>(actorIter->second.get());
-         // ID
-         //qDebug() << "Actor: id=" << actor->getId();
-         // Alive or not
+
+         // Status
         string aliveStatus;
         if(actor->getIsAlive()){
             aliveStatus = "Alive";
         }else{
             aliveStatus = "Destroyed";
         }
-        //qDebug() << ", status=" << aliveStatus;
+
         // Affiliation
         string affiliation;
         switch(actor->getAffiliation()){
@@ -223,8 +222,8 @@ void LogicWidget::getBeliefInfo()
             affiliation = "Invalid";
             break;
         }
-        //qDebug() << ", affiliation=" << affiliation;
-        // Type of actor
+
+        // Type
         string actorType;
         switch(actor->getType()){
         case 0: // Base
@@ -252,53 +251,6 @@ void LogicWidget::getBeliefInfo()
             actorType = "Invalid";
             break;
         }
-        //qDebug() << ", type=" << actorType;
-        // Coordinates
-        //qDebug() << ", position=(" << actor->getPos_x() << "," << actor->getPos_y() << ","
-             //<< actor->getPos_z() << ")";
-        //qDebug() << ", velocityValid=" << actor->getVelocity_x_valid() &&
-             //actor->getVelocity_y_valid() && actor->getVelocity_z_valid();
-        //qDebug() << ", velocity=(" << actor->getVelocity_x() << "," << actor->getVelocity_y() << ","
-            // << actor->getVelocity_z() << ")";
-        // Actor-specific information
-        switch(actor->getType()){
-        case 0: // Base
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            break;
-        case 1: // Small UAV
-            //qDebug() << ", fuelRemaining=" << actor->getFuelRemaining();
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            break;
-        case 2: // Heavy UAV
-            //qDebug() << ", fuelRemaining=" << actor->getFuelRemaining();
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            //qDebug() << "\t\ttotalStorage=" << actor->getNumStorageSlots() <<
-//                ", availableStorage=" << actor->getNumFreeSlots() <<
-//                ", casualtiesStored=" << actor->getNumCasualtiesStored() <<
-//                ", suppliesStored=" << actor->getNumSuppliesStored() << endl;
-            break;
-        case 3: // Dismount
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            //qDebug() << "\t\t" << "isWeaponized=" << actor->getIsWeaponized() <<
-                //", totalStorage=" << actor->getNumStorageSlots() <<
-               // ", availableStorage=" << actor->getNumFreeSlots() <<
-               // ", civiliansStored=" << actor->getNumCiviliansStored() << endl;
-            break;
-        case 4: // Truck
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            //qDebug() << "\t\t" << "isWeaponized=" << actor->getIsWeaponized() <<
-//                ", hasJammer=" << actor->getHasJammer() <<
-//                ", totalStorage=" << actor->getNumStorageSlots() <<
-//                ", availableStorage=" << actor->getNumFreeSlots() <<
-//                ", civiliansStored=" << actor->getNumCiviliansStored() <<endl;
-            break;
-        case 5: // Police
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            break;
-        case 6: // Balloon
-            //qDebug() << ", timestamp=" << actor->getBeliefTime() << endl;
-            break;
-        }
 
         tActor->id = actor->getId();
         tActor->status = QString::fromStdString(aliveStatus);
@@ -319,6 +271,16 @@ void LogicWidget::getBeliefInfo()
      }//End for each actor
 }
 
+/*
+ * hLatToGoogle
+ * hLngToGoogle
+ * googleToHLat
+ * googleToHLng
+ *
+ * are fine tuned to map the sim world to
+ * Dugway, UT proving grounds
+ *
+*/
 
 float LogicWidget::hLatToGoogle(float hex)
 {
@@ -356,48 +318,61 @@ float LogicWidget::googleToHLng(float lng)
 }
 
 
+//interfaceWindow.cpp connects taskPanelWidget's sendTaskInfo to logicWindow's taskSOA
+//SLOT used when not scripting for video
+//taskSOA() tasks the sim using the SoaAutonomy API
 void LogicWidget::taskSOA(taskInfo *tInfo)
 {
     if (tInfo->task == "MoveToLocation")
     {
+        //Extract the waypoints for this task
         if (tInfo->points.size() > 2)
         {
             vector <soa::WorldLocation> tPoints;
             for (int i = 0; i < tInfo->points.size(); i += 2)
             {
-                tPoints.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]), 0 ,googleToHLat(tInfo->points[i])));
+                tPoints.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]),
+                                  0, googleToHLat(tInfo->points[i])));
             }
+            //task the sim using the API
             m_pSoaAutonomy->sendWaypointPathCommand(tInfo->actorId, tPoints);
         }
         else
-        m_pSoaAutonomy->sendWaypointCommand(tInfo->actorId, soa::WorldLocation(googleToHLng(tInfo->points[1]),
+            m_pSoaAutonomy->sendWaypointCommand(tInfo->actorId,
+                                            soa::WorldLocation(googleToHLng(tInfo->points[1]),
                                             0, googleToHLat(tInfo->points[0])));
 
     }
     else if (tInfo->task == "MaintainLocation")
     {
+        //This task only requires actor ID
         m_pSoaAutonomy->sendMaintainLocationCommand(tInfo->actorId);
     }
     else if (tInfo->task == "ReturnToFOB")
     {
+        //This task only requires actor ID
         m_pSoaAutonomy->sendReturnToFOBCommand(tInfo->actorId);
     }
     else if (tInfo->task == "Home")
     {
+        //This task only requires actor ID
         m_pSoaAutonomy->sendReturnToFOBCommand(tInfo->actorId);
     }
     else if (tInfo->task == "Refuel")
     {
+        //This task only requires actor ID
         m_pSoaAutonomy->sendRefuelCommand(tInfo->actorId);
     }
     else if (tInfo->task == "Avoid")
     {
+        //Extract the no fly zone vertices
         if (tInfo->points.size() > 2)
         {
             vector <soa::WorldLocation> tPointsAvoid;
             for (int i = 0; i < tInfo->points.size(); i += 2)
             {
-                tPointsAvoid.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]), 0 ,googleToHLat(tInfo->points[i])));
+                tPointsAvoid.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]),
+                                       0, googleToHLat(tInfo->points[i])));
             }
             m_pSoaAutonomy->addNoFlyZone(tPointsAvoid);
         }
@@ -414,12 +389,13 @@ void LogicWidget::taskSOA(taskInfo *tInfo)
 }
 
 
+//Method to resolve icon flickering
 void LogicWidget::checkWaypointsProgress(taskInfo *tInfo)
 {
     //Only doing this for MoveToLocation
     if (tInfo->task == "MoveToLocation")
     {
-        //Go through all the actors (NOT GREAT, FIX LATER)
+        //Go through all the actors (NOT GREAT)
         std::map<int, soa_shared_ptr<soa::Belief> > actorMap = m_pWDM->getAllBeliefs(soa::Belief::ACTOR);
         std::map<int, soa_shared_ptr<soa::Belief> >::iterator actorIter;
         for(actorIter = actorMap.begin(); actorIter!= actorMap.end(); actorIter++)
@@ -445,13 +421,21 @@ void LogicWidget::checkWaypointsProgress(taskInfo *tInfo)
 }
 
 
+//interfaceWindow.cpp connects taskPanelWidget's sendTaskInfo to logicWindow's taskForVideo
+//SLOT used as part of video script
+//Goals are  (1) emit the SIGNAL commitTask() with taskInfo
+//           (2) and to task the sim using the API taskSOA()
+//Details:   each sim actor needs to be tasked separately, ie call taskSOA() for each actor
 void LogicWidget::tasksForVideo(taskInfo* tInfo)
 {
     if (tInfo->id == 300)
     {
         Q_EMIT(commitTask(tInfo));
-        //tInfo->actor = "Small UAV 103";
-        //tInfo->actorId = 103;
+        //Even though the Avoid task applies all
+        //vechicles, it needs an ID
+        //We've given it 103, as such
+        //tInfo->actor is "Small UAV 103";
+        //tInfo->actorId is 103;
         taskSOA(tInfo);
     }
     //01 Move to Location
@@ -460,10 +444,10 @@ void LogicWidget::tasksForVideo(taskInfo* tInfo)
         Q_EMIT(commitTask(tInfo));
         tInfo->actor = "Small UAV 103";
         tInfo->actorId = 103;
-        taskSOA(tInfo);
+        taskSOA(tInfo); //calling taskSOA() for 103
         tInfo->actor = "Small UAV 104";
         tInfo->actorId = 104;
-        taskSOA(tInfo);
+        taskSOA(tInfo); //calling taskSOA() for 104
     }
     //02 Move to Location
     else if (tInfo->id == 302)

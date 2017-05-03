@@ -339,3 +339,4 @@ QFontMetrics QSidePanel::m_FontMetrics = QFontMetrics(m_Font);
 QFont QSidePanel::m_Font2;
 QFontMetrics QSidePanel::m_FontMetrics2 = QFontMetrics(m_Font2);
 
+
