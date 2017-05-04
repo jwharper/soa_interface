@@ -20,7 +20,7 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
      * ~/Downloads/soa_sample_app/blarg2/mapWidget/Scripts/RVA_derived.htm
     */
     m_pLogicWidget = new LogicWidget(this);
-    m_pLogicWidget->setFileName("./Scripts/RVA_derived.htm");
+    m_pLogicWidget->setFileName("./Scripts/RVA_derived.htm"); //right click file to edit
     //Map area dimensions
     m_pLogicWidget->setMinimumHeight(800);
     m_pLogicWidget->setMinimumWidth(1000);
@@ -32,14 +32,12 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
 
 
     //Operator interface dimensions, layout, title, and icon
-    BorderLayout *layout = new BorderLayout;
+    BorderLayout * layout = new BorderLayout;
     layout->addWidget(m_pLogicWidget, BorderLayout::Center);
     //layout->addWidget(m_pTabPanelWidget, BorderLayout::East);
     layout->addWidget(m_pTabPanel2, BorderLayout::East);
     layout->addWidget(m_pTaskPanelWidget, BorderLayout::South);
     setLayout(layout);
-    //setMinimumHeight(1200);
-    //setMinimumWidth(1200);
     setWindowTitle(tr("SOA Operator Interface"));
     setWindowIcon(QIcon("maria2.png"));
 
