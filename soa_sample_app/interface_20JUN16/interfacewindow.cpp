@@ -23,10 +23,10 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
     m_pLogicWidget->setFileName("./Scripts/RVA_derived.htm");
     //Map area dimensions
     m_pLogicWidget->setMinimumHeight(800);
-    m_pLogicWidget->setMinimumWidth(1100);
+    m_pLogicWidget->setMinimumWidth(1000);
     //m_pTabPanelWidget = new TabPanelWidget(this);
     m_pTabPanel2 = new TabPanel2(this);
-    m_pTabPanel2->setMaximumHeight(800);
+    m_pTabPanel2->setMinimumHeight(800);
     m_pTaskPanelWidget = new TaskPanelWidget(this);
     //m_pTaskPanelWidget->setMaximumHeight(300);
 
@@ -38,17 +38,17 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
     layout->addWidget(m_pTabPanel2, BorderLayout::East);
     layout->addWidget(m_pTaskPanelWidget, BorderLayout::South);
     setLayout(layout);
-    setMinimumHeight(1300);
-    setMinimumWidth(1300);
+    //setMinimumHeight(1200);
+    //setMinimumWidth(1200);
     setWindowTitle(tr("SOA Operator Interface"));
     setWindowIcon(QIcon("maria2.png"));
 
     //Connections between the three widgets are made here.
 
-    //Connect selectTaskArea from taskPanelWidget to enableTaskDraw
-    connect(m_pTaskPanelWidget, SIGNAL(selectTaskArea(QString, QString)), m_pLogicWidget, SLOT(enableTaskDraw(QString, QString)));
+    //Connect TaskPanelWidget's taskShapeAndColor to LogicWidget's enableTaskDraw informing about color and shape for task
+    connect(m_pTaskPanelWidget, SIGNAL(taskShapeAndColor(QString, QString)), m_pLogicWidget, SLOT(enableTaskDraw(QString, QString)));
 
-    //Connect logicWidget's coordinates recvd from JS to taskPanelWidget's mapCoordFromJS
+    //Connect LogicWidget's coordinates recvd from JS to taskPanelWidget's mapCoordFromJS
     connect(m_pLogicWidget, SIGNAL(actuallySendCoord(QString)), m_pTaskPanelWidget, SLOT(mapCoordFromJS(QString)));
 
 

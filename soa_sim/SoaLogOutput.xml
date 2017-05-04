@@ -1,9 +1,18 @@
 <Log>
-  <Simulation configFile="SoaSimConfig.xml" startDateTime="05/02/2017 10:22:43.828993" startTimeStamp="1493734963828" stopDateTime="05/02/2017 10:24:36.101391" stopTimeStamp="1493735076101" />
+  <Simulation configFile="SoaSimConfig.xml" startDateTime="05/04/2017 04:23:17.191459" startTimeStamp="1493886197191" stopDateTime="05/04/2017 04:31:31.222282" stopTimeStamp="1493886691222" />
   <Errors />
-  <Results supplyDelivery="0" redTruckCaptured="2" redDismountCaptured="0" casualtyDelivered="0" heavyUAVLost="0" smallUAVLost="0" civilianInRedCustody="0" />
+  <Results supplyDelivery="0" redTruckCaptured="4" redDismountCaptured="2" casualtyDelivered="0" heavyUAVLost="0" smallUAVLost="0" civilianInRedCustody="5" />
   <Events>
-    <RedTruckCaptured timeStamp="1493735028949" capturer="Blue Police 16" captured="Red Truck 9" />
-    <RedTruckCaptured timeStamp="1493735050996" capturer="Blue Police 16" captured="Red Truck 10" />
+    <RedTruckCaptured timeStamp="1493886263853" capturer="Blue Police 16" captured="Red Truck 9" />
+    <RedTruckCaptured timeStamp="1493886286420" capturer="Blue Police 16" captured="Red Truck 10" />
+    <CivilianInRedCustody timeStamp="1493886370144" capturer="Red Truck 20" destination="Red Base 2" />
+    <RedDismountCaptured timeStamp="1493886391100" capturer="Blue Police 16" captured="Red Dismount 2" />
+    <RedTruckCaptured timeStamp="1493886416931" capturer="Blue Police 16" captured="Red Truck 8" />
+    <RedTruckCaptured timeStamp="1493886431317" capturer="Blue Police 16" captured="Red Truck 20" />
+    <RedDismountCaptured timeStamp="1493886476496" capturer="Blue Police 16" captured="Red Dismount 6" />
+    <CivilianInRedCustody timeStamp="1493886531069" capturer="Red Truck 17" destination="Red Base 1" />
+    <CivilianInRedCustody timeStamp="1493886622260" capturer="Red Truck 28" destination="Red Base 1" />
+    <CivilianInRedCustody timeStamp="1493886635311" capturer="Red Truck 17" destination="Red Base 0" />
+    <CivilianInRedCustody timeStamp="1493886660947" capturer="Red Truck 29" destination="Red Base 2" />
   </Events>
 </Log>

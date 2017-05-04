@@ -64,7 +64,7 @@ public:
         if (TaskPanelWidget->objectName().isEmpty())
             TaskPanelWidget->setObjectName(QStringLiteral("TaskPanelWidget"));
         TaskPanelWidget->resize(1100, 250);
-        TaskPanelWidget->setMinimumSize(QSize(1000, 200));
+        TaskPanelWidget->setMinimumSize(QSize(1100, 250));
         TaskPanelWidget->setMaximumSize(QSize(16777215, 250));
         m_pCommitButton = new QPushButton(TaskPanelWidget);
         m_pCommitButton->setObjectName(QStringLiteral("m_pCommitButton"));
