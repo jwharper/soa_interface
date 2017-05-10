@@ -3,7 +3,7 @@ Human operator interface for SOA simulator
 
 
 
-Clone the soa_interface repository <br />
+cd into Downloads directory and Clone the soa_interface repository <br />
 	https://github.com/mhaque3/soa_interface.git<br />
 		
 This document serves as a setup guide for the operator interface. Screenshots that accompany this guide can be found in ~/Downloads/screenshots.<br /> 
