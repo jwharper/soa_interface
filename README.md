@@ -12,7 +12,7 @@ This document serves as a setup guide for the operator interface. Screenshots th
 
 %=============
 
-Components
+1  Components
 
 %=============
 	
@@ -20,16 +20,16 @@ Components
 
 ~/Downloads/screenshots/00<br />
  
-01.  The interface code lives in ~/Downloads/soa_sample_app<br />
-02.  Qt Creator IDE (setup instruction are below) since the interface is built using the Qt framework.<br />  
-03.  The simulator lives in ~/Downloads/soa_sim. Additional information is provided below.<br /> 
-03.  Google Protocol Buffers (the sim needs these for messaging). Instructions on how to install Google protobuf is provided in this document.<br />
+01.  The interface code lives in ~/Downloads/soa_sample_app. Setup instructions are in Section 6.<br />
+02.  Qt Creator IDE since the interface is built using the Qt framework. Setup instructions are in Section 4.<br />  
+03.  The simulator lives in ~/Downloads/soa_sim. Setup instructions are in Section 5.<br /> 
+03.  Google Protocol Buffers since the sim utilizes these for messaging. Setup instructions are in Section 3.<br />
 
 
 
 %=============
 
-System
+2  System
 
 %=============
 
@@ -44,7 +44,7 @@ System
 
 %=============
 
-Google protobuf
+3  Google protobuf
 
 %=============
 
@@ -53,7 +53,7 @@ Google protobuf
 First, replace old protobuf-3.0.0-alpha-2<br /> 
 
 01.  Delete directory ~/Downloads/soa_sample_app/protobuf-3.0.0-aplha-2<br /> 
-02.  Do *NOT* delete Directory ~/Downloads/soa_sample_app/proto_buff<br /> 
+02.  Do **NOT** delete directory ~/Downloads/soa_sample_app/proto_buff<br /> 
 03.  Go to<br />
 	https://github.com/google/protobuf<br />
 04.  Click on the "Branch: master" dropdown button, select the "Tags" tab, and scroll through the list and select v3.0.0-alpha-2<br />
@@ -63,7 +63,7 @@ First, replace old protobuf-3.0.0-alpha-2<br />
 
 Next, install new protobuf-3.0.0-alpha-2<br />
 
-12.  Run:<br />
+12.  Open a terminal, cd into ~/Downloads/protobuf-3.0.0-alpha-2 and run:<br />
 ~/Downloads/protobuf-3.0.0-alpha-2$  ./autogen.sh<br />
 ~/Downloads/protobuf-3.0.0-alpha-2$  ./configure<br />
 ~/Downloads/protobuf-3.0.0-alpha-2$  make<br />
@@ -74,7 +74,7 @@ Next, install new protobuf-3.0.0-alpha-2<br />
 
 %=============
 
-Qt creator
+4  Qt creator
 
 %=============
 
@@ -97,7 +97,7 @@ Qt creator
 
 %=============
 
-Simulator<br />
+5  Simulator<br />
 ~/Downloads/soa_sim/
 
 %=============
@@ -122,7 +122,7 @@ Simulator<br />
 
 %=============
 
-Interface<br /> 
+6  Interface<br /> 
 ~/Downloads/soa_sample_app
 
 %=============
@@ -141,9 +141,14 @@ Interface<br />
 ~/Downloads/screenshots/06<br />
 ~/Downloads/screenshots/07<br />
 
-04.  Build project<br />
+04.  Replace "haquema1" with appropriate username (QUrl not happy with relative path) in the following location:<br />
+
+~Downloads/soa_sample_app/blarg2/mapWdiget/**webview.cpp Line 24:**<br />
+load(QUrl::fromLocalFile("/home/**haquema1**/Downloads/soa_sample_app/blarg2/mapWidget/Scripts/RVA_derived.htm"));<br />
+
+05.  Build project<br />
 	Build >> Build Project "interface20JUN16"<br />
-05.  Run project<br />
+06.  Run project<br />
 	Build >> Run<br />
 	
 ~/Downloads/screenshots/08<br />
@@ -152,7 +157,7 @@ Interface<br />
 
 %=============
 
-Notes
+7  Notes
 
 %=============
 
@@ -185,12 +190,38 @@ Notes
 	
 ~/Downloads/screenshots/05<br />
 	
-10.  JHU/APL files that allow the interface to talk to the sim, or API to the sim (do *NOT* edit):<br /> 
+10.  JHU/APL files that allow the interface to talk to the sim, or API to the sim (do **NOT** edit):<br /> 
 	Belief_Actor.h<br />
 	SoaAutonomy.h<br />
 	WorldDataManager.h<br />
 	WorldLocation.h<br />
      List not exhaustive -- only included items that can be seen in the Active Project View<br />
+     
+     
+     
+%=============
+
+8  API Notes
+
+%=============
+
+
+
+01.  ~/Downloads/soa_sample_app/include/SoaAutonomy.h is the JHU/APL provided API to the sim.<br />
+02.  LogicWidget::taskSOA makes use of API to task the sim, (choice of task comes from TaskPanelWidget).<br />
+03.  Currently, the sim's agents are individually tasked.<br />
+
+*Current API:* Interface asks sim to task agent with ID 103 to "Move to Location" by calling<br />
+
+m_pSoaAutonomy->sendWaypointPathCommand(**103**, waypointsToLocation); // in LogicWidget::taskSOA<br />
+
+*Future API:* Interface asks sim to task 3 agents to "Move to Location" by calling<br />
+
+m_pSoaAutonomy->sendWaypointPathCommand(**3**, waypointsToLocation); // coming soon...<br />
+
+04.  The interface is one step ahead of the API at this point as it has been designed to task by a swarm size (scroll bars in TabpanelWidget), and not by swarm agent IDs. Interface is developed without waiting for API to catch up by faking what happens after the TabPanelWidget goes through setting up a task (see LogicWidget::tasksForVideo).<br />
+
+~/Downloads/screenshots/10<br />
 
 
 
