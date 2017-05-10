@@ -196,6 +196,20 @@ load(QUrl::fromLocalFile("/home/**haquema1**/Downloads/soa_sample_app/blarg2/map
 	WorldDataManager.h<br />
 	WorldLocation.h<br />
      List not exhaustive -- only included items that can be seen in the Active Project View<br />
+     
+     
+     
+%=============
+
+8  API Notes
+
+%=============
+
+
+
+01.  ~/Downloads/soa_sample_app/include/SoaAutonomy.h is the JHU/APL provided API to the sim
+02.  LogicWidget::taskSOA makes use of API to task the sim, (choice of task comes from TaskPanelWidget).
+03.  
 
 
 
