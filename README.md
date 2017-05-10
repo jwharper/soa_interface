@@ -207,9 +207,18 @@ load(QUrl::fromLocalFile("/home/**haquema1**/Downloads/soa_sample_app/blarg2/map
 
 
 
-01.  ~/Downloads/soa_sample_app/include/SoaAutonomy.h is the JHU/APL provided API to the sim
-02.  LogicWidget::taskSOA makes use of API to task the sim, (choice of task comes from TaskPanelWidget).
-03.  
+01.  ~/Downloads/soa_sample_app/include/SoaAutonomy.h is the JHU/APL provided API to the sim.<br />
+02.  LogicWidget::taskSOA makes use of API to task the sim, (choice of task comes from TaskPanelWidget).<br />
+03.  Currently, the sim's agents are individually tasked. However, the interface has been designed to task by a swarm size (scroll bars in TabpanelWidget), and not swarm agent IDs.<br />
+
+Asking agent with ID 103 to "Move to Location," calls<br />
+
+m_pSoaAutonomy->sendWaypointPathCommand(**103**, waypointsToLocation); // in LogicWidget::taskSOA<br />
+
+JHU/APL is modifying the API in a way that allows calls<br />
+
+m_pSoaAutonomy->sendWaypointPathCommand(**3**, waypointsToLocation); // coming soon...<br />
+
 
 
 
