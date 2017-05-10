@@ -221,8 +221,6 @@ m_pSoaAutonomy->sendWaypointPathCommand(**3**, waypointsToLocation); // coming s
 
 04.  The interface is one step ahead of the API at this point as it has been designed to task by a swarm size (scroll bars in TabpanelWidget), and not by swarm agent IDs. Interface is developed without waiting for API to catch up by faking what happens after the TabPanelWidget goes through setting up a task (see LogicWidget::tasksForVideo).<br />
 
-~/Downloads/screenshots/10<br />
-
 
 
 %=============
