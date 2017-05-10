@@ -60,14 +60,6 @@ public:
 	QList<QSidePanel *> m_PinnedPanelList;
 	QList<QSidePanel *> m_PanelList;
 
-//	int m_UnknownCount;
-//	int m_NormalCount;
-//	int m_PausedCount;
-//	int m_QueuedCount;
-//	int m_CanceledCount;
-//	int m_FailedCount;
-//	int m_DoneCount;
-
 	QPushButton * m_pCenterMapButton;
 	QPushButton * m_pResetButton;
 	QPushButton * m_pSelectButton;

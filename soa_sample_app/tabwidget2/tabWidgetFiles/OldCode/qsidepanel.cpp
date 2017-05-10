@@ -265,34 +265,6 @@ void QSidePanel::SidePanelInit(){
     m_pPlayPixmap = new QPixmap("../../tabWidgetFiles/play.png");
     m_pPausePixmap = new QPixmap("../../tabWidgetFiles/pause.png");
 
-//    m_pPinPixmap = new QPixmap("/home/haquema1/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-pin.png");
-//    m_pPinnedPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-pinned.png");
-//    m_pPlusPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-plus.png");
-//    m_pMinusPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-minus.png");
-//    m_pLowerCornerPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-lowercorner.png");
-//    m_pSmallLowerCornerPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-smalllowercorner.png");
-//    m_pUpperCornerPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-uppercorner.png");
-//    m_pBorderPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/qsp-border.png");
-//    m_pInterruptPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/interrupt.png");
-//    m_pUavPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/small_uav.png");
-//    m_pUgvPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/heavy_uav.png");
-//    m_pPlayPixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/play.png");
-//    m_pPausePixmap = new QPixmap("/home/musadhaque/Downloads/soa_sample_app/tabwidget2/tabWidgetFiles/pause.png");
-
-//	if(m_pPinPixmap->isNull()) assert(0);
-//	if(m_pPinnedPixmap->isNull()) assert(0);
-//	if(m_pPlusPixmap->isNull()) assert(0);
-//	if(m_pMinusPixmap->isNull()) assert(0);
-//	if(m_pLowerCornerPixmap->isNull()) assert(0);
-//	if(m_pSmallLowerCornerPixmap->isNull()) assert(0);
-//	if(m_pUpperCornerPixmap->isNull()) assert(0);
-//	if(m_pBorderPixmap->isNull()) assert(0);
-//	if(m_pInterruptPixmap->isNull()) assert(0);
-//	if(m_pUavPixmap->isNull()) assert(0);
-//	if(m_pUgvPixmap->isNull()) assert(0);
-//	if(m_pPlayPixmap->isNull()) assert(0);
-//	if(m_pPausePixmap->isNull()) assert(0);
-
 	// Configure font
 	QFont font(FONT_FAMILY, FONT_SIZE, FONT_WEIGHT);
 	m_Font = font;

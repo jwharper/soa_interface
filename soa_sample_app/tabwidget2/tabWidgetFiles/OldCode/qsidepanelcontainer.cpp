@@ -66,7 +66,6 @@ QSidePanelContainer::QSidePanelContainer(QWidget *parent) : QWidget(parent){
 	m_pAlgUtility->hide();
 
 //	UpdateCounts();
-//	QObject::connect(this, SIGNAL(PanelAdded(QSidePanel *)), this, SLOT(UpdateCounts(QSidePanel *)));
 	QObject::connect(m_pSortComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(SortPanels(int)));
 }
 
@@ -198,70 +197,4 @@ void QSidePanelContainer::PanelPinned(bool pinned){
 	}
 }
 
-//void QSidePanelContainer::MapButtonClicked(){
-//	void * pId = NULL;
 
-//    if(m_pSelected)
-//    {
-//        pId = m_pSelected->Id();
-//        Q_EMIT(CenterMapRequest(pId));
-//    }
-//}
-
-//void QSidePanelContainer::UpdateCounts(QSidePanel * pNotUsed){
-//	QSidePanel * pPanel;
-
-//	(void)pNotUsed;
-
-//	m_UnknownCount = 0;
-//	m_NormalCount = 0;
-//	m_PausedCount = 0;
-//	m_QueuedCount = 0;
-//	m_CanceledCount = 0;
-//	m_FailedCount = 0;
-//	m_DoneCount = 0;
-
-//	for(long iter = 0; iter < m_PanelList.size(); iter++){
-	
-//		pPanel = m_PanelList[iter];
-//		switch(pPanel->Status()){
-//			case QSidePanel::Unknown:
-//				m_UnknownCount++;
-//				break;
-
-//			case QSidePanel::Normal:
-//				m_NormalCount++;
-//				break;
-
-//			case QSidePanel::Paused:
-//				m_PausedCount++;
-//				break;
-
-//			case QSidePanel::Queued:
-//				m_QueuedCount++;
-//				break;
-
-//			case QSidePanel::Canceled:
-//				m_CanceledCount++;
-//				break;
-
-//			case QSidePanel::Failed:
-//				m_FailedCount++;
-//				break;
-			
-//			case QSidePanel::Done:
-//				m_DoneCount++;
-//				break;
-			
-//			case QSidePanel::Alg:
-//				break;
-
-//			default:
-//				assert(0);
-//				break;
-//		};
-//	}
-
-//	QString text = QString("Unknown: %1 Normal: %2 Paused: %3 Queued: %4 Canceled: %5 Failed: %6 Done: %7").arg(m_UnknownCount).arg(m_NormalCount).arg(m_PausedCount).arg(m_QueuedCount).arg(m_CanceledCount).arg(m_FailedCount).arg(m_DoneCount);
-//	m_pCounts->setText(text);
-//}

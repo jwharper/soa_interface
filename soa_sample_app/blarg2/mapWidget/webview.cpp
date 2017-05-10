@@ -20,7 +20,7 @@ WebView::WebView(QString homeUrl, MapWidget * pParentMapWidget)
     Q_UNUSED(homeUrl);
     firstLoad = true;
 
-    //QUrl doesn't like relative paths, so please change accordingly:
+    //QUrl doesn't seem to like relative paths, so replace haquema1 with appropriate username:
     load(QUrl::fromLocalFile("/home/haquema1/Downloads/soa_sample_app/blarg2/mapWidget/Scripts/RVA_derived.htm"));
     show();
 
