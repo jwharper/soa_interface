@@ -44,6 +44,8 @@ namespace soa
 		 */
 		bool contains(WorldLocation location) const;
 
+		WorldLocation center() const;
+
 		float minX() const;
 
 		float maxX() const;
@@ -84,7 +86,13 @@ namespace soa
 		 */
 		static RegionPtr polygon(const std::vector<WorldLocation>& orderedBoundary);
 
-
+		/**
+		 * Returns an object that represents a
+		 * rectangular region where the smallest
+		 * x/z are given by minBounds and the
+		 * largest x/z are given by maxBounds.
+		 */
+		static RegionPtr rectangle(WorldLocation minBounds, WorldLocation maxBounds);
 
 		virtual ~Region() {}
 

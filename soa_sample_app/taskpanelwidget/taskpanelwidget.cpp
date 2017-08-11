@@ -297,6 +297,11 @@ void TaskPanelWidget::mapCoordFromJS (QString locationJS)
     enableCommitBtn();
 }
 
+void TaskPanelWidget::taskBeliefUpdated(soa_shared_ptr<soa::Belief_Task> taskBelief)
+{
+    std::cout << "Emitting task updated" << std::endl;
+    Q_EMIT(taskUpdated(taskBelief));
+}
 
 void TaskPanelWidget::commit(){
 
@@ -314,6 +319,8 @@ void TaskPanelWidget::commit(){
     //Priority and risk
     pTaskInfo->priority   = ui->m_pPrioritySelect->currentText().toInt();
     pTaskInfo->risk       = ui->m_pRiskSelect->currentText().toInt();
+    pTaskInfo->numHeavyUAVs = ui->m_pHSlider->value();
+    pTaskInfo->numSmallUAVs = ui->m_pSSlider->value();
 
     //Remove spaces from the name of the task...
     if (pTaskInfo->task == "Move to Location")

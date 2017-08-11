@@ -20,8 +20,10 @@ public:
 	struct QSubTask;
 
 public:
-    ByTaskPanel(taskInfo* ttask, QWidget * parent = 0);
+    ByTaskPanel(soa::task::TaskPtr task, QWidget * parent = 0);
 	~ByTaskPanel();
+
+    void update(soa::task::TaskPtr task);
 
 	QString Name() {return(m_pNameLabel->text());}
     QString Leader() {return(m_pLeaderLabel->text());}
@@ -50,8 +52,7 @@ protected:
 	QGridLayout * m_pLine2Layout;
 	QHBoxLayout * m_pBottomLayout;
 	QLabel * m_pLine1;
-	QLabel * m_pLine2;
-    int m_ActorId;
+    QLabel * m_pLine2;
 
 	QProgressBar * m_pRunningBar;
 	QLabel * m_pRunningLabel;
@@ -66,8 +67,6 @@ protected:
     QLabel * m_pLeaderLabel;
 
 	bool m_Paused;
-
-	int m_TaskId;
 
 	static int m_ByTaskInstanceCount;
 };

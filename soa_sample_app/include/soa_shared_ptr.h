@@ -2,7 +2,7 @@
 #define SOASHAREDPTR
 
 #include <mutex>
-//#include <iostream>
+#include <memory>
 
 using std::mutex;
 
@@ -13,105 +13,53 @@ class soa_shared_ptr
     friend class soa_shared_ptr;
 
 public:
-    soa_shared_ptr() :p(NULL), c(NULL), m(NULL) {
+    soa_shared_ptr()
+	{}
 
-    }
+    explicit soa_shared_ptr(T* s)
+    	: payload(s)
+    {}
 
-    explicit soa_shared_ptr(T* s) :p(s), c(new unsigned(1)), m(new mutex()) {
+    soa_shared_ptr(const soa_shared_ptr& s)
+    	: payload(s.payload)
+    {}
 
-    }
-
-    soa_shared_ptr(const soa_shared_ptr& s) :p(s.p), c(s.c), m(s.m) {
-	if(m){
-		m->lock();
- 		if(c){
-			++*c; 
-		}
-		m->unlock();
-	}
-    }
-
-    soa_shared_ptr& operator=(const soa_shared_ptr& s){ 
-	if(this!=&s) {
-		clear(); 
-		p=s.p; 
-		c=s.c; 
-		m=s.m;
-
-		if(m){
-			m->lock();
-			if(c){
-				++*c;
-			} 
-			m->unlock();
-		}
-	} 
-	return *this; 
-    }
 
     template<class U>
-    soa_shared_ptr(const soa_shared_ptr<U>& s) :p(s.p), c(s.c), m(s.m)
-	{
-		if(m){
-			m->lock();
-			if(c){
-				 ++*c;
-			}
-			m->unlock();
-		}
-    }
+    soa_shared_ptr(const soa_shared_ptr<U>& s)
+		: payload(::std::dynamic_pointer_cast<T>(s.payload))
+	{}
 
     template<class U>
-	soa_shared_ptr(const soa_shared_ptr<U>& s, T* _p) :p(_p), c(s.c), m(s.m)
-	{
-		if(m){
-			m->lock();
-			if(c){
-				 ++*c;
-			}
-			m->unlock();
+	soa_shared_ptr(const soa_shared_ptr<U>& s, T* _p)
+		: payload(s.payload, _p)
+	{}
+
+    soa_shared_ptr& operator=(const soa_shared_ptr& s)
+    {
+		if(this!=&s) {
+			payload = s.payload;
 		}
-	}
-
-    ~soa_shared_ptr() { 
-	clear(); 
+		return *this;
     }
 
-    void clear() 
-    { 
-	if(m){
-		m->lock();
-    		if(c){	
-			--*c;
-           	 	
-			if(*c==0){
-				delete p;
-				delete c;
-				m->unlock();
-				delete m;
-				return;
-		    	}
- 	       	} 
-		m->unlock();
-	}
+    T* get() const
+    {
+    	return payload.get();
     }
 
-    T* get() const { 
-	return (c)? p: 0; 
+    T* operator->() const
+    {
+    	return payload.get();
     }
 
-    T* operator->() const { 
-	return get(); 
-    }
-
-    T& operator*() const { 
-	return *get(); 
+    T& operator*() const
+    {
+    	return *payload;
     }
 
 private:
-    T* p;
-    unsigned* c;
-    mutex* m;
+    std::shared_ptr<T> payload;
 };
 
 #endif

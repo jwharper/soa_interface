@@ -69,9 +69,9 @@ void LogicWidget::setFileName(QString configurationFilename)
     //SoaAutonomy pointer and worldDataManager pointer using agent0
     //FOB acts as agent0
     //socket matches ~Downloads/soa_sim/SoaSimConfig.xml's configuration of "blue-room"
-    m_pSoaAutonomy = new soa::SoaAutonomy(0, "localhost:11511");
+    m_pSoaAutonomy = new soa::SoaAutonomy(0, "localhost:11411");
     m_pWDM = m_pSoaAutonomy->getWorldDataManager();
-
+    m_pWDM->waitForInitialData();
 }
 
 void LogicWidget::debuggingFunc()
@@ -323,25 +323,30 @@ float LogicWidget::googleToHLng(float lng)
 //taskSOA() tasks the sim using the SoaAutonomy API
 void LogicWidget::taskSOA(taskInfo *tInfo)
 {
+    std::cout << "Task: " << tInfo->task.toStdString() << std::endl;
     if (tInfo->task == "MoveToLocation")
     {
-        //Extract the waypoints for this task
-        if (tInfo->points.size() > 2)
-        {
-            vector <soa::WorldLocation> tPoints;
-            for (int i = 0; i < tInfo->points.size(); i += 2)
-            {
-                tPoints.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]),
-                                  0, googleToHLat(tInfo->points[i])));
-            }
-            //task the sim using the API
-            m_pSoaAutonomy->sendWaypointPathCommand(tInfo->actorId, tPoints);
-        }
-        else
-            m_pSoaAutonomy->sendWaypointCommand(tInfo->actorId,
-                                            soa::WorldLocation(googleToHLng(tInfo->points[1]),
-                                            0, googleToHLat(tInfo->points[0])));
+        auto builder = m_pSoaAutonomy->newPatrolTaskBuilder();
 
+        vector <soa::WorldLocation> tPoints;
+        for (int i = 0; i < tInfo->points.size(); i += 2)
+        {
+            tPoints.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]),
+                              0, googleToHLat(tInfo->points[i])));
+        }
+
+        builder.setPath(tPoints);
+        builder.setDirection(1);
+        if (tInfo->numHeavyUAVs > 0) {
+            builder.addCargoRequirements(soa::task::ResourceType::CARGO_SUPPLIES, tInfo->numHeavyUAVs);
+        }
+        if (tInfo->numSmallUAVs > 0) {
+            builder.addSensorRequirements(soa::task::ResourceType::SENSOR_CAMERA, tInfo->numSmallUAVs);
+        }
+
+        builder.build(m_pWDM);
+
+        return;
     }
     else if (tInfo->task == "MaintainLocation")
     {
@@ -428,7 +433,34 @@ void LogicWidget::checkWaypointsProgress(taskInfo *tInfo)
 //Details:   each sim actor needs to be tasked separately, ie call taskSOA() for each actor
 void LogicWidget::tasksForVideo(taskInfo* tInfo)
 {
-    if (tInfo->id == 300)
+    std::cout << "Somehow got in tasksForVideo " << std::endl;
+
+    if (tInfo->task == "MoveToLocation") {
+
+        auto builder = m_pSoaAutonomy->newPatrolTaskBuilder();
+
+        vector <soa::WorldLocation> tPoints;
+        for (int i = 0; i < tInfo->points.size(); i += 2)
+        {
+            tPoints.push_back(soa::WorldLocation(googleToHLng(tInfo->points[i+1]),
+                              0, googleToHLat(tInfo->points[i])));
+        }
+
+        builder.setPath(tPoints);
+        builder.setDirection(1);
+        if (tInfo->numHeavyUAVs > 0) {
+            builder.addCargoRequirements(soa::task::ResourceType::CARGO_SUPPLIES, tInfo->numHeavyUAVs);
+        }
+        if (tInfo->numSmallUAVs > 0) {
+            builder.addSensorRequirements(soa::task::ResourceType::SENSOR_CAMERA, tInfo->numSmallUAVs);
+        }
+
+        builder.build(m_pWDM);
+
+        return;
+    }
+
+     if (tInfo->id == 300)
     {
         Q_EMIT(commitTask(tInfo));
         //Even though the Avoid task applies all

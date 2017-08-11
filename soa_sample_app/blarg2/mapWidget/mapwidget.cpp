@@ -232,7 +232,9 @@ void MapWidget::updateSite(site * pSite)
 void MapWidget::sendCmdToJS(taskInfo* tInfo)
 {
     tInfo->id = nextTaskId();
+
     taskHash.insert(tInfo->id, tInfo); //add taskInfo to a taskHash
+
     actorHash.value(tInfo->actorId)->taskId = tInfo->id;
 
     QString cmd = "finishTask(";

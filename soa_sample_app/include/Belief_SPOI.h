@@ -1,6 +1,8 @@
-#include "Belief.h"
 #include <cstdint>
 #include <inttypes.h>
+
+#include "Belief.h"
+#include "WorldLocation.h"
 
 #ifndef BELIEF_SPOI_H
 #define BELIEF_SPOI_H
@@ -35,6 +37,8 @@ public:
 	float getPos_y();
 
 	float getPos_z();
+
+	WorldLocation getPosition();
 };
 
 }

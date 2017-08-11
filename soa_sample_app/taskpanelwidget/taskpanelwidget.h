@@ -11,6 +11,9 @@
 #include <QTime>
 #include <QList>
 
+#include "soa_shared_ptr.h"
+#include "Belief_Task.h"
+
 struct taskInfo{
     float lat;
     float alt;
@@ -25,6 +28,8 @@ struct taskInfo{
     float avoidRadius;
     int priority;
     int risk;
+    int numSmallUAVs;
+    int numHeavyUAVs;
 };
 
 
@@ -45,8 +50,11 @@ public:
     Q_SIGNAL void sendTaskInfo(taskInfo * pTaskInfo);
     Q_SIGNAL void taskShapeAndColor(QString taskShape, QString taskColor);
     Q_SIGNAL void actAsMapButton();
+    Q_SIGNAL void taskUpdated(soa_shared_ptr<soa::Belief_Task> taskBelief);
 
     Q_SLOT void resetAll();
+
+    void taskBeliefUpdated(soa_shared_ptr<soa::Belief_Task> taskBelief);
 
     //Buttons
     Q_SLOT void commit();

@@ -20,7 +20,9 @@ class QSidePanelContainerTabWidget;
 
 #include <QWidget>
 #include <QVariant>
+#include <unordered_map>
 #include "../taskpanelwidget/taskpanelwidget.h"
+#include "tabWidgetFiles/Containers_Panels/bytaskpanel.h"
 
 class TabPanel2 : public QWidget{
     Q_OBJECT
@@ -36,6 +38,7 @@ public:
     Q_SIGNAL void taskActive(int Id);
     Q_SIGNAL void editTask(int Id);
 
+public Q_SLOTS:
     Q_SLOT void CenterMapOnTask(void * pId);
     Q_SLOT void RemovePanel(QAction * pAction);
     Q_SLOT void SidePanelContextMenuActionTriggered(QAction * pAction);
@@ -43,7 +46,7 @@ public:
     Q_SLOT void taskSelected(QSidePanel *);
     Q_SLOT void taskEdit(QSidePanel *);
     Q_SLOT void endTask(int id);
-
+    Q_SLOT void handleTaskUpdate(soa_shared_ptr<soa::Belief_Task> taskBelief);
 
 
 protected:
@@ -63,6 +66,8 @@ protected:
 
     QActionGroup * m_pRemovePanelActionGroup;
     QAction * m_pRemoveByTaskPanelAction;
+
+    std::unordered_map<soa::Belief::Key, ByTaskPanel*> taskPanelMap;
 };
 
 #endif

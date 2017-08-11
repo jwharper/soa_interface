@@ -21,7 +21,7 @@ WebView::WebView(QString homeUrl, MapWidget * pParentMapWidget)
     firstLoad = true;
 
     //QUrl doesn't seem to like relative paths, so replace haquema1 with appropriate username:
-    load(QUrl::fromLocalFile("/home/haquema1/Downloads/soa_sample_app/blarg2/mapWidget/Scripts/RVA_derived.htm"));
+    load(QUrl::fromLocalFile("/Users/harpejw1/Projects/soa_interface/soa_sample_app/blarg2/mapWidget/Scripts/RVA_derived.htm"));
     show();
 
     page()->settings()->setAttribute(QWebSettings::JavascriptCanOpenWindows, true);
@@ -85,7 +85,8 @@ void WebView::UpdateOnPageLoad(bool ok)
 
 void WebView::eval(QString cmd)
 {
-    getWebFrame()->evaluateJavaScript(cmd);
+    //Original: getWebFrame()->evaluateJavaScript(cmd);
+    getWebFrame()->evaluateJavaScript(cmd.append("; null")); //New
 }
 
 

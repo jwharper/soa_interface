@@ -17,9 +17,9 @@ public:
 
 	virtual ~Belief_Base(){};
 
-	Belief::BeliefType getBeliefType() const;
+	virtual Belief::BeliefType getBeliefType() const;
 
-	BeliefPtr getCopy() const;
+	virtual BeliefPtr getCopy() const;
 
 	virtual string toString();
 

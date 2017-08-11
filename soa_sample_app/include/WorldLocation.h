@@ -28,6 +28,10 @@ namespace soa
 
 		bool isValid() const;
 
+		float getAltitude() const;
+
+		void setAltitude(float altitude);
+
 		float distance(const WorldLocation& other) const;
 
 		GridCell convertToGridLocation(GridMath* gridMath) const;

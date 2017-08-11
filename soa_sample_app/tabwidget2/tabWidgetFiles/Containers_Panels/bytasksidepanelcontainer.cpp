@@ -5,6 +5,7 @@
 // 2016
 
 #include "bytasksidepanelcontainer.h"
+#include "task/TaskBuilder.h"
 
 #include <QLabel>
 #include <QString>
@@ -20,11 +21,13 @@ ByTaskSidePanelContainer::ByTaskSidePanelContainer(QWidget * parent) : QSidePane
 }
 
 int ByTaskSidePanelContainer::MinimumWidth(){
+    auto builder = soa::task::TaskType::builder_for(soa::task::TaskID(0,0), soa::task::TaskType::GOTO);
+    auto taskPtr = builder->getTask();
     taskInfo *tData = new taskInfo;	tData->id = 2;
     tData->task = "Move To Location";
     tData->actor = "Heavy UAV 101";
     tData->actorId = 101;
-	ByTaskPanel panel(tData);
+    ByTaskPanel panel(taskPtr);
 		int minimumWidth;
 
 	panel.ChangeMode(QSidePanel::Mode1);

@@ -12,7 +12,7 @@ const long TASK_NAME_LENGTH = 25;
 const long LEADER_LENGTH = 25;
 const QSidePanel::PanelMode MAX_MODE = QSidePanel::Mode2;
 
-ByTaskPanel::ByTaskPanel(taskInfo * ttask, QWidget * parent) : QSidePanel(parent)
+ByTaskPanel::ByTaskPanel(soa::task::TaskPtr task, QWidget * parent) : QSidePanel(parent)
 {
 
 	if(m_ByTaskInstanceCount == 0) ByTaskInit();
@@ -20,25 +20,23 @@ ByTaskPanel::ByTaskPanel(taskInfo * ttask, QWidget * parent) : QSidePanel(parent
 
 	SidePanelInit();
 
-    m_TaskId = ttask->id;
     m_Division = "Blue";
-    m_ActorId = ttask->actorId;
-	m_Paused = false;
+    m_Paused = false;
 
 	// Create labels
-    m_pNameLabel = new QLabel(ttask->task);
+    m_pNameLabel = new QLabel(QString::fromStdString(soa::task::TaskType::name(task->getType())));
     m_pNameLabel->setFont(m_Font);
 	m_pNameLabel->setFixedWidth(TASK_NAME_LENGTH * m_FontMetrics.width('W') + 2 * (m_pNameLabel->frameWidth() + 2));
 	m_pNameLabel->setFixedHeight(m_FontMetrics.height());
     m_pNameLabel->setAlignment(Qt::AlignLeft);
 
-    m_pLeaderLabel = new QLabel(ttask->actor, this);
+    m_pLeaderLabel = new QLabel("", this);
 	m_pLeaderLabel->setFont(m_Font);
 	m_pLeaderLabel->setFixedWidth(LEADER_LENGTH * m_FontMetrics.width('W') + 2 * (m_pLeaderLabel->frameWidth() + 2));
 	m_pLeaderLabel->setFixedHeight(m_FontMetrics.height());
     m_pLeaderLabel->setAlignment(Qt::AlignLeft);
 
-    m_pPriorityLabel = new QLabel(QString::number(ttask->priority), this);
+    m_pPriorityLabel = new QLabel(QString::number(task->getPriority()), this);
 	m_pPriorityLabel->setFont(m_Font2);
 
     m_pUgvIcon = new QLabel("", this);
@@ -55,14 +53,10 @@ ByTaskPanel::ByTaskPanel(taskInfo * ttask, QWidget * parent) : QSidePanel(parent
 
     m_pLine1Layout = new QHBoxLayout;
     m_pLine1Layout->addLayout(tLayoutIcon, 0);
-    if (ttask->actorId < 102)
-    {
-        m_pUavIcon->hide();
-    }
-    else
-    {
-        m_pUgvIcon->hide();
-    }
+
+    m_pUavIcon->hide();
+    m_pUgvIcon->hide();
+
     m_pLine1Layout->addWidget(m_pNameLabel, 6);
     m_pLine1Layout->addWidget(m_pLeaderLabel, 6);
     m_pLine1Layout->setSpacing(8);
@@ -92,6 +86,22 @@ ByTaskPanel::ByTaskPanel(taskInfo * ttask, QWidget * parent) : QSidePanel(parent
 
 	ChangeStatus(Queued);
     ChangeMode(Mode1);
+}
+
+void ByTaskPanel::update(soa::task::TaskPtr task)
+{
+    auto reqs = task->getRequirements();
+    bool addComma = false;
+    QString text;
+    for (auto req : reqs)
+    {
+        if (addComma) {
+            text += ", ";
+        }
+        addComma = true;
+        text += QString::fromStdString(std::to_string(req.getAssignedAgent()));
+
+    }
 }
 
 ByTaskPanel::~ByTaskPanel(){

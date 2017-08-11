@@ -11,6 +11,14 @@
 #include <vector>
 #include "Belief_WaypointPath.h"
 
+#include "task/RegionTaskBuilder.h"
+#include "task/PointTaskBuilder.h"
+#include "task/PatrolTaskBuilder.h"
+#include "task/TrackingTaskBuilder.h"
+#include "task/AvoidRegionConstraint.h"
+#include "task/AvoidThreatConstraint.h"
+#include "task/CommsConstraint.h"
+
 #ifndef INCLUDE_AUTONOMYAPI_H_
 #define INCLUDE_AUTONOMYAPI_H_
 
@@ -88,49 +96,55 @@ public:
 	 * Note: this is equivalent to
 	 * sendWaypointCommand(getAgentID(), x, y, z);
 	 */
-	void moveToDestination(WorldLocation location);
+	void moveToDestination(WorldLocation location, float speed=MAX_SPEED);
 
 	/**
 	 * Move this agent to the center of the given
 	 * hex cell.
 	 */
-	void moveToDestination(GridCell location);
+	void moveToDestination(GridCell location, float speed=MAX_SPEED);
 
 	/**
 	 * Commands the agent with the given ID to move to the
 	 * given 3D location.
 	 */
-	void sendWaypointCommand(int agentID, WorldLocation location);
+	void sendWaypointCommand(int agentID, WorldLocation location, float speed=MAX_SPEED);
 
 	/**
 	 * Commands the agent with the given ID to move to the center
 	 * of the given hex cell
 	 */
-	void sendWaypointCommand(int agentID, GridCell location);
+	void sendWaypointCommand(int agentID, GridCell location, float speed=MAX_SPEED);
 
 	/**
 	 * Moves this agent along a path of waypoints.
 	 * Note: this is equivalent to
 	 * sendWaypointPathCommand(getAgentID(), waypoints);
 	 */
-	void moveAlongPath(const std::vector<WorldLocation>& waypoints);
+	void moveAlongPath(const std::vector<WorldLocation>& waypoints, float speed=MAX_SPEED);
 
 	/**
 	 * Moves this agent along a path of waypoints.
 	 * Note: this is equivalent to
 	 * sendWaypointPathCommand(getAgentID(), waypoints);
 	 */
-	void moveAlongPath(const std::vector<GridCell>& waypoints);
+	void moveAlongPath(const std::vector<GridCell>& waypoints, float speed=MAX_SPEED);
 
 	/**
 	 * Commands an agent to follow the given path of waypoints.
 	 */
-	void sendWaypointPathCommand(int agentID, const std::vector<WorldLocation>& waypoints);
+	void sendWaypointPathCommand(int agentID, const std::vector<WorldLocation>& waypoints, float speed=MAX_SPEED);
 
 	/**
 	 * Commands an agent to follow the given path of waypoints.
 	 */
-	void sendWaypointPathCommand(int agentID, const std::vector<GridCell>& waypoints);
+	void sendWaypointPathCommand(int agentID, const std::vector<GridCell>& waypoints, float speed=MAX_SPEED);
+
+	/**
+	 * Returns a safe path from the agent to the destination. This will avoid both mountains
+	 * and no-fly zones.
+	 */
+	std::vector<soa::WorldLocation> findPathTo(int agentID, soa::WorldLocation destination);
 
 	/**
 	 * Moves this agent back to the FOB to refuel.
@@ -191,6 +205,114 @@ public:
 	 * the addNoFlyZone method.
 	 */
 	void removeNoFlyZone(int zoneID);
+
+	/**
+	 * Creates a new builder class for instantiating a region task.
+	 *
+	 * Inputs:
+	 * 	- TaskType::Value - The type of region task to create. This must
+	 * 						be one of {SEARCH, DISPERSE, PERIMETER}.
+	 *
+	 * Outputs:
+	 *  - task::RegionTaskBuilder - a builder object that has methods
+	 *  							for setting important fields on
+	 *  							the region task.
+	 */
+	task::RegionTaskBuilder newRegionTaskBuilder(task::TaskType::Value type);
+
+	/**
+	 * Creates a new builder class for instantiating a point task.
+	 *
+	 * Inputs:
+	 * 	- TaskType::Value - The type of region task to create. This must
+	 * 						be one of {RALLY, DELIVERY, PICKUP, GOTO}.
+	 *
+	 * Outputs:
+	 *  - task::PointTaskBuilder - a builder object that has methods
+	 *  							for setting important fields on
+	 *  							the point task.
+	 */
+	task::PointTaskBuilder newPointTaskBuilder(task::TaskType::Value type);
+
+	/**
+	 * Creates a new builder class for instantiating a tracking task.
+	 *
+	 * Outputs:
+	 *  - task::TrackingTaskBuilder - a builder object that has methods
+	 *  							for setting important fields on
+	 *  							the tracking task.
+	 */
+	task::TrackingTaskBuilder newTrackingTaskBuilder();
+
+	/**
+	 * Creates a new builder class for instantiating a patrol task.
+	 *
+	 * Outputs:
+	 *  - task::PatrolTaskBuilder - a builder object that has methods
+	 *  							for setting important fields on
+	 *  							the patrol task.
+	 */
+	task::PatrolTaskBuilder newPatrolTaskBuilder();
+
+	/**
+	 * Creates a new builder class for instantiating
+	 * an AvoidRegionConstraint
+	 *
+	 * Outputs:
+	 *  - task::AvoidRegionConstraintBuilder - A builder object for
+	 *  										creating a no-fly zone.
+	 */
+	task::AvoidRegionConstraintBuilder newAvoidRegionBuilder();
+
+	/**
+	 * Creates a new builder class for instantiating
+	 * an AvoidThreatConstraint
+	 *
+	 * Outputs:
+	 *  - task::AvoidThreatConstraintBuilder - A builder object for
+	 *  										a constraint to avoid
+	 *  										a particular agent.
+	 */
+	task::AvoidThreatConstraintBuilder newAvoidThreatBuilder();
+
+	/**
+	 * Creates a new builder class for instantiating
+	 * an CommsConstraintBuilder
+	 *
+	 * Outputs:
+	 *  - task::CommsConstraintBuilder - A builder object for
+	 *  								 requiring agents to
+	 *  								 maintain comms with each
+	 *  								 other.
+	 */
+	task::CommsConstraintBuilder newMaintainCommsBuilder();
+
+	/**
+	 * Returns a list of agent IDs for any agents that
+	 * are not assigned to an active task.
+	 */
+	std::vector<int> getUnassignedAgents();
+
+	/**
+	 * Returns a list of task pointers
+	 * (shared_ptr<Task>) for tasks that are active
+	 * and assigned to the specified agent.
+	 */
+	std::vector<task::TaskPtr> getTasksAssignedTo(int agentID);
+
+	/**
+	 * Returns a list of IDs of the agents that are
+	 * assigned (manually or self-assigned) to fulfill
+	 * one or more resource requirements for the
+	 * specified task.
+	 */
+	std::vector<int> getAgentsAssignedTo(task::TaskID taskID);
+
+	/**
+	 * Returns a list of all tasks that have unassigned
+	 * resources requirements.
+	 */
+	std::vector<task::TaskPtr> getUnfulfilledTasks();
 
 private:
 	WorldDataManager* dataManager;

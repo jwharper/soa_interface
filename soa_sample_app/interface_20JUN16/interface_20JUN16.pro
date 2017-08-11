@@ -11,8 +11,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = interface_20JUN16
 TEMPLATE = app
 
+QMAKE_CFLAGS += -stdlib=libstdc++
 QMAKE_CXXFLAGS += -std=c++11
-
+QMAKE_CXXFLAGS += -stdlib=libc++
 
 SOURCES += main.cpp\
         interfacewindow.cpp \
@@ -38,6 +39,7 @@ HEADERS  += interfacewindow.h \
     ../include/WorldDataManager.h \
     ../include/WorldLocation.h \
     ../include/Belief_Actor.h \
+    ../include/task/RegionTask.h\
     borderlayout.h \
     ../tabwidget2/tabpanel2.h \
     ../tabwidget2/tabWidgetFiles/OldCode/qsidepanel.h \
@@ -50,9 +52,10 @@ HEADERS  += interfacewindow.h \
 FORMS    += interfacewindow.ui \
     ../taskpanelwidget/taskpanelwidget.ui
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../lib/Linux/release/ -lwdm
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../lib/Linux/debug/ -lwdm
-else:unix: LIBS += -L$$PWD/../lib/Linux/ -lwdm
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../lib/MacOS/release/ -lwdm
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../lib/MacOS/debug/ -lwdm
+else:unix: LIBS += -L$$PWD/ -L../lib/MacOS/ -lwdm -lc++
 
 INCLUDEPATH += $$PWD/../lib/Linux
-DEPENDPATH += $$PWD/../lib/Linux
+INCLUDEPATH += ../include
+DEPENDPATH += $$PWD/../lib/MacOS

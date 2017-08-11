@@ -58,6 +58,10 @@ namespace soa{
 
 		void mapToWorld(int map_m, int map_n, float &world_x, float &world_z);
 
+		float getGridOrigin_x() { return gridOrigin_x; }
+
+		float getGridOrigin_z() { return gridOrigin_z; }
+
 		float getGridToWorldScale() const { return gridToWorldScale; }
 	};
 }

@@ -1,5 +1,6 @@
 #include <string>
 #include <sstream>
+#include <vector>
 
 #include "GridMath.h"
 
@@ -43,6 +44,8 @@ namespace soa
 		bool operator<(const GridCell& other) const;
 
 		friend std::ostream& operator << (std::ostream& stream, const GridCell& cell);
+
+		std::vector<GridCell> neighbors() const;
 
 		GridCell north() const;
 

@@ -104,7 +104,7 @@ void TabPanel2::taskEdit(QSidePanel * pPanel)
 
 
 void TabPanel2::addTask(taskInfo * ttask)
-{
+{/*
     // Create a ByTask panel for the new task
     ByTaskPanel * pByTaskPanel;
     pByTaskPanel = new ByTaskPanel(ttask, this);
@@ -115,17 +115,38 @@ void TabPanel2::addTask(taskInfo * ttask)
     m_pByTaskSidePanelContainer->AddPanel(pByTaskPanel);
 
     // Task ID used here
-    m_pByTaskSidePanelContainer->m_ByTaskPanelHash.insert(ttask->id, pByTaskPanel);
+    m_pByTaskSidePanelContainer->m_ByTaskPanelHash.insert(ttask->id, pByTaskPanel);*/
 }
 
+void TabPanel2::handleTaskUpdate(soa_shared_ptr<soa::Belief_Task> taskBelief)
+{
+   std::cout << "Handling task update" << std::endl;
+   auto key = taskBelief->getBeliefKey();
+   auto pairIt = taskPanelMap.find(key);
+
+   if (pairIt != taskPanelMap.end())
+   {
+        pairIt->second->update(taskBelief->getTask());
+   }
+   else
+   {
+        std::cout << "Creating new panel" << std::endl;
+        ByTaskPanel* taskPanel = new ByTaskPanel(taskBelief->getTask(), this);
+        taskPanel->SetContextMenu(m_pByTaskPanelContextMenu);
+        connect(taskPanel, SIGNAL(ContextMenuActionTriggered(QAction *)), SLOT(SidePanelContextMenuActionTriggered(QAction *)));
+        taskPanelMap[key] = taskPanel;
+        m_pByTaskSidePanelContainer->AddPanel(taskPanel);
+   }
+
+}
 
 void TabPanel2::endTask(int id)
 {
-    if (!m_pByTaskSidePanelContainer->m_ByTaskPanelHash.contains(id))
-        return;
-    ByTaskPanel * pByTaskPanel = m_pByTaskSidePanelContainer->m_ByTaskPanelHash.value(id);
-    m_pByTaskSidePanelContainer->m_ByTaskPanelHash.remove(id);
-    m_pByTaskSidePanelContainer->RemovePanel(pByTaskPanel);
+//    if (!m_pByTaskSidePanelContainer->m_ByTaskPanelHash.contains(id))
+//        return;
+//    ByTaskPanel * pByTaskPanel = m_pByTaskSidePanelContainer->m_ByTaskPanelHash.value(id);
+//    m_pByTaskSidePanelContainer->m_ByTaskPanelHash.remove(id);
+//    m_pByTaskSidePanelContainer->RemovePanel(pByTaskPanel);
 }
 
 

@@ -17,6 +17,23 @@
 
 namespace soa {
 
+struct Navpoint
+{
+private:
+	WorldLocation location;
+	float speed;
+
+public:
+
+	Navpoint(WorldLocation location, float speed);
+
+	WorldLocation getLocation() const;
+
+	float getSpeed() const;
+};
+
+typedef std::vector<Navpoint> NavpointPath;
+
 class Belief_WaypointPath : public Belief {
 
 public:
@@ -27,6 +44,10 @@ public:
 
 	Belief_WaypointPath(uint64_t _request_time, int id, WaypointPath waypoints);
 
+	Belief_WaypointPath(int id, NavpointPath navpoints);
+
+	Belief_WaypointPath(uint64_t _request_time, int id, NavpointPath navpoints);
+
 	virtual ~Belief_WaypointPath();
 
 	virtual Belief::BeliefType getBeliefType() const;
@@ -34,6 +55,8 @@ public:
 	int getNumWaypoints();
 
 	WaypointPath getWaypoints();
+
+	NavpointPath getNavpoints();
 
 	virtual BeliefPtr getCopy() const;
 
@@ -43,7 +66,7 @@ public:
 
 private:
 	uint64_t request_time;
-	WaypointPath waypoints;
+	NavpointPath navpoints;
 
 };
 

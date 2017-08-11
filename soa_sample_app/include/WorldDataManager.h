@@ -40,7 +40,13 @@ namespace soa
 
 		BackingType::const_iterator find(GridCell cell) const;
 
+		BackingType::const_iterator begin() const;
+
 		BackingType::const_iterator end() const;
+
+		soa::WorldLocation getMinBounds(soa::GridMath* gridMath) const;
+
+		soa::WorldLocation getMaxBounds(soa::GridMath* gridMath) const;
 	};
 
 	class WorldDataManager
@@ -93,6 +99,10 @@ namespace soa
 
 		virtual void addCustomBeliefHandler(const soa_shared_ptr<CustomBeliefHandler>& handler) = 0;
 
+		virtual int getSiteIdAtLocation(GridCell cell) = 0;
+
+		virtual void addCommitListener(std::function<void(soa::BeliefPtr)> listener) = 0;
+
 		/**
 		 * Returns pointer to gridMath object that has been initialized from
 		 * Belief_GridSpec.
@@ -119,12 +129,17 @@ namespace soa
 		template <typename BeliefClass>
 		soa_shared_ptr<BeliefClass> getTypedBelief(Belief::Key key, int id)
 		{
+			soa_shared_ptr<BeliefClass> sharedPtr;
 			BeliefPtr belief = getBelief(key, id);
+			if (belief.get() == NULL) {
+				return sharedPtr;
+			}
 			BeliefClass* castPtr = dynamic_cast<BeliefClass*>(belief.get());
 			if (castPtr == NULL) {
-				return soa_shared_ptr<BeliefClass>();
+				return sharedPtr;
 			}
-			return soa_shared_ptr<BeliefClass>(belief, castPtr);
+			sharedPtr = soa_shared_ptr<BeliefClass>(belief, castPtr);
+			return sharedPtr;
 		}
 
 		template <typename BeliefClass>
@@ -137,6 +152,9 @@ namespace soa
 			for (auto entry = beliefMap.begin(); entry != beliefMap.end(); ++entry)
 			{
 				BeliefPtr belief = entry->second;
+				if (belief.get() == NULL) {
+					continue;
+				}
 				BeliefClass* castPtr = dynamic_cast<BeliefClass*>(belief.get());
 				if (castPtr != NULL) {
 					soa_shared_ptr<BeliefClass> sharedPtr = soa_shared_ptr<BeliefClass>(belief, castPtr);

@@ -91,6 +91,8 @@ public:
 	virtual std::string toString();
 };
 
+typedef soa_shared_ptr<soa::Belief_Actor> Belief_ActorPtr;
+
 }
 
 #endif

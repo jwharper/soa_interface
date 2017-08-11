@@ -18,7 +18,11 @@ namespace soa
 	class MapLocation
 	{
 	public:
-		int m, n;
+		//Column
+		int m;
+
+		//Row
+		int n;
 
 		MapLocation();
 
