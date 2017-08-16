@@ -23,6 +23,7 @@ class QSidePanelContainerTabWidget;
 #include <unordered_map>
 #include "../taskpanelwidget/taskpanelwidget.h"
 #include "tabWidgetFiles/Containers_Panels/bytaskpanel.h"
+#include "WorldDataManager.h"
 
 class TabPanel2 : public QWidget{
     Q_OBJECT
@@ -31,7 +32,7 @@ public:
     struct Task;
 
 public:
-    TabPanel2(QWidget * parent = 0);
+    TabPanel2(QWidget * parent, soa::WorldDataManager* wdm);
     ~TabPanel2();
 
     Q_SIGNAL void centerOnTask(int pId);
@@ -46,7 +47,7 @@ public Q_SLOTS:
     Q_SLOT void taskSelected(QSidePanel *);
     Q_SLOT void taskEdit(QSidePanel *);
     Q_SLOT void endTask(int id);
-    Q_SLOT void handleTaskUpdate(soa_shared_ptr<soa::Belief_Task> taskBelief);
+    Q_SLOT void handleTaskUpdate(int);
 
 
 protected:
@@ -68,6 +69,7 @@ protected:
     QAction * m_pRemoveByTaskPanelAction;
 
     std::unordered_map<soa::Belief::Key, ByTaskPanel*> taskPanelMap;
+    soa::WorldDataManager* wdm;
 };
 
 #endif

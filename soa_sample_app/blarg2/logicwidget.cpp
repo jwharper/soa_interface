@@ -326,7 +326,9 @@ void LogicWidget::taskSOA(taskInfo *tInfo)
     std::cout << "Task: " << tInfo->task.toStdString() << std::endl;
     if (tInfo->task == "MoveToLocation")
     {
-        auto builder = m_pSoaAutonomy->newPatrolTaskBuilder();
+        soa::task::PatrolTaskBuilder builder = m_pSoaAutonomy->newPatrolTaskBuilder();
+
+        builder.setPriority(tInfo->priority);
 
         vector <soa::WorldLocation> tPoints;
         for (int i = 0; i < tInfo->points.size(); i += 2)
@@ -337,6 +339,7 @@ void LogicWidget::taskSOA(taskInfo *tInfo)
 
         builder.setPath(tPoints);
         builder.setDirection(1);
+        builder.setNumberOfLaps(10);//why not?
         if (tInfo->numHeavyUAVs > 0) {
             builder.addCargoRequirements(soa::task::ResourceType::CARGO_SUPPLIES, tInfo->numHeavyUAVs);
         }
@@ -344,7 +347,9 @@ void LogicWidget::taskSOA(taskInfo *tInfo)
             builder.addSensorRequirements(soa::task::ResourceType::SENSOR_CAMERA, tInfo->numSmallUAVs);
         }
 
-        builder.build(m_pWDM);
+        auto taskID = builder.build(m_pWDM);
+
+        std::cout << "New task ID: " << taskID.getCreatorID() << ", " << taskID.getInstance() << " = " << taskID.intHash() << std::endl;
 
         return;
     }
@@ -355,8 +360,21 @@ void LogicWidget::taskSOA(taskInfo *tInfo)
     }
     else if (tInfo->task == "ReturnToFOB")
     {
+        auto builder = m_pSoaAutonomy->newPointTaskBuilder(soa::task::TaskType::GOTO);
+        builder.setLocation(m_pSoaAutonomy->getWorldDataManager()->getBlueBaseLocation());
+        builder.setPriority(tInfo->priority);
+//        builder.addAgentRequirement(tInfo->actorId); //We no longer have an actor ID here... this command doesn't make sense
+        if (tInfo->numHeavyUAVs > 0) {
+            builder.addCargoRequirements(soa::task::ResourceType::CARGO_SUPPLIES, tInfo->numHeavyUAVs);
+        }
+        if (tInfo->numSmallUAVs > 0) {
+            builder.addSensorRequirements(soa::task::ResourceType::SENSOR_CAMERA, tInfo->numSmallUAVs);
+        }
+
+        builder.build(m_pWDM);
+
         //This task only requires actor ID
-        m_pSoaAutonomy->sendReturnToFOBCommand(tInfo->actorId);
+//        m_pSoaAutonomy->sendReturnToFOBCommand(tInfo->actorId);
     }
     else if (tInfo->task == "Home")
     {

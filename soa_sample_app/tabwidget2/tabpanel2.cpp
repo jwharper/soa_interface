@@ -26,7 +26,7 @@
 #include "../tabwidget2/tabWidgetFiles/Containers_Panels/bytaskpanel.h"
 
 
-TabPanel2::TabPanel2(QWidget * parent) : QWidget(parent){
+TabPanel2::TabPanel2(QWidget * parent, soa::WorldDataManager* wdm) : QWidget(parent), wdm(wdm){
     QList<QPair<QSidePanelContainer *, QString> > containers;
 
     m_pByTaskSidePanelContainer = new ByTaskSidePanelContainer;
@@ -118,20 +118,33 @@ void TabPanel2::addTask(taskInfo * ttask)
     m_pByTaskSidePanelContainer->m_ByTaskPanelHash.insert(ttask->id, pByTaskPanel);*/
 }
 
-void TabPanel2::handleTaskUpdate(soa_shared_ptr<soa::Belief_Task> taskBelief)
+void TabPanel2::handleTaskUpdate(int taskID)
 {
+   soa_shared_ptr<soa::Belief_Task> taskBelief = wdm->getTypedBelief<soa::Belief_Task>(soa::Belief::Key(soa::Belief_Task::Type), taskID);
+   if (taskBelief.get() == NULL) {
+       std::cerr << "Expected to find a task with ID: " << taskID << " but none was found." << std::endl;
+       return;
+   }
    std::cout << "Handling task update" << std::endl;
    auto key = taskBelief->getBeliefKey();
    auto pairIt = taskPanelMap.find(key);
 
    if (pairIt != taskPanelMap.end())
    {
-        pairIt->second->update(taskBelief->getTask());
+        std::cout << "Updating old task panel" << std::endl;
+        if (taskBelief->getTask()->isFinished()) {
+            auto panel = pairIt->second;
+            taskPanelMap.erase(key);
+            m_pByTaskSidePanelContainer->RemovePanel(panel);
+            delete panel;
+        } else {
+            pairIt->second->update(taskBelief->getTask());
+        }
    }
    else
    {
         std::cout << "Creating new panel" << std::endl;
-        ByTaskPanel* taskPanel = new ByTaskPanel(taskBelief->getTask(), this);
+        ByTaskPanel* taskPanel = new ByTaskPanel(wdm, taskBelief->getTask(), this);
         taskPanel->SetContextMenu(m_pByTaskPanelContextMenu);
         connect(taskPanel, SIGNAL(ContextMenuActionTriggered(QAction *)), SLOT(SidePanelContextMenuActionTriggered(QAction *)));
         taskPanelMap[key] = taskPanel;

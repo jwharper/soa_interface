@@ -25,6 +25,7 @@ namespace soa
 			soa::Belief_WaypointPath::WaypointPath path;
 			size_t waypointIndex;
 			int direction;
+			uint32_t laps;
 
 		public:
 
@@ -46,7 +47,11 @@ namespace soa
 
 			int getDirection() const;
 
+			uint32_t getNumberOfLaps() const;
+
 		};
+
+		typedef ::soa_shared_ptr<PatrolTask> PatrolTaskPtr;
 	}
 }
 

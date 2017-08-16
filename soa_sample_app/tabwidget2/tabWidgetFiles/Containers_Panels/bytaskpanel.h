@@ -11,6 +11,7 @@ class QHBoxLayout;
 #include <QGridLayout>
 #include "../OldCode/qsidepanel.h"
 #include "../taskpanelwidget/taskpanelwidget.h"
+#include "WorldDataManager.h"
 
 class ByTaskPanel : public QSidePanel{
 	Q_OBJECT
@@ -20,7 +21,7 @@ public:
 	struct QSubTask;
 
 public:
-    ByTaskPanel(soa::task::TaskPtr task, QWidget * parent = 0);
+    ByTaskPanel(soa::WorldDataManager* wdm, soa::task::TaskPtr task, QWidget * parent = 0);
 	~ByTaskPanel();
 
     void update(soa::task::TaskPtr task);
@@ -47,6 +48,7 @@ protected:
 	virtual bool MinusPresent(PanelMode mode);
 
 protected:	
+    soa::WorldDataManager* wdm;
     QVBoxLayout * m_pMainLayout;
     QHBoxLayout * m_pLine1Layout;
 	QGridLayout * m_pLine2Layout;

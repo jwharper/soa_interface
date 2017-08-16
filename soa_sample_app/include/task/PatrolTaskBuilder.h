@@ -37,6 +37,8 @@ namespace soa
 
 			virtual void setDirection(int direction);
 
+			virtual void setNumberOfLaps(uint32_t numLaps);
+
 			virtual void merge(TaskPtr older, TaskPtr newer);
 
 		protected:

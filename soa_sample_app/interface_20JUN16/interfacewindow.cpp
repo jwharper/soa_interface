@@ -25,7 +25,7 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
     m_pLogicWidget->setMinimumHeight(400);
     m_pLogicWidget->setMinimumWidth(500);
     //m_pTabPanelWidget = new TabPanelWidget(this);
-    m_pTabPanel2 = new TabPanel2(this);
+    m_pTabPanel2 = new TabPanel2(this, m_pLogicWidget->m_pWDM);
     m_pTabPanel2->setMinimumHeight(400);
     m_pTaskPanelWidget = new TaskPanelWidget(this);
     //m_pTaskPanelWidget->setMaximumHeight(300);
@@ -71,8 +71,9 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
     //connect(m_pTaskPanelWidget, SIGNAL(sendTaskInfo(taskInfo*)), m_pLogicWidget, SLOT(taskSOA(taskInfo*))); //nv2
     //connect(m_pTaskPanelWidget, SIGNAL(sendTaskInfo(taskInfo*)), m_pTabPanel2, SLOT(addTask(taskInfo*))); //nv3
     //v1, v2:
+
     connect(m_pTaskPanelWidget, SIGNAL(sendTaskInfo(taskInfo*)), m_pLogicWidget, SLOT(taskSOA(taskInfo*))); //v1
-    connect(m_pTaskPanelWidget, SIGNAL(taskUpdated(soa_shared_ptr<soa::Belief_Task>)), m_pTabPanel2, SLOT(handleTaskUpdate(soa_shared_ptr<soa::Belief_Task>)));
+    connect(m_pTaskPanelWidget, SIGNAL(taskUpdated(int)), m_pTabPanel2, SLOT(handleTaskUpdate(int)));
     //connect(m_pLogicWidget, SIGNAL(commitTask(taskInfo*)), m_pTabPanel2, SLOT(addTask(taskInfo*))); //v2
     //endRegionTasking *** *** ***
 
@@ -91,5 +92,3 @@ InterfaceWindow::InterfaceWindow(QWidget * parent) :
 void InterfaceWindow::debug(QString msg){
     qDebug()<<msg;
 }
-
-

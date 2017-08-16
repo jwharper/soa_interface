@@ -300,7 +300,7 @@ void TaskPanelWidget::mapCoordFromJS (QString locationJS)
 void TaskPanelWidget::taskBeliefUpdated(soa_shared_ptr<soa::Belief_Task> taskBelief)
 {
     std::cout << "Emitting task updated" << std::endl;
-    Q_EMIT(taskUpdated(taskBelief));
+    Q_EMIT(taskUpdated(taskBelief->getId()));
 }
 
 void TaskPanelWidget::commit(){

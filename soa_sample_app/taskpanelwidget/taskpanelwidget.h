@@ -50,7 +50,7 @@ public:
     Q_SIGNAL void sendTaskInfo(taskInfo * pTaskInfo);
     Q_SIGNAL void taskShapeAndColor(QString taskShape, QString taskColor);
     Q_SIGNAL void actAsMapButton();
-    Q_SIGNAL void taskUpdated(soa_shared_ptr<soa::Belief_Task> taskBelief);
+    Q_SIGNAL void taskUpdated(int);
 
     Q_SLOT void resetAll();
 

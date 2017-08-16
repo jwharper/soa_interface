@@ -12,7 +12,7 @@ const long TASK_NAME_LENGTH = 25;
 const long LEADER_LENGTH = 25;
 const QSidePanel::PanelMode MAX_MODE = QSidePanel::Mode2;
 
-ByTaskPanel::ByTaskPanel(soa::task::TaskPtr task, QWidget * parent) : QSidePanel(parent)
+ByTaskPanel::ByTaskPanel(soa::WorldDataManager* wdm, soa::task::TaskPtr task, QWidget * parent) : QSidePanel(parent), wdm(wdm)
 {
 
 	if(m_ByTaskInstanceCount == 0) ByTaskInit();
@@ -35,6 +35,7 @@ ByTaskPanel::ByTaskPanel(soa::task::TaskPtr task, QWidget * parent) : QSidePanel
 	m_pLeaderLabel->setFixedWidth(LEADER_LENGTH * m_FontMetrics.width('W') + 2 * (m_pLeaderLabel->frameWidth() + 2));
 	m_pLeaderLabel->setFixedHeight(m_FontMetrics.height());
     m_pLeaderLabel->setAlignment(Qt::AlignLeft);
+    m_pLeaderLabel->setText(QString::fromStdString(""));
 
     m_pPriorityLabel = new QLabel(QString::number(task->getPriority()), this);
 	m_pPriorityLabel->setFont(m_Font2);
@@ -48,15 +49,15 @@ ByTaskPanel::ByTaskPanel(soa::task::TaskPtr task, QWidget * parent) : QSidePanel
     m_pUavIcon->setFixedSize(10, 10);
     m_pUavIcon->setScaledContents(true);
     QGridLayout *tLayoutIcon = new QGridLayout;
-    tLayoutIcon->addWidget(m_pUgvIcon, 0, 0);
-    tLayoutIcon->addWidget(m_pUavIcon, 0, 0);
 
     m_pLine1Layout = new QHBoxLayout;
     m_pLine1Layout->addLayout(tLayoutIcon, 0);
 
-    m_pUavIcon->hide();
-    m_pUgvIcon->hide();
+    m_pUavIcon->show();
+    m_pUgvIcon->show();
 
+    m_pLine1Layout->addWidget(m_pUgvIcon);
+    m_pLine1Layout->addWidget(m_pUavIcon);
     m_pLine1Layout->addWidget(m_pNameLabel, 6);
     m_pLine1Layout->addWidget(m_pLeaderLabel, 6);
     m_pLine1Layout->setSpacing(8);
@@ -82,7 +83,7 @@ ByTaskPanel::ByTaskPanel(soa::task::TaskPtr task, QWidget * parent) : QSidePanel
 	m_pMainLayout->addLayout(m_pBottomLayout);
 	setLayout(m_pMainLayout);
 	m_pLine1->show();
-	m_pLine2->hide();
+    m_pLine2->show();
 
 	ChangeStatus(Queued);
     ChangeMode(Mode1);
@@ -90,18 +91,35 @@ ByTaskPanel::ByTaskPanel(soa::task::TaskPtr task, QWidget * parent) : QSidePanel
 
 void ByTaskPanel::update(soa::task::TaskPtr task)
 {
+    std::cout << "Updating ByTaskPanel with new task info" <<  std::endl;
     auto reqs = task->getRequirements();
     bool addComma = false;
     QString text;
+    bool isHeavy = false;
+    bool isSmall = false;
     for (auto req : reqs)
     {
         if (addComma) {
             text += ", ";
         }
         addComma = true;
-        text += QString::fromStdString(std::to_string(req.getAssignedAgent()));
+        int agentID = req.getAssignedAgent();
 
+        auto actorBelief = wdm->getTypedBelief<soa::Belief_Actor>(soa::Belief::ACTOR, agentID);
+        if (actorBelief.get() != NULL)
+        {
+            isHeavy |= actorBelief->getType() == soa::Belief_Actor::HEAVYLIFT;
+            isSmall |= actorBelief->getType() == soa::Belief_Actor::SMALLUAV;
+        }
+
+        text += QString::fromStdString(std::to_string(agentID));
     }
+    std::cout << "Is heavy? " << (isHeavy ? "Yes" : "No") << std::endl;
+    std::cout << "Is small? " << (isSmall ? "Yes" : "No") << std::endl;
+    m_pLeaderLabel->setText(text);
+    m_pUgvIcon->setVisible(isHeavy);
+    m_pUavIcon->setVisible(isSmall);
+    m_pMainLayout->update();
 }
 
 ByTaskPanel::~ByTaskPanel(){

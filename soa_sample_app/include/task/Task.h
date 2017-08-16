@@ -44,7 +44,8 @@ namespace soa
 				DISPERSE,
 				RALLY,
 				PERIMETER,
-				GOTO,		//
+				GOTO,
+				REFUEL,
 				ERROR
 			};
 

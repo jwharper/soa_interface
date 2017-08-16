@@ -27,7 +27,7 @@ int ByTaskSidePanelContainer::MinimumWidth(){
     tData->task = "Move To Location";
     tData->actor = "Heavy UAV 101";
     tData->actorId = 101;
-    ByTaskPanel panel(taskPtr);
+    ByTaskPanel panel(NULL, taskPtr);
 		int minimumWidth;
 
 	panel.ChangeMode(QSidePanel::Mode1);
