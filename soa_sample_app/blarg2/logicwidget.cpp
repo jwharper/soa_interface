@@ -324,7 +324,7 @@ float LogicWidget::googleToHLng(float lng)
 void LogicWidget::taskSOA(taskInfo *tInfo)
 {
     std::cout << "Task: " << tInfo->task.toStdString() << std::endl;
-    if (tInfo->task == "MoveToLocation")
+    if (tInfo->task == "MoveToLocation" || tInfo->task == "Patrol")
     {
         soa::task::PatrolTaskBuilder builder = m_pSoaAutonomy->newPatrolTaskBuilder();
 
@@ -339,7 +339,11 @@ void LogicWidget::taskSOA(taskInfo *tInfo)
 
         builder.setPath(tPoints);
         builder.setDirection(1);
-        builder.setNumberOfLaps(10);//why not?
+        int laps = 1;
+        if (tInfo->task == "Patrol") {
+            laps = 100;
+        }
+        builder.setNumberOfLaps(laps);//why not?
         if (tInfo->numHeavyUAVs > 0) {
             builder.addCargoRequirements(soa::task::ResourceType::CARGO_SUPPLIES, tInfo->numHeavyUAVs);
         }

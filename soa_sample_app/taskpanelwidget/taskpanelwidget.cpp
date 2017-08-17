@@ -42,6 +42,7 @@ void TaskPanelWidget::initialize(){
     connect(ui->m_pHSlider, SIGNAL(sliderMoved(int)), this, SLOT(sliderMoved(int)));
 
     //Add tasks and don't set any item
+    ui->m_pTaskSelect->addItem("Patrol");
     ui->m_pTaskSelect->addItem("Move to Location");
     ui->m_pTaskSelect->addItem("Maintain Location");
     ui->m_pTaskSelect->addItem("Return to FOB");
@@ -121,6 +122,19 @@ void TaskPanelWidget::taskSelected(){
     if (ui->m_pTaskSelect->currentText() == "Move to Location"){
         //Priority 7
         ui->m_pPrioritySelect->setCurrentIndex(6);
+        //Risk medium
+        ui->m_pRiskSelect->setCurrentIndex(1);
+        //Duration disappers
+        ui->m_pDurationSmallBox->setVisible(false);
+        //A map-based task was selected, so emit signal
+        Q_EMIT(actAsMapButton());
+        //Enable vehicle selection
+        ui->m_pSSlider->setEnabled(true);
+        ui->m_pHSlider->setEnabled(true);
+    }
+    else if (ui->m_pTaskSelect->currentText() == "Patrol"){
+        //Priority 7
+        ui->m_pPrioritySelect->setCurrentIndex(5);
         //Risk medium
         ui->m_pRiskSelect->setCurrentIndex(1);
         //Duration disappers
@@ -231,7 +245,7 @@ void TaskPanelWidget::enableTaskAreaSelection(){
     QString taskColor = "#FFFFFF";
     QString taskShape = "polygon";
 
-    if (ui->m_pTaskSelect->currentText() == "Move to Location"){
+    if (ui->m_pTaskSelect->currentText() == "Move to Location" || ui->m_pTaskSelect->currentText() == "Patrol"){
         taskShape = "polyline";
     }
     else if (ui->m_pTaskSelect->currentText() == "Maintain Location"){
@@ -326,6 +340,10 @@ void TaskPanelWidget::commit(){
     if (pTaskInfo->task == "Move to Location")
     {
         pTaskInfo->task = "MoveToLocation";
+    }
+    else if (pTaskInfo->task == "Patrol")
+    {
+        pTaskInfo->task = "Patrol";
     }
     else if (pTaskInfo->task == "Maintain Location")
     {
